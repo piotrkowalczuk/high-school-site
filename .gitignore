@@ -1,0 +1,10 @@
+*.class
+*.pyc
+*.pyo
+*/.git/*
+/high-school-site/settings.py
+*/migrations/*.py
+.idea
+high-school-site.sublime.project
+high-school-site.sublime.workspace
+uploads/*

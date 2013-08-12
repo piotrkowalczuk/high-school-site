@@ -1,0 +1,6 @@
+- model: information.informationCategory
+  pk: 1
+  fields:
+    name: Matury
+    description: |
+        Materiały związane z maturą.

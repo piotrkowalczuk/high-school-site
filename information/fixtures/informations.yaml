@@ -1,0 +1,100 @@
+- model: information.information
+  pk: 1
+  fields:
+    title: Święto Przedmiotów Ścisłych i Przyrodniczych
+    content: |
+        Ideą tego dnia było popularyzowanie nauk przyrodniczych i ścisłych. 
+        W uroczystych obchodach uczestniczyli uczniowie żarskich gimnazjów. 
+        Zgodnie z programem tego dnia obył się m.in. turniej wiedzy wszechstronnej w formie zabawy, 
+        różne zagadki logiczne, konkurs wiedzy dla publiczności oraz konkurs plastyczny dla gimnazjalistów, 
+        którego celem było sformułowanie hasła, promującego nauki przyrodnicze i ścisłe. 
+        Hasło to będzie mottem dla imprezy w kolejnych latach. 
+        Młodzież naszej szkoły miała okazję dopingować swoich kolegów i koleżanki z gimnazjów. 
+        Na koniec specjalnie dla przybyłych przygotowana została prezentacja doświadczeń biologicznych, 
+        fizycznych i chemicznych.
+    autor: 1
+    category: 1
+    created_at: 1999-01-01
+    updated_at: 1999-01-01
+- model: information.information
+  pk: 2
+  fields:
+    title: Prus odbiera wyróżnienie we Wrocławiu
+    content: |
+        6 czerwca 2013 w Auli Politechniki Wrocławskiej odbyła się konferencja pt: "Nauczyciel w roli Szkolnego Łowcy Talentów, 
+        czyli jak rozwijać zainteresowania i zdolności uczniów?" Wydarzenie to było podsumowaniem projektu 
+        Łowimy Talenty i zaproszono do niego nauczycieli biorących udział w tym projekcie oraz osoby 
+        zajmujące się tematem rozwoju zainteresowań dzieci i odkrywania talentów młodzieży. 
+        Podczas konferencji swoją wiedzą podzielili się doświadczeni pedagodzy i autorzy publikacji oświatowych. 
+        Ukoronowaniem wydarzenia była Gala Talentów podczas, której wręczono statuetki ośmiu szkołom, 
+        których uczniowie osiągnęli ponadprzeciętne wyniki w projekcie. Pośród szkół z dużych miast takich jak Wrocław, 
+        Zabrze czy Szczecin znalazło się też żarskie I LO im. B. Prusa, które reprezentował nauczyciel j. angielskiego Grzegorz Brąś. 
+        Statuetka powędrowała do szkolnej Gabloty Talentów.
+    autor: 1
+    category: 1
+    created_at: 1998-01-01
+    updated_at: 1998-01-01
+- model: information.information
+  pk: 3
+  fields:
+    title: Konkurs teatralny
+    content: |
+        29 i 30 kwietnia 2013r. grupa teatralna z I Liceum Ogólnokształcącego w Żarach wzięła 
+        udział w II Lubuskich Spotkaniach Teatralnych „Zwierciadła” w Zielonej Górze. Pierwszego 
+        dnia grupa zaprezentowała spektakl pod tytułem „O miłości rozprawa krótka”, dla którego 
+        inspiracją był tekst Konstantego Ildefonsa Gałczyńskiego „Teatrzyk Zielona Gęś” oraz utwory Adama Mickiewicza, 
+        Marii Pawlikowskiej-Jasnorzewskiej i Czesława Miłosza. Ponadto pani Ewa Woźniak wykonała piosenkę Kabaretu Starszych 
+        Panów „Tango Kat” przy akompaniamencie Magdaleny Kurdziel z klasy 1A. W skład grupy wchodzą: Adrianna Chudyk (2A), 
+        Alicja Wróbel (2A), Dorota Zakowicz (2C) i Kamil Wróbel (1A), natomiast opiekunem jest pani Agnieszka Serbeńska. 
+        Drugiego dnia odbyły się warsztaty teatralne prowadzone przez aktora Teatru Lubuskiego Marka Sitarskiego. 
+        Przegląd zakończył się ogłoszeniem wyników. Nasza grupa zajęła drugie miejsce, zbierając bardzo dobre recenzje jury i widzów.
+    autor: 1
+    category: 1
+    created_at: 1997-01-01
+    updated_at: 1997-01-01
+- model: information.information
+  pk: 4
+  fields:
+    title: Matura 2013
+    content: |
+        7 maja 2013 r. 175 tegorocznych abiturientów naszego liceum przystąpiło do egzaminu maturalnego. 
+        Sesję majową, jak zwykle, rozpoczną obowiązkowym egzaminem pisemnym z języka polskiego. 
+        Przed nimi jeszcze obowiązkowa matematyka i język obcy nowożytny oraz wybrany przedmiot dodatkowy. 
+        Natomiast 9 maja rozpoczynają się egzaminy ustne z języka polskiego i języka obcego nowożytnego. 
+        Trzymamy za Was wszystkich kciuki i życzymy sukcesów!
+    autor: 1
+    category: 1
+    created_at: 1996-01-01
+    updated_at: 1996-01-01
+- model: information.information
+  pk: 5
+  fields:
+    title: Targi edukacyjne - 2013
+    content: |
+        29 kwietnia 2013r. w godz. 10:00-14:00 Starostwo Powiatowe zorganizowało w naszej szkole 
+        Targi Edukacyjne dla gimnazjalistów z powiatu żarskiego. Przygotowaliśmy dla 
+        potencjalnych uczniów klas pierwszych naszego liceum foldery zachęcające absolwentów gimnazjów 
+        do podjęcia nauki w Prusie. Ponadto, mogli obejrzeć występ artystyczny oraz lekcje pokazowe z 
+        biologii i języków obcych: angielskiego, francuskiego, niemieckiego i rosyjskiego. 
+        Cieszyły się one dużym zainteresowaniem. Gimnazjaliści mogli również pobrać podania 
+        do szkoły oraz zwiedzić budynek. Jeśli ktoś jeszcze u nas nie był, zapraszamy :)
+    autor: 1
+    category: 1
+    created_at: 1995-01-01
+    updated_at: 1995-01-01
+- model: information.information
+  pk: 6
+  fields:
+    title: Pożegnanie klas trzecich - 2013
+    content: |
+        26 kwietnia 2013r. pożegnaliśmy uczniów klas trzecich. 
+        To kolejny rocznik, który opuścił mury naszej szkoły. 
+        Odbył się uroczysty apel, na którym Dyrektor szkoły wraz z wychowawcami 
+        wręczył wyróżniającym się uczniom świadectwa oraz nagrody rzeczowe. 
+        Program artystyczny, jak co roku, przygotowały klasy drugie, a tradycją od 
+        kilku już lat stało się wypuszczanie balonów przez abiturientów na dziedzińcu szkoły. 
+        Niech tak jak te balony wzlatują wysoko i osiągają szczyty!
+    autor: 1
+    category: 1
+    created_at: 1994-01-01
+    updated_at: 1994-01-01

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% block head %}
+	    <link rel="Shortcut icon" href="{{ STATIC_URL }}images/favicon.gif" />
+        <!-- style -->
+        <link href="{{ STATIC_URL }}vendors/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="{{ STATIC_URL }}css/main.css" rel="stylesheet" type="text/css" media="screen" />
+        <!-- scripts -->
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="{{ STATIC_URL }}vendors/bootstrap/js/bootstrap.js"></script>
+    {% endblock %}
+    <title>{% block title %}Strona III Liceum w Żarach{% endblock %}</title>
+</head>
+
+<body>
+    {% block navbar %}
+        <div class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Strona Główna</a></li>
+                </ul>
+                <ul class="nav navbar-nav pull-right">
+                    <li class="active"><a href="#">Kalendarz szkolny</a></li>
+                    <li><a href="#">Plan Lekcji</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+    {% endblock %}
+    <div class="lz-header">
+        <div class="container">
+            <div class="row">
+                <div class="header col-lg-12"></div>
+            </div>    
+        </div>
+    </div>
+    <div class="lz-menu">
+        <div class="container">
+            <ul class="nav nav-pills lz-menu-nav">
+                <li><a href="#">Aktualności</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Informacje</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Test1</a></li>
+                        <li><a href="#">Test2</a></li>
+                        <li><a href="#">Test3</a></li>
+                        <li><a href="#">Test4</a></li>
+                        <li><a href="#">Test5</a></li>
+                        <li><a href="#">Test6</a></li>   
+                    </ul>
+                </li>
+            </ul>  
+        </div>
+    </div>
+    <div class="lz-content">
+    	<div class="container">
+    		{% block content %}{% endblock %}
+        </div>
+    </div>
+</body>
+</html>
