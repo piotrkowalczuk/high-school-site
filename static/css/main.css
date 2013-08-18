@@ -79,3 +79,7 @@ body {
     color: #939393;
     display: block;
 }
+
+.admin-image-widget-thumb {
+    float: left;
+}

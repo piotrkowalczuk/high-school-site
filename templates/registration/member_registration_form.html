@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="page-header">
+      <h1>Member <small>registration</small></h1>
+    </div>
+    <form action="{% url 'registration_register_member_process' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" class="btn btn-block btn-primary">create account</button>
+    </form>
+{% endblock %}

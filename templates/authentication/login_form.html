@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="page-header">
+        <h1>Member <small>registration</small></h1>
+    </div>
+    {% include 'partials/messages.html' %}
+    <div class="row">
+        <div class="span12">
+            <form action="{% url 'authentication_login_process' %}" method="post">
+                {% csrf_token %}
+                {{ form }}
+                <button type="submit" class="btn btn-block btn-primary">login</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

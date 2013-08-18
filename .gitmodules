@@ -1,0 +1,6 @@
+[submodule "static/vendors/bootstrap-glyphicons"]
+	path = static/vendors/bootstrap-glyphicons
+	url = https://github.com/marcoceppi/bootstrap-glyphicons.git
+[submodule "static/vendors/bootstrap"]
+	path = static/vendors/bootstrap
+	url = https://github.com/twbs/bootstrap.git

@@ -1,4 +1,4 @@
-- model: information.informationCategory
+- model: news.category
   pk: 1
   fields:
     name: Matury

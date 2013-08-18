@@ -1,0 +1,20 @@
+- model: user.user
+  pk: 1
+  fields:
+    activation_code: null
+    birth_date: null
+    created_at: 2013-08-18 19:17:53
+    first_name: Admin
+    gender: ''
+    groups: []
+    is_active: true
+    is_staff: true
+    is_superuser: true
+    last_login: 2013-08-18 19:17:53
+    last_name: Administrator
+    password: pbkdf2_sha256$10000$AjRxwPTq6aRr$KQmoW2vC/xE7GZazkAmPvFwww1i3J1lo7LPDv/jPOY4=
+    photo: null
+    role: ''
+    updated_at: 2013-08-18 19:17:53
+    user_permissions: []
+    username: admin@admin.pl

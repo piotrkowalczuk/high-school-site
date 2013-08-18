@@ -1,0 +1,36 @@
+- model: semester.semester
+  pk: 1
+  fields:
+    name: 2010/2011
+    is_active: 0
+    start_at: 2010-09-01
+    end_at: 2011-06-30
+    created_at: 1999-01-01
+    updated_at: 1999-01-01
+- model: semester.semester
+  pk: 2
+  fields:
+    name: 2011/2012
+    is_active: 0
+    start_at: 2011-09-01
+    end_at: 2012-06-30
+    created_at: 1999-01-01
+    updated_at: 1999-01-01
+- model: semester.semester
+  pk: 3
+  fields:
+    name: 2012/2013
+    is_active: 0
+    start_at: 2012-09-01
+    end_at: 2013-06-30
+    created_at: 1999-01-01
+    updated_at: 1999-01-01
+- model: semester.semester
+  pk: 4
+  fields:
+    name: 2013/2014
+    is_active: 1
+    start_at: 2013-09-01
+    end_at: 2014-06-30
+    created_at: 1999-01-01
+    updated_at: 1999-01-01

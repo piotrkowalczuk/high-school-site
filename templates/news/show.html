@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="lz-information-show col-lg-12">
+            {% include 'information/_news.html' with information=information %}
+        </div>
+    </div>
+{% endblock %}

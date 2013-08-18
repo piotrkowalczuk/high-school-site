@@ -1,16 +1,35 @@
+# -*- coding: utf-8 -*-
 from django.db import models
 from user.models import User
-from information.models import Information
+from news.models import News
+from PIL import Image
+from cStringIO import StringIO
+from django.core.files.uploadedfile import SimpleUploadedFile
+import os
 
 
-def content_file_name(instance, filename):
+def image_filepath(instance, filename):
     return '/'.join(['uploads', str(instance.gallery.id), filename])
+
+
+def thumb_filepath(instance, filename):
+    filename = 'thumb_'+filename
+    return image_filepath(instance, filename)
 
 
 class Gallery(models.Model):
 
+    class Meta:
+        verbose_name = "galeria"
+        verbose_name_plural = "galerie"
+
     name = models.CharField(max_length=255)
-    information = models.ForeignKey(Information, related_name='Information')
+    news = models.ForeignKey(
+        News,
+        blank=True,
+        null=True,
+        related_name='News'
+    )
     description = models.TextField(blank=True, null=True)
     is_published = models.BooleanField(default=False)
 
@@ -20,10 +39,20 @@ class Gallery(models.Model):
 
 class Photo(models.Model):
 
+    class Meta:
+        verbose_name = "zdjęcie"
+        verbose_name_plural = "zdjęcia"
+
     name = models.CharField(max_length=255)
     description = models.TextField(blank=True, null=True)
     is_published = models.BooleanField(default=False)
-    file = models.ImageField(upload_to=content_file_name)
+    image = models.ImageField(upload_to=image_filepath)
+    thumbnail = models.ImageField(
+        upload_to=thumb_filepath,
+        max_length=500,
+        blank=True,
+        null=True
+    )
     autor = models.ForeignKey(User, related_name='Autor')
     gallery = models.ForeignKey(Gallery, related_name='Gallery')
     created_at = models.DateTimeField(auto_now_add=True, editable=False)
@@ -32,3 +61,50 @@ class Photo(models.Model):
 
     def __unicode__(self):
         return self.name
+
+    def image_preview(self):
+        return u'<img src="/media/%s" />' % self.image
+
+    image_preview.short_description = 'Podgląd zdjęcia'
+    image_preview.allow_tags = True
+
+    def create_thumbnail(self):
+
+        if not self.image:
+            return
+
+        THUMBNAIL_SIZE = (100, 100)
+
+        DJANGO_TYPE = self.image.file.content_type
+
+        if DJANGO_TYPE == 'image/jpeg':
+            PIL_TYPE = 'jpeg'
+            FILE_EXTENSION = 'jpg'
+        elif DJANGO_TYPE == 'image/png':
+            PIL_TYPE = 'png'
+            FILE_EXTENSION = 'png'
+
+        image = Image.open(StringIO(self.image.read()))
+
+        image.thumbnail(THUMBNAIL_SIZE, Image.ANTIALIAS)
+
+        temp_handle = StringIO()
+        image.save(temp_handle, PIL_TYPE)
+        temp_handle.seek(0)
+
+        suf = SimpleUploadedFile(
+            os.path.split(self.image.name)[-1],
+            temp_handle.read(),
+            content_type=DJANGO_TYPE
+        )
+
+        self.thumbnail.save(
+            '%s_thumbnail.%s' % (os.path.splitext(suf.name)[0], FILE_EXTENSION),
+            suf,
+            save=False
+        )
+
+    def save(self):
+        self.create_thumbnail()
+
+        super(Photo, self).save()

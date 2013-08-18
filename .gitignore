@@ -7,4 +7,9 @@
 .idea
 high-school-site.sublime.project
 high-school-site.sublime.workspace
+high-school-site.sublime-project
+high-school-site.sublime-workspace
 uploads/*
+grappeli/*
+auto_static/*
+media/*

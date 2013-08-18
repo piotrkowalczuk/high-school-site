@@ -1,16 +1,17 @@
+# -*- coding: utf-8 -*-
 from django.db import models
 
 
-class Link(models.Model):
+class Semester(models.Model):
 
     class Meta:
-        verbose_name = "link"
-        verbose_name_plural = "linki"
+        verbose_name = "semestr"
+        verbose_name_plural = "semestry"
 
     name = models.CharField(max_length=255)
-    url = models.CharField(max_length=255)
-    order = models.IntegerField()
-    is_published = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=False)
+    start_at = models.DateTimeField()
+    end_at = models.DateTimeField()
     created_at = models.DateTimeField(auto_now_add=True, editable=False)
     updated_at = models.DateTimeField(auto_now=True)
 
