@@ -8,11 +8,9 @@ class PhotoInlineForm(ModelForm):
         model = Photo
         fields = [
             'image',
-            'name',
             'description',
             'autor',
             'gallery',
-            'slug'
         ]
         widgets = {'image': AdminImageWidget(), }
     readonly_fields = ('image_preview',)

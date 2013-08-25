@@ -1,0 +1,9 @@
+<div class="panel panel-default">
+    <div class="panel-heading"><strong>Aktualności</strong></div>
+    <div class="list-group">
+        {% for news in news_list %}
+            {% include 'news/_news.html' with news=news %}
+        {% endfor %}
+    </div>
+</div>
+

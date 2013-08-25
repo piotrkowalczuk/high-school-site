@@ -5,17 +5,15 @@
 	    <link rel="Shortcut icon" href="{{ STATIC_URL }}images/favicon.gif" />
         <!-- style -->
         <link href="{{ STATIC_URL }}vendors/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css" media="screen" />
+        <link rel="stylesheet" href="{{ STATIC_URL }}vendors/blueimp/css/blueimp-gallery.min.css">
         <link href="{{ STATIC_URL }}css/main.css" rel="stylesheet" type="text/css" media="screen" />
-        <!-- scripts -->
-        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-        <script src="{{ STATIC_URL }}vendors/bootstrap/dist/js/bootstrap.js"></script>
     {% endblock %}
     <title>{% block title %}Strona III Liceum w Żarach{% endblock %}</title>
 </head>
 
 <body>
     {% block navbar %}
-        <div class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+        <div class="navbar navbar-inverse navbar-custom">
             <div class="container">
                 <ul class="nav navbar-nav">
                     <li><a href="#">Strona Główna</a></li>
@@ -38,7 +36,7 @@
     <div class="lz-menu">
         <div class="container">
             <ul class="nav nav-pills lz-menu-nav">
-                <li><a href="#">Aktualności</a></li>
+                <li><a href="{% url 'news_list' %}">Aktualności</a></li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Informacje</a>
                     <ul class="dropdown-menu">
@@ -58,5 +56,58 @@
     		{% block content %}{% endblock %}
         </div>
     </div>
+    <div class="lz-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">Panel heading</div>
+                        <!-- List group -->
+                        <ul class="list-group">
+                            <li class="list-group-item">Cras justo odio</li>
+                            <li class="list-group-item">Dapibus ac facilisis in</li>
+                            <li class="list-group-item">Morbi leo risus</li>
+                            <li class="list-group-item">Porta ac consectetur ac</li>
+                            <li class="list-group-item">Vestibulum at eros</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">Panel heading</div>
+                        <!-- List group -->
+                        <ul class="list-group">
+                            <li class="list-group-item">Cras justo odio</li>
+                            <li class="list-group-item">Dapibus ac facilisis in</li>
+                            <li class="list-group-item">Morbi leo risus</li>
+                            <li class="list-group-item">Porta ac consectetur ac</li>
+                            <li class="list-group-item">Vestibulum at eros</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">Panel heading</div>
+                        <!-- List group -->
+                        <ul class="list-group">
+                            <li class="list-group-item">Cras justo odio</li>
+                            <li class="list-group-item">Dapibus ac facilisis in</li>
+                            <li class="list-group-item">Morbi leo risus</li>
+                            <li class="list-group-item">Porta ac consectetur ac</li>
+                            <li class="list-group-item">Vestibulum at eros</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+    <!-- scripts -->
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="{{ STATIC_URL }}vendors/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="{{ STATIC_URL }}vendors/blueimp/js/blueimp-gallery.min.js"></script>
+    <script src="{{ STATIC_URL }}scripts/main.js"></script>
 </body>
 </html>

@@ -1,7 +1,10 @@
 from django.db import models
+from links.managers import LinkManager
 
 
 class Link(models.Model):
+
+    objects = LinkManager()
 
     class Meta:
         verbose_name = "link"

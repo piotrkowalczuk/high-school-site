@@ -3,6 +3,8 @@ from django.db import models
 from user.models import User
 from category.models import Category
 from semester.models import Semester
+from news.managers import NewsManager
+from gallery.models import Gallery
 
 
 class Category(Category):
@@ -10,6 +12,8 @@ class Category(Category):
 
 
 class News(models.Model):
+
+    objects = NewsManager()
 
     class Meta:
         verbose_name = "news"
@@ -41,6 +45,12 @@ class News(models.Model):
     semester = models.ForeignKey(
         Semester,
         verbose_name='Semestr'
+    )
+    gallery = models.ForeignKey(
+        Gallery,
+        blank=True,
+        null=True,
+        related_name='NewsGallery'
     )
     slug = models.SlugField(unique=True, max_length=100)
     created_at = models.DateTimeField(auto_now_add=True, editable=False)

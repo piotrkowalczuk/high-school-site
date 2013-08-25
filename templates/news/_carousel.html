@@ -1,1 +1,26 @@
-<img src="{{ STATIC_URL }}images/carusele-mock.jpg" alt="" style="margin: 30px auto;">
+<div class="col-lg-8" style="text-align: center;">
+  <div id="lz-carousel" class="carousel slide">
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      {% for news in news_pinned %}
+        <div id="{{ forloop.counter0 }}" class="item {{ forloop.counter0|yesno:' ,active' }}">
+          <img src="{{ STATIC_URL }}images/carusele-background-test.jpg" alt="...">
+          <div class="carousel-caption">
+            <h1>{{ news.title }}</h1>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<div class="col-lg-4">
+  <div class="list-group lz-carousel-navi">
+    {% for news in news_pinned %}
+      <a href="#" data-target="#lz-carousel" data-slide-to="{{forloop.counter0}}" class="lz-carousel-navi-item list-group-item {{ forloop.counter0|yesno:' ,active' }}">
+        <h4 class="list-group-item-heading">{{ news.title }}</h4>
+        <p class="list-group-item-text">{{ news.content_intro|truncatechars:120 }}</p>
+      </a>
+    {% endfor %}
+  </div>
+</div>

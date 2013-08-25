@@ -1,15 +1,17 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 from user.models import User
-from news.models import News
 from PIL import Image
 from cStringIO import StringIO
 from django.core.files.uploadedfile import SimpleUploadedFile
 import os
+import uuid
 
 
 def image_filepath(instance, filename):
-    return '/'.join(['uploads', str(instance.gallery.id), filename])
+    ext = filename.split('.')[-1]
+    filename = "%s.%s" % (uuid.uuid4(), ext)
+    return '/'.join(['uploads/gallery/', str(instance.gallery.id), filename])
 
 
 def thumb_filepath(instance, filename):
@@ -24,12 +26,6 @@ class Gallery(models.Model):
         verbose_name_plural = "galerie"
 
     name = models.CharField(max_length=255)
-    news = models.ForeignKey(
-        News,
-        blank=True,
-        null=True,
-        related_name='News'
-    )
     description = models.TextField(blank=True, null=True)
     is_published = models.BooleanField(default=False)
 
@@ -54,10 +50,9 @@ class Photo(models.Model):
         null=True
     )
     autor = models.ForeignKey(User, related_name='Autor')
-    gallery = models.ForeignKey(Gallery, related_name='Gallery')
+    gallery = models.ForeignKey(Gallery)
     created_at = models.DateTimeField(auto_now_add=True, editable=False)
     updated_at = models.DateTimeField(auto_now=True)
-    slug = models.SlugField()
 
     def __unicode__(self):
         return self.name

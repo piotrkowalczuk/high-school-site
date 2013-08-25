@@ -4,3 +4,6 @@
 [submodule "static/vendors/bootstrap"]
 	path = static/vendors/bootstrap
 	url = https://github.com/twbs/bootstrap.git
+[submodule "static/vendors/blueimp"]
+	path = static/vendors/blueimp
+	url = https://github.com/blueimp/Gallery.git

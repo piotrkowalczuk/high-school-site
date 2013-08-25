@@ -1,8 +1,10 @@
 from news.models import News, Category
 from django.contrib import admin
+from news.forms import NewsForm
 
 
 class NewsAdmin(admin.ModelAdmin):
+    form = NewsForm
     prepopulated_fields = {"slug": ("title",)}
     list_display = (
         'title',

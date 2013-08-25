@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="row" style="height: 15px;">
+    </div>
+    {% block carousel %}
+        <div class="row">
+            {% include 'news/_carousel.html' with news_pinned=news_pinned %}
+        </div>
+    {% endblock %}
+    <div class="row">
+        {% block breadcrumb %}{% endblock %}
+    </div>
+    <div class="row" style="padding-bottom: 100px;">
+        <div class="lz-information-left-column col-lg-8">
+            {% block left_column %}
+                {% include 'news/_list.html' with news_list=news_list %}
+            {% endblock %}
+        </div>
+        <div class="lz-information-right-column col-lg-4">
+            {% block right_column %}
+                <div class="panel panel-default">
+                    <div class="panel-heading"><strong>Linki</strong></div>
+                    <div class="panel-body">
+                        <p>Tutaj znajdziecie odnośniki do najpotrzebniejszych stron i serwisów. </p>
+                    </div>
+
+                    <div class="list-group">
+                        {% for link in links %}
+                            <a href="{{ link.url }}" class="list-group-item">
+                                {{ link.name }}
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">Adres</div>
+                    <div class="panel-body">
+                        <address>
+                            <strong>
+                                I Liceum Ogólnokształcące im. Bolesława Prusa w Żarach
+                            </strong>
+                            <br>
+                            ul. Podwale 16<br>
+                            68-200 Żary<br>
+                            <abbr title="Telefon">Telefon:</abbr> 068 374 36 76<br/>
+                            <abbr title="Email">Email:</abbr> <a href="mailto:sekretariat@lo.zary.pl">sekretariat@lo.zary.pl</a>
+                        </address>
+                    </div>
+                </div>
+            {% endblock %}
+        </div>
+    </div>
+{% endblock %}

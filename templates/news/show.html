@@ -1,9 +1,13 @@
-{% extends "base.html" %}
+{% extends "news/index.html" %}
 
-{% block content %}
-    <div class="row">
-        <div class="lz-information-show col-lg-12">
-            {% include 'information/_news.html' with information=information %}
-        </div>
-    </div>
+{% block carousel %}
+{% endblock %}  
+{% block breadcrumb %}
+    <ol class="breadcrumb">
+        <li><a href="{% url 'news_list' %}">Strona Główna</a></li>
+        <li class="active">{{ news.title }}</li>
+    </ol>
+{% endblock %}  
+{% block left_column %}
+    {% include 'news/_news_full.html' with news=news %}
 {% endblock %}

@@ -3,15 +3,37 @@ body {
     font-family: Arial;    
 }
 
+@media (min-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+    .lz-carousel-navi {
+        margin-left: -30px;
+    }
+}
+
 .lz-header .header {
     background: transparent url('../images/header.jpg') no-repeat center;
     height: 196px;
-    margin-top: 50px;
+    margin-top: 0px;
 }
 
 .lz-header {
-    background: #000 url('../images/background-top.jpg') repeat-x;
-    background-position: 0px 50px;
+    background: transparent url('../images/background-top.jpg') repeat-x;
+    background-position: 0px 0px;
+}
+
+.lz-footer {
+    background-color: #000;
+    min-height: 200px;
+    color: #fff;
+}
+
+.lz-footer .panel,
+.lz-footer .panel-heading,
+.lz-footer .list-group-item  {
+    background-color: #000;
+    border-width: 0px;
 }
 
 .navbar-custom {
@@ -50,7 +72,6 @@ body {
 .lz-informations-h2 {
     color: #cc6666;
     font-size: 30px;
-    line-height: 68px;
     border-bottom: 1px solid #e4e4e4;
 }
 
@@ -82,4 +103,49 @@ body {
 
 .admin-image-widget-thumb {
     float: left;
+}
+
+.lz-carousel-navi-item {
+    height: 137px;
+    max-height: 137px;
+    overflow: hidden;
+}
+
+.lz-carousel-navi-item.list-group-item:hover,
+.lz-carousel-navi-item.list-group-item:focus {
+    background-color: #444;
+    border-color: #444;
+    color: #fff;
+}
+
+.lz-carousel-navi-item.list-group-item:hover h4,
+.lz-carousel-navi-item.list-group-item:focus h4 {
+    color: #fff;
+}
+
+.lz-carousel-navi-item.active,
+.lz-carousel-navi-item.list-group-item.active p.list-group-item-text,
+.lz-carousel-navi-item.list-group-item.active h4 
+.lz-carousel-navi-item.list-group-item.hover,
+.lz-carousel-navi-item.list-group-item.focus {
+    background-color: #dddddd;
+    border-color: #dddddd;
+    color: #444;
+}
+
+.lz-carousel-navi-item.active:hover,
+.lz-carousel-navi-item.list-group-item.active:hover p.list-group-item-text,
+.lz-carousel-navi-item.list-group-item.active:focus p.list-group-item-text,
+.lz-carousel-navi-item.list-group-item.active:hover h4,
+.lz-carousel-navi-item.list-group-item.active:focus h4 
+.lz-carousel-navi-item.list-group-item.active.hover,
+.lz-carousel-navi-item.list-group-item.active.focus {
+    color: #fff;
+    background-color: #444;
+    border-color: #444;
+}
+
+.lz-carousel-navi-item.list-group-item:first-child,
+.lz-carousel-navi-item.list-group-item:last-child {
+    border-radius: 0px;
 }

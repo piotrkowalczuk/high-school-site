@@ -1,5 +1,7 @@
-<div class="lz-news">
-    <h4>{{ information.title }}</h4>
-    <span>{{ information.category.name }} | {{ information.created_at }}</span>
-    <p>{{ information.content_intro }}</p>
+<div class="lz-news list-group-item">
+    <h4>{{ news.title }}</h4>
+    <span>{{ news.category.name }} | {{ news.created_at }}</span>
+    <p>{{ news.content_intro }}</p>
+    <a href="{% url 'news_show' slug=news.slug %}" class="btn btn-link btn-xs pull-right">więcej</a>
+    <div style="clear:both;"></div>
 </div>

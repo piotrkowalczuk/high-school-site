@@ -1,0 +1,40 @@
+<div class="lz-news">
+    <h1>{{ news.title }}</h1>
+    <span>{{ news.category.name }} | {{ news.created_at }}</span>
+    <p>{{ news.content_body|safe }}</p>
+</div>
+{% if news.gallery %}
+    {% if news.gallery.photo_set.all %}
+        <br/><br/>
+        <h4>Zdjęcia:</h4>
+        <div id="links" class="row">
+            {% for photo in news.gallery.photo_set.all %}
+                <div class="col-sm-6 col-md-3">
+                    <a href="/media/{{ photo.image }}" class="thumbnail">
+                        <img src="/media/{{ photo.thumbnail }}" alt="">
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endif %}
+<!-- The Gallery as lightbox dialog, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+</div>
+<script>
+document.getElementById('links').onclick = function (event) {
+    event = event || window.event;
+    var target = event.target || event.srcElement,
+        link = target.src ? target.parentNode : target,
+        options = {index: link, event: event},
+        links = this.getElementsByTagName('a');
+    blueimp.Gallery(links, options);
+};
+</script>
