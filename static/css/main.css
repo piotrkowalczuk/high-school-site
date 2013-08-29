@@ -45,6 +45,10 @@ body {
     background-color: #9999cc;
 }
 
+.lz-menu .container {
+    padding: auto 0px;
+}
+
 .lz-menu-nav {
     background-color: transparent;
 }
@@ -54,11 +58,52 @@ body {
     font-family: Calibri;
     font-weight: bold;
     color: #fff;
+    display: block;
+    text-align: center;
 }
 
-.lz-menu-nav li a:hover, .lz-menu-nav .dropdown.open a {
+.lz-menu-nam li.dropdown,
+.nav-pills > li.dropdown,
+.nav-pills > li {
+    border: 1px solid #333366;
+    border-width: 0px 0px 1px 1px;
     border-radius: 0px;
+    margin: 0px;
+    padding:0px;
+}
+
+.nav-pills li:first-child {
+    border-width: 0px 0px 1px 0px;
+}
+
+.lz-menu-nav li a:hover,
+.lz-menu-nav .dropdown.open a {
+    border-radius: 0px;
+    background-color: #9999cc;
+}
+
+.lz-menu-nav .dropdown-menu {
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.lz-menu-nav li a:hover,
+.lz-menu-nav .dropdown.open a:hover {
     background-color: #cc6666;
+}
+
+.lz-menu-sub li,
+.lz-menu-sub li:first-child {
+    border: 1px solid #333366;
+}
+
+.lz-menu-sub li + li {
+    border-width: 1px 1px 0px 1px;
+}
+
+.lz-menu-sub li:last-child {
+    border-width: 0px 1px 1px 1px;
 }
 
 .lz-content {

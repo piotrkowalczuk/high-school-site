@@ -1,11 +1,11 @@
-from django.views.generic.base import View
+from common.views import BaseView
 from django.shortcuts import render
 from news.models import News
 from links.models import Link
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
-class NewsList(View):
+class NewsList(BaseView):
     def get(self, request):
         news_not_pinned = News.objects.get_not_pinned()
         news_pinned = News.objects.get_pinned()
@@ -19,19 +19,19 @@ class NewsList(View):
         except EmptyPage:
             news_list = paginator.page(paginator.num_pages)
 
-        print type(news_pinned)
         return render(
             request,
             'news/index.html',
             {
                 'news_list': news_list,
                 'news_pinned': news_pinned,
-                'links': links
+                'links': links,
+                'menu': self.get_menu()
             }
         )
 
 
-class NewsShow(View):
+class NewsShow(BaseView):
     def get(self, request, slug):
 
         news = News.objects.get_published(slug=slug)
@@ -42,7 +42,8 @@ class NewsShow(View):
             'news/show.html',
             {
                 'news': news[0],
-                'links': links
+                'links': links,
+                'menu': self.get_menu()
             }
 
         )

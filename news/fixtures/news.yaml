@@ -15,6 +15,8 @@
     autor: 1
     category: 1
     semester: 4
+    is_published: 1
+    is_pinned: 0
     slug: swieto-premiotow-scislych-i-przyrodniczych
     created_at: 1999-01-01
     updated_at: 1999-01-01
@@ -35,6 +37,8 @@
     autor: 1
     category: 1
     semester: 4
+    is_published: 1
+    is_pinned: 0
     slug: prus-odbier-wyroznienia-we-wroclawiu
     created_at: 1998-01-01
     updated_at: 1998-01-01
@@ -55,6 +59,8 @@
     autor: 1
     category: 1
     semester: 4
+    is_published: 1
+    is_pinned: 0
     slug: konkurs-teatralny
     created_at: 1997-01-01
     updated_at: 1997-01-01
@@ -71,6 +77,8 @@
     autor: 1
     category: 1
     semester: 4
+    is_published: 1
+    is_pinned: 1
     slug: matura-2013
     created_at: 1996-01-01
     updated_at: 1996-01-01
@@ -89,6 +97,8 @@
     autor: 1
     category: 1
     semester: 4
+    is_published: 1
+    is_pinned: 1 
     slug: targi-edukacyjne-2013
     created_at: 1995-01-01
     updated_at: 1995-01-01
@@ -107,6 +117,8 @@
     autor: 1
     category: 1
     semester: 4
+    is_published: 1
+    is_pinned: 1
     slug: pozegnanie-klas-trzecich-2013
     created_at: 1994-01-01
     updated_at: 1994-01-01

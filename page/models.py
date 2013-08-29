@@ -3,7 +3,7 @@ from django.db import models
 from user.models import User
 from category.models import Category
 from semester.models import Semester
-from news.managers import NewsManager
+from page.managers import PageManager
 from gallery.models import Gallery
 
 
@@ -11,46 +11,37 @@ class Category(Category):
     pass
 
 
-class News(models.Model):
+class Page(models.Model):
 
-    objects = NewsManager()
+    objects = PageManager()
 
     class Meta:
-        verbose_name = "news"
-        verbose_name_plural = "newsy"
+        verbose_name = "strona"
+        verbose_name_plural = "strony"
 
     title = models.CharField(
         max_length=255,
         verbose_name='Tytuł'
     )
-    content_intro = models.TextField(verbose_name='Wprowadzenie wiadomości')
-    content_body = models.TextField(verbose_name='Ciało wiadomości')
+    content = models.TextField(verbose_name='Treść')
     autor = models.ForeignKey(
         User,
         verbose_name='Autor',
-        related_name='News'
+        related_name='Page'
     )
     is_published = models.BooleanField(
         default=False,
         verbose_name='Czy jest opublikowany'
     )
-    is_pinned = models.BooleanField(
-        default=False,
-        verbose_name='Czy jest przypięty'
-    )
     category = models.ForeignKey(
         Category,
         verbose_name='Kategoria'
-    )
-    semester = models.ForeignKey(
-        Semester,
-        verbose_name='Semestr'
     )
     gallery = models.ForeignKey(
         Gallery,
         blank=True,
         null=True,
-        related_name='NewsGallery'
+        related_name='PageGallery'
     )
     slug = models.SlugField(unique=True, max_length=100)
     created_at = models.DateTimeField(auto_now_add=True, editable=False)

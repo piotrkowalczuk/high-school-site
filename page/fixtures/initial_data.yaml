@@ -1,0 +1,35 @@
+- model: page.category
+  pk: 1
+  fields:
+    name: Informacje
+    description: |
+        Ogólne informacje z życia szkoły.
+    is_published: 1    
+- model: page.category
+  pk: 2
+  fields:
+    name: Szkoła
+    description: |
+        Informacje dotyczące stricte szkoły.
+    is_published: 1
+- model: page.category
+  pk: 3
+  fields:
+    name: Uczniowie
+    description: |
+        Informacje skierowane do uczniów.   
+    is_published: 1
+- model: page.category
+  pk: 4
+  fields:
+    name: Rodzice
+    description: |
+        Informacje skierowane do rodziców uczniów. 
+    is_published: 1 
+- model: page.category
+  pk: 5
+  fields:
+    name: Kandydaci
+    description: |
+        Informacje skierowane do kandydatów.
+    is_published: 1

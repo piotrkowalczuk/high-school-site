@@ -1,4 +1,4 @@
-<div class="col-lg-8" style="text-align: center;">
+<div class="col-lg-8 col-sm-12" style="text-align: center;">
   <div id="lz-carousel" class="carousel slide">
 
     <!-- Wrapper for slides -->
@@ -14,7 +14,7 @@
     </div>
   </div>
 </div>
-<div class="col-lg-4">
+<div class="col-lg-4 col-sm-12">
   <div class="list-group lz-carousel-navi">
     {% for news in news_pinned %}
       <a href="#" data-target="#lz-carousel" data-slide-to="{{forloop.counter0}}" class="lz-carousel-navi-item list-group-item {{ forloop.counter0|yesno:' ,active' }}">

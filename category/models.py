@@ -18,7 +18,6 @@ class Category(models.Model):
         default=False,
         verbose_name='Czy jest widoczna'
     )
-    slug = models.SlugField(unique=True, max_length=100)
 
     def __unicode__(self):
         return self.name

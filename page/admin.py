@@ -1,17 +1,16 @@
-from news.models import News, Category
+from page.models import Page, Category
 from django.contrib import admin
-from news.forms import NewsForm
+from page.forms import PageForm
 
 
-class NewsAdmin(admin.ModelAdmin):
-    form = NewsForm
+class PageAdmin(admin.ModelAdmin):
+    form = PageForm
     prepopulated_fields = {"slug": ("title",)}
     list_display = (
         'title',
         'autor',
         'category',
         'is_published',
-        'is_pinned',
         'created_at',
         'updated_at',
         'slug'
@@ -22,8 +21,8 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'name',
         'description',
-        'is_published',
+        'is_published'
     )
 
 admin.site.register(Category, CategoryAdmin)
-admin.site.register(News, NewsAdmin)
+admin.site.register(Page, PageAdmin)
