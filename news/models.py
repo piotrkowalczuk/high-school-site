@@ -7,6 +7,12 @@ from news.managers import NewsManager
 from gallery.models import Gallery
 
 
+def image_filepath(instance, filename):
+    ext = filename.split('.')[-1]
+    filename = "%s.%s" % (uuid.uuid4(), ext)
+    return '/'.join(['uploads/news', str(instance.id), filename])
+
+
 class Category(Category):
     pass
 
@@ -52,6 +58,7 @@ class News(models.Model):
         null=True,
         related_name='NewsGallery'
     )
+    image = models.ImageField(upload_to=image_filepath)
     slug = models.SlugField(unique=True, max_length=100)
     created_at = models.DateTimeField(auto_now_add=True, editable=False)
     updated_at = models.DateTimeField(auto_now=True)

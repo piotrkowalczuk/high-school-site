@@ -11,7 +11,7 @@ import uuid
 def image_filepath(instance, filename):
     ext = filename.split('.')[-1]
     filename = "%s.%s" % (uuid.uuid4(), ext)
-    return '/'.join(['uploads/gallery/', str(instance.gallery.id), filename])
+    return '/'.join(['uploads/gallery', str(instance.gallery.id), filename])
 
 
 def thumb_filepath(instance, filename):

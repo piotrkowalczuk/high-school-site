@@ -5,7 +5,7 @@
     <div class="carousel-inner">
       {% for news in news_pinned %}
         <div id="{{ forloop.counter0 }}" class="item {{ forloop.counter0|yesno:' ,active' }}">
-          <img src="{{ STATIC_URL }}images/carusele-background-test.jpg" alt="...">
+          <img src="/media/{{ news.image }}" alt="...">
           <div class="carousel-caption">
             <h1>{{ news.title }}</h1>
           </div>
