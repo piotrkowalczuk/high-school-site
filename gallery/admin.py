@@ -5,6 +5,10 @@ from gallery.forms import PhotoInlineForm
 
 
 class PhotoAdmin(admin.ModelAdmin):
+    list_display = (
+        'description',
+        'thumbnail_preview'
+    )
     readonly_fields = ('image_preview',)
     fields = (
         'description',
@@ -15,6 +19,9 @@ class PhotoAdmin(admin.ModelAdmin):
 
     def image_preview(self, obj):
         return mark_safe("""<img src="/media/%s" />""" % obj.image)
+
+    def thumbnail_preview(self, obj):
+        return mark_safe("""<img src="/media/%s" />""" % obj.thumbnail)
 
 
 class PhotoInline(admin.TabularInline):

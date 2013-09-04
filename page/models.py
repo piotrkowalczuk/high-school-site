@@ -7,10 +7,6 @@ from page.managers import PageManager
 from gallery.models import Gallery
 
 
-class Category(Category):
-    pass
-
-
 class Page(models.Model):
 
     objects = PageManager()

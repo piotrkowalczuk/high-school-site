@@ -16,13 +16,4 @@ class PageAdmin(admin.ModelAdmin):
         'slug'
     )
 
-
-class CategoryAdmin(admin.ModelAdmin):
-    list_display = (
-        'name',
-        'description',
-        'is_published'
-    )
-
-admin.site.register(Category, CategoryAdmin)
 admin.site.register(Page, PageAdmin)

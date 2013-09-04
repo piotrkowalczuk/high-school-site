@@ -1,3 +1,4 @@
+{% load thumbnail %}
 <div class="col-lg-8 col-sm-12" style="text-align: center;">
   <div id="lz-carousel" class="carousel slide">
 
@@ -5,9 +6,9 @@
     <div class="carousel-inner">
       {% for news in news_pinned %}
         <div id="{{ forloop.counter0 }}" class="item {{ forloop.counter0|yesno:' ,active' }}">
-          <img src="/media/{{ news.image }}" alt="...">
+          <img src="{{ news.image|thumbnail_url:'carousel_full' }}" alt="" />
           <div class="carousel-caption">
-            <h1>{{ news.title }}</h1>
+            {{ news.content_intro }}
           </div>
         </div>
       {% endfor %}
@@ -18,8 +19,15 @@
   <div class="list-group lz-carousel-navi">
     {% for news in news_pinned %}
       <a href="#" data-target="#lz-carousel" data-slide-to="{{forloop.counter0}}" class="lz-carousel-navi-item list-group-item {{ forloop.counter0|yesno:' ,active' }}">
-        <h4 class="list-group-item-heading">{{ news.title }}</h4>
-        <p class="list-group-item-text">{{ news.content_intro|truncatechars:120 }}</p>
+        <span class="carousel-thumb pull-left">
+          <img src="{{ news.image|thumbnail_url:'carousel_thumb' }}" alt="" />
+        </span>
+        <h4 class="list-group-item-heading">
+          <span class="ui-carousel-link" data-href="{% url 'news_show' slug=news.slug %}">
+            {{ news.title }}
+          </span>
+        </h4>
+        <p class="list-group-item-text">{{ news.content_intro|truncatechars:70 }}</p>
       </a>
     {% endfor %}
   </div>

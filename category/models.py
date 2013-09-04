@@ -5,7 +5,6 @@ from django.db import models
 class Category(models.Model):
 
     class Meta:
-        abstract = True
         verbose_name = "kategoria"
         verbose_name_plural = "kategorie"
 

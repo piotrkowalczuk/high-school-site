@@ -12,88 +12,55 @@
 </head>
 
 <body>
-    {% block navbar %}
-        <div class="navbar navbar-inverse navbar-custom">
+    <div class="top-background">
+        {% block navbar %}
+            <div class="navbar navbar-inverse navbar-custom">
+                <div class="container">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Strona Główna</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav pull-right">
+                        <li class="active"><a href="#">Kalendarz szkolny</a></li>
+                        <li><a href="#">Plan Lekcji</a></li>
+                        <li><a href="#">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+        {% endblock %}
+        <div class="lz-header">
             <div class="container">
-                <ul class="nav navbar-nav">
-                    <li><a href="#">Strona Główna</a></li>
-                </ul>
-                <ul class="nav navbar-nav pull-right">
-                    <li class="active"><a href="#">Kalendarz szkolny</a></li>
-                    <li><a href="#">Plan Lekcji</a></li>
-                    <li><a href="#">Kontakt</a></li>
-                </ul>
+                <div class="row">
+                    <div class="header col-lg-12" style="text-align:center;">
+                        <img src="{{ STATIC_URL }}images/header.jpg" class="visible-lg" alt="Liceum Ogólnokształcące imienia Bolesława Prusa w Żarach" />
+                        <img src="{{ STATIC_URL }}images/header.jpg" class="visible-md" alt="Liceum Ogólnokształcące imienia Bolesława Prusa w Żarach" />
+                        <img style="margin: 0 auto;" src="{{ STATIC_URL }}images/small_header.png" class="visible-sm" alt=
+                        "Liceum Ogólnokształcące imienia Bolesława Prusa w Żarach" />
+                        <img style="margin: 0 auto;" src="{{ STATIC_URL }}images/super_small_header.png" class="visible-xs" alt=
+                        "Liceum Ogólnokształcące imienia Bolesława Prusa w Żarach" />
+                    </div>
+                </div>    
             </div>
         </div>
-    {% endblock %}
-    <div class="lz-header">
-        <div class="container">
-            <div class="row">
-                <div class="header col-lg-12"></div>
-            </div>    
+        <div class="lz-menu">
+            <div class="container" style="padding: 0px;">
+                {% block top_menu %}{% endblock %}
+            </div>
         </div>
-    </div>
-    <div class="lz-menu">
-        <div class="container" style="padding: 0px;">
-            {% block top_menu %}{% endblock %}
-        </div>
-    </div>
-    <div class="lz-content">
-    	<div class="container">
-    		{% block content %}{% endblock %}
+        <div class="lz-content">
+        	<div class="container">
+        		{% block content %}{% endblock %}
+            </div>
         </div>
     </div>
     <div class="lz-footer">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="panel panel-default">
-                        <!-- Default panel contents -->
-                        <div class="panel-heading">Panel heading</div>
-                        <!-- List group -->
-                        <ul class="list-group">
-                            <li class="list-group-item">Cras justo odio</li>
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                            <li class="list-group-item">Morbi leo risus</li>
-                            <li class="list-group-item">Porta ac consectetur ac</li>
-                            <li class="list-group-item">Vestibulum at eros</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="panel panel-default">
-                        <!-- Default panel contents -->
-                        <div class="panel-heading">Panel heading</div>
-                        <!-- List group -->
-                        <ul class="list-group">
-                            <li class="list-group-item">Cras justo odio</li>
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                            <li class="list-group-item">Morbi leo risus</li>
-                            <li class="list-group-item">Porta ac consectetur ac</li>
-                            <li class="list-group-item">Vestibulum at eros</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="panel panel-default">
-                        <!-- Default panel contents -->
-                        <div class="panel-heading">Panel heading</div>
-                        <!-- List group -->
-                        <ul class="list-group">
-                            <li class="list-group-item">Cras justo odio</li>
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                            <li class="list-group-item">Morbi leo risus</li>
-                            <li class="list-group-item">Porta ac consectetur ac</li>
-                            <li class="list-group-item">Vestibulum at eros</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>    
+            {% include 'common/footer.html'%}     
         </div>
     </div>
     <!-- scripts -->
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="{{ STATIC_URL }}vendors/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="{{ STATIC_URL }}vendors/bootstrap-hover-dropdown/twitter-bootstrap-hover-dropdown.min.js"></script>
     <script src="{{ STATIC_URL }}vendors/blueimp/js/blueimp-gallery.min.js"></script>
     <script src="{{ STATIC_URL }}scripts/main.js"></script>
 </body>

@@ -1,0 +1,35 @@
+- model: category.category
+  pk: 1
+  fields:
+    is_published: 1
+    name: Informacje
+    description: |
+        Informacje ogólne.
+- model: category.category
+  pk: 2
+  fields:
+    is_published: 1
+    name: Szkoła
+    description: |
+        Informacje stricte na temat szkoły.
+- model: category.category
+  pk: 3
+  fields:
+    is_published: 1
+    name: Uczniowie
+    description: |
+        Komunikaty skierowane do uczniów.
+- model: category.category
+  pk: 4
+  fields:
+    is_published: 1
+    name: Rodzice
+    description: |
+        Komunikaty skierowane do rodziców.
+- model: category.category
+  pk: 5
+  fields:
+    is_published: 1
+    name: Kandydaci
+    description: |
+        Komunikaty skierowane do kandydatów.

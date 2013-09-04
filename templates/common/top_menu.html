@@ -2,10 +2,17 @@
     <li class="col-lg-2 col-sm-2 col-xs-6"><a href="{% url 'news_list' %}">Aktualności</a></li>
     {% for category in menu %}
         <li class="col-lg-2 col-sm-2 col-xs-6 dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ category.name }}</a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+                {{ category.name }}
+            </a>
             <ul class="dropdown-menu lz-menu-sub">
+                <li>
+                    <a href="{% url 'news_filter' category_name=category.name %}">Aktualności</a>
+                </li>                
                 {% for page in category.page_set.all %}
-                    <li><a href="{% url 'page_show' slug=page.slug %}">{{ page.title }}</a></li>
+                    <li>
+                        <a href="{% url 'page_show' slug=page.slug %}">{{ page.title }}</a>
+                    </li>
                 {% endfor %} 
             </ul>
         </li>

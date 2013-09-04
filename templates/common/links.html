@@ -1,0 +1,10 @@
+<div class="panel panel-default">
+    <div class="panel-heading"><strong>Linki</strong></div>
+    <div class="list-group">
+        {% for link in links %}
+            <a href="{{ link.url }}" class="list-group-item">
+                {{ link.name }}
+            </a>
+        {% endfor %}
+    </div>
+</div>

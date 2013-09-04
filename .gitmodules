@@ -7,3 +7,6 @@
 [submodule "static/vendors/blueimp"]
 	path = static/vendors/blueimp
 	url = https://github.com/blueimp/Gallery.git
+[submodule "static/vendors/bootstrap-hover-dropdown"]
+	path = static/vendors/bootstrap-hover-dropdown
+	url = https://github.com/CWSpear/twitter-bootstrap-hover-dropdown.git

@@ -5,16 +5,16 @@ from category.models import Category
 from semester.models import Semester
 from news.managers import NewsManager
 from gallery.models import Gallery
+import uuid
+import image.thumbnails as thumbnails
+from cStringIO import StringIO
+from PIL import Image
 
 
 def image_filepath(instance, filename):
     ext = filename.split('.')[-1]
     filename = "%s.%s" % (uuid.uuid4(), ext)
     return '/'.join(['uploads/news', str(instance.id), filename])
-
-
-class Category(Category):
-    pass
 
 
 class News(models.Model):
@@ -65,3 +65,7 @@ class News(models.Model):
 
     def __unicode__(self):
         return self.title
+
+    def save(self):
+
+        super(News, self).save()
