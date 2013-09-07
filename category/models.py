@@ -1,13 +1,23 @@
 # -*- coding: utf-8 -*-
 from django.db import models
+from category.managers import CategoryManager
 
 
 class Category(models.Model):
+
+    objects = CategoryManager()
 
     class Meta:
         verbose_name = "kategoria"
         verbose_name_plural = "kategorie"
 
+    parent = models.ForeignKey(
+        "self",
+        null=True,
+        blank=True,
+        default=None,
+        related_name="childrens"
+    )
     name = models.CharField(
         max_length=100,
         verbose_name='Nazwa'

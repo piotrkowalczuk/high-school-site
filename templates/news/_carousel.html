@@ -8,7 +8,7 @@
         <div id="{{ forloop.counter0 }}" class="item {{ forloop.counter0|yesno:' ,active' }}">
           <img src="{{ news.image|thumbnail_url:'carousel_full' }}" alt="" />
           <div class="carousel-caption">
-            {{ news.content_intro }}
+            {{ news.title }}
           </div>
         </div>
       {% endfor %}
@@ -19,15 +19,16 @@
   <div class="list-group lz-carousel-navi">
     {% for news in news_pinned %}
       <a href="#" data-target="#lz-carousel" data-slide-to="{{forloop.counter0}}" class="lz-carousel-navi-item list-group-item {{ forloop.counter0|yesno:' ,active' }}">
-        <span class="carousel-thumb pull-left">
-          <img src="{{ news.image|thumbnail_url:'carousel_thumb' }}" alt="" />
-        </span>
+
         <h4 class="list-group-item-heading">
-          <span class="ui-carousel-link" data-href="{% url 'news_show' slug=news.slug %}">
-            {{ news.title }}
-          </span>
+          {{ news.title }}
         </h4>
-        <p class="list-group-item-text">{{ news.content_intro|truncatechars:70 }}</p>
+        <p class="list-group-item-text">
+          {{ news.content_intro|truncatechars:70 }}
+          <span class="ui-carousel-link carousel-link" data-href="{% url 'news_show' slug=news.slug %}">
+            więcej »
+          </span>
+        </p>
       </a>
     {% endfor %}
   </div>

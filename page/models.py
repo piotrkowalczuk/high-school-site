@@ -19,7 +19,11 @@ class Page(models.Model):
         max_length=255,
         verbose_name='Tytuł'
     )
-    content = models.TextField(verbose_name='Treść')
+    content = models.TextField(
+        null=True,
+        blank=True,
+        verbose_name='Treść'
+    )
     autor = models.ForeignKey(
         User,
         verbose_name='Autor',

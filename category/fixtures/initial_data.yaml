@@ -33,3 +33,19 @@
     name: Kandydaci
     description: |
         Komunikaty skierowane do kandydatów.
+- model: category.category
+  pk: 6
+  fields:
+    is_published: 1
+    parent: 1
+    name: Sport
+    description: |
+        Informacje sportowe.
+- model: category.category
+  pk: 7
+  fields:
+    is_published: 1
+    parent: 4
+    name: Komunikaty
+    description: |
+        Komunikaty

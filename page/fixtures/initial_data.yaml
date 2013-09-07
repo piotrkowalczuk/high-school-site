@@ -1,0 +1,305 @@
+# Informacje
+- model: page.page
+  pk: 1
+  fields:
+    is_published: 1
+    category: 1
+    autor: 1
+    title: Kadra
+    slug: kadra
+    created_at: 1970-01-01
+    updated_at: 1970-01-01
+- model: page.page
+  pk: 2
+  fields:
+    is_published: 1
+    category: 1
+    autor: 1
+    title: Wychowawcy
+    slug: wychowawcy
+    created_at: 1970-01-01
+    updated_at: 1970-01-01
+- model: page.page
+  pk: 3
+  fields:
+    is_published: 1
+    category: 1
+    autor: 1
+    title: Przydiał zadań
+    slug: przydzial-zadan
+    created_at: 1970-01-01
+    updated_at: 1970-01-01
+- model: page.page
+  pk: 4
+  fields:
+    is_published: 1
+    category: 1
+    autor: 1
+    title: Strony nauczycieli
+    slug: strony-nauczycieli
+    created_at: 1970-01-01
+    updated_at: 1970-01-01
+- model: page.page
+  pk: 5
+  fields:
+    is_published: 1
+    category: 1
+    autor: 1
+    title: Biblioteka
+    slug: biblioteka
+    created_at: 1970-01-01
+    updated_at: 1970-01-01
+- model: page.page
+  pk: 6
+  fields:
+    is_published: 1
+    category: 1
+    autor: 1
+    title: Pedagog
+    slug: pedagog
+    created_at: 1970-01-01
+    updated_at: 1970-01-01
+- model: page.page
+  pk: 7
+  fields:
+    is_published: 1
+    category: 1
+    autor: 1
+    title: Pielęgniarka
+    slug:  pielegniarka
+    created_at: 1970-01-01
+    updated_at: 1970-01-01
+- model: page.page
+  pk: 8
+  fields:
+    is_published: 1
+    category: 1
+    autor: 1
+    title: Administracja
+    slug: administracja
+    created_at: 1970-01-01
+    updated_at: 1970-01-01
+# Szkoła
+- model: page.page
+  pk: 9
+  fields:
+    is_published: 1
+    category: 2
+    autor: 1
+    title: Historia szkoły
+    slug: historia-szkoly
+    created_at: 1970-01-01
+    updated_at: 1970-01-01
+- model: page.page
+  pk: 10
+  fields:
+    is_published: 1
+    category: 2
+    autor: 1
+    title: Patron
+    slug: patron
+    created_at: 1970-01-01
+    updated_at: 1970-01-01
+- model: page.page
+  pk: 11
+  fields:
+    is_published: 1
+    category: 2
+    autor: 1
+    title: Statut szkoły
+    slug: statut-szkoly
+    created_at: 1970-01-01
+    updated_at: 1970-01-01
+- model: page.page
+  pk: 12
+  fields:
+    is_published: 1
+    category: 2
+    autor: 1
+    title: Osiągnięcia
+    slug: osiagniecia
+    created_at: 1970-01-01
+    updated_at: 1970-01-01
+- model: page.page
+  pk: 13
+  fields:
+    is_published: 1
+    category: 2
+    autor: 1
+    title: PCK
+    slug: pck
+    created_at: 1970-01-01
+    updated_at: 1970-01-01
+- model: page.page
+  pk: 14
+  fields:
+    is_published: 1
+    category: 2
+    autor: 1
+    title: Wolontariat
+    slug: wolontariat
+    created_at: 1970-01-01
+    updated_at: 1970-01-01
+- model: page.page
+  pk: 15
+  fields:
+    is_published: 1
+    category: 2
+    autor: 1
+    title: Dokumenty
+    slug: dokumenty
+    created_at: 1970-01-01
+    updated_at: 1970-01-01
+# Uczniowie
+- model: page.page
+  pk: 16
+  fields:
+    is_published: 1
+    category: 3
+    autor: 1
+    title: Plan lekcji
+    slug: plan-lekcji
+    created_at: 1970-01-01
+    updated_at: 1970-01-01
+- model: page.page
+  pk: 17
+  fields:
+    is_published: 1
+    category: 3
+    autor: 1
+    title: Materiały dla ucznia
+    slug: materialy-dla-ucznia
+    created_at: 1970-01-01
+    updated_at: 1970-01-01
+- model: page.page
+  pk: 18
+  fields:
+    is_published: 1
+    category: 3
+    autor: 1
+    title: Podręczniki
+    slug: podreczniki
+    created_at: 1970-01-01
+    updated_at: 1970-01-01  
+- model: page.page
+  pk: 19
+  fields:
+    is_published: 1
+    category: 3
+    autor: 1
+    title: Samorząd
+    slug: samorzad 
+    created_at: 1970-01-01
+    updated_at: 1970-01-01
+- model: page.page
+  pk: 20
+  fields:
+    is_published: 1
+    category: 3
+    autor: 1
+    title: Konsultacje
+    slug: konsultacje
+    created_at: 1970-01-01
+    updated_at: 1970-01-01
+- model: page.page
+  pk: 21
+  fields:
+    is_published: 1
+    category: 3
+    autor: 1
+    title: Koła zaintereowań
+    slug: kola-zainteresowan
+    created_at: 1970-01-01
+    updated_at: 1970-01-01
+- model: page.page
+  pk: 22
+  fields:
+    is_published: 1
+    category: 3
+    autor: 1
+    title: Matura
+    slug: matura
+    created_at: 1970-01-01
+    updated_at: 1970-01-01    
+- model: page.page
+  pk: 23
+  fields:
+    is_published: 1
+    category: 3
+    autor: 1
+    title: Konkursy i olimpiady
+    slug: konkursy-i-olimpiady
+    created_at: 1970-01-01
+    updated_at: 1970-01-01   
+- model: page.page
+  pk: 24
+  fields:
+    is_published: 1
+    category: 3
+    autor: 1
+    title: Zajęcia pozalekcyjne
+    slug: zajecia-pozalekcyjne
+    created_at: 1970-01-01
+    updated_at: 1970-01-01
+# Rodzice
+- model: page.page
+  pk: 25
+  fields:
+    is_published: 1
+    category: 4
+    autor: 1
+    title: Rada rodziców
+    slug: rada-rodzicow
+    created_at: 1970-01-01
+    updated_at: 1970-01-01
+- model: page.page
+  pk: 26
+  fields:
+    is_published: 1
+    category: 4
+    autor: 1
+    title: Zebrania
+    slug: zebrania
+    created_at: 1970-01-01
+    updated_at: 1970-01-01    
+# Kandydaci
+- model: page.page
+  pk: 27
+  fields:
+    is_published: 1
+    category: 5
+    autor: 1
+    title: Informacje ogólne
+    slug: informacje-ogolne
+    created_at: 1970-01-01
+    updated_at: 1970-01-01
+- model: page.page
+  pk: 28
+  fields:
+    is_published: 1
+    category: 5
+    autor: 1
+    title: Warunki przyjęcia
+    slug: warunki-przyjecia
+    created_at: 1970-01-01
+    updated_at: 1970-01-01
+- model: page.page
+  pk: 28
+  fields:
+    is_published: 1
+    category: 5
+    autor: 1
+    title: Oferta szkoły
+    slug: oferta-szkoly
+    created_at: 1970-01-01
+    updated_at: 1970-01-01
+- model: page.page
+  pk: 29
+  fields:
+    is_published: 1
+    category: 5
+    autor: 1
+    title: Druki do pobrania
+    slug: druki-do-pobrania
+    created_at: 1970-01-01
+    updated_at: 1970-01-01

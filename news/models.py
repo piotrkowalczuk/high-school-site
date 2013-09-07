@@ -58,7 +58,12 @@ class News(models.Model):
         null=True,
         related_name='NewsGallery'
     )
-    image = models.ImageField(upload_to=image_filepath)
+    image = models.ImageField(
+        upload_to=image_filepath,
+        null=True,
+        blank=True,
+        default=None
+    )
     slug = models.SlugField(unique=True, max_length=100)
     created_at = models.DateTimeField(auto_now_add=True, editable=False)
     updated_at = models.DateTimeField(auto_now=True)

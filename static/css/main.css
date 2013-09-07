@@ -308,3 +308,10 @@ ul.dropdown-menu.lz-menu-sub a {
 .footer-copyrights a {
     color: #97B0C5;
 }
+
+.carousel-link {
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}

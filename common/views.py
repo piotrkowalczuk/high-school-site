@@ -4,6 +4,6 @@ from page.models import Category
 
 class BaseView(View):
     def get_menu(self):
-        menu = Category.objects.all()
+        menu = Category.objects.get_mains()
 
         return menu

@@ -3,11 +3,15 @@
     <h4><a href="{% url 'news_show' slug=news.slug %}">{{ news.title }}</a></h4>
     <span><a href="{% url 'news_filter' category_name=news.category.name %}">{{ news.category.name }}</a> | {{ news.created_at|date:"d.m.Y" }}</span>
     <p>
-        <a href="{% url 'news_show' slug=news.slug %}">
-            <img class="thumbnail" style="float: left; margin: 5px 10px 0 0px;" src="{{ news.image|thumbnail_url:'news_thumb' }}" alt="" />
-        </a>
+        {% if news.image %}
+            <a href="{% url 'news_show' slug=news.slug %}">
+                <img class="thumbnail" style="float: left; margin: 5px 10px 0 0px;" src="{{ news.image|thumbnail_url:'news_thumb' }}" alt="" />
+            </a>
+        {% endif %}
         {{ news.content_intro }}
     </p>
-    <a href="{% url 'news_show' slug=news.slug %}" class="btn btn-link btn-xs btn-more pull-right">więcej »</a>
+    <a href="{% url 'news_show' slug=news.slug %}" class="btn btn-link btn-xs btn-more pull-right">
+        więcej »
+    </a>
     <div style="clear:both;"></div>
 </div>
