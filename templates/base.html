@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="{{ STATIC_URL }}vendors/blueimp/css/blueimp-gallery.min.css">
         <link href="{{ STATIC_URL }}css/main.css" rel="stylesheet" type="text/css" media="screen" />
     {% endblock %}
-    <title>{% block title %}Strona I Liceum w Żarach{% endblock %}</title>
+    <title>{% block title %}I Liceum Ogólnokształcące w Żarach{% endblock %}</title>
 </head>
 
 <body>
@@ -17,12 +17,12 @@
             <div class="navbar navbar-inverse navbar-custom">
                 <div class="container">
                     <ul class="nav navbar-nav">
-                        <li><a href="#">Strona Główna</a></li>
+                        <li><a href="{% url 'news_list' %}">Strona Główna</a></li>
                     </ul>
                     <ul class="nav navbar-nav pull-right">
-                        <li class="active"><a href="#">Kalendarz szkolny</a></li>
+                        <li><a href="#">Kalendarz szkolny</a></li>
                         <li><a href="#">Plan Lekcji</a></li>
-                        <li><a href="#">Kontakt</a></li>
+                        <li><a href="{% url 'page_show' slug='kontakt' %}">Kontakt</a></li>
                     </ul>
                 </div>
             </div>
@@ -31,12 +31,14 @@
             <div class="container">
                 <div class="row">
                     <div class="header col-lg-12" style="text-align:center;">
-                        <img src="{{ STATIC_URL }}images/header.jpg" class="visible-lg" alt="Liceum Ogólnokształcące imienia Bolesława Prusa w Żarach" />
-                        <img src="{{ STATIC_URL }}images/header.jpg" class="visible-md" alt="Liceum Ogólnokształcące imienia Bolesława Prusa w Żarach" />
-                        <img style="margin: 0 auto;" src="{{ STATIC_URL }}images/small_header.png" class="visible-sm" alt=
-                        "Liceum Ogólnokształcące imienia Bolesława Prusa w Żarach" />
-                        <img style="margin: 0 auto;" src="{{ STATIC_URL }}images/super_small_header.png" class="visible-xs" alt=
-                        "Liceum Ogólnokształcące imienia Bolesława Prusa w Żarach" />
+                        <a href="{% url 'news_list' %}">
+                            <img src="{{ STATIC_URL }}images/header.jpg" class="visible-lg" alt="Liceum Ogólnokształcące imienia Bolesława Prusa w Żarach" />
+                            <img src="{{ STATIC_URL }}images/header.jpg" class="visible-md" alt="Liceum Ogólnokształcące imienia Bolesława Prusa w Żarach" />
+                            <img style="margin: 0 auto;" src="{{ STATIC_URL }}images/small_header.png" class="visible-sm" alt=
+                            "Liceum Ogólnokształcące imienia Bolesława Prusa w Żarach" />
+                            <img style="margin: 0 auto;" src="{{ STATIC_URL }}images/super_small_header.png" class="visible-xs" alt=
+                            "Liceum Ogólnokształcące imienia Bolesława Prusa w Żarach" />
+                        </a>
                     </div>
                 </div>    
             </div>

@@ -303,3 +303,13 @@
     slug: druki-do-pobrania
     created_at: 1970-01-01
     updated_at: 1970-01-01
+- model: page.page
+  pk: 30
+  fields:
+    is_published: 1
+    category: 1
+    autor: 1
+    title: Kontakt
+    slug: kontakt
+    created_at: 1970-01-01
+    updated_at: 1970-01-01
