@@ -86,8 +86,6 @@ body {
 .lz-menu-nam li.dropdown a,
 .nav-pills > li.dropdown a,
 .nav-pills > li a{
-    border: 1px solid #333366;
-    border-width: 0px 0px 0px 1px;
     border-radius: 0px;
     margin: 0px;
     padding:0px;
@@ -95,12 +93,14 @@ body {
     line-height: 46px;
 }
 
-.nav-pills li:first-child a {
-    border-width: 0px 0px 0px 0px;
+.nav-pills.lz-menu-nav > li {
+    border: 1px solid #333366;
+    border-width: 0px 0px 0px 1px;
 }
 
-.nav-pills li:last-child a{
-    border-width: 0px 0px 0px 1px;
+
+ul.lz-menu-nav > li:first-child{
+    border-width: 0px 0px 0px 0px;
 }
 
 .lz-menu-nav li a:hover,
@@ -125,24 +125,12 @@ body {
 }
 
 ul.dropdown-menu.lz-menu-sub {
-    border: 1px solid #333366;
-    border-width: 1px 1px 1px 1px;
+    border-width: 0px;
     border-radius: 0px;
 }
 
 @media (min-width: 1200px) {
-/*    .nav-pills li,
-    .nav-pills li a {
-        width: 160px;
-    }
-
-    .nav-pills .lz-menu-sub,
-    .nav-pills .lz-menu-sub li,
-    .nav-pills .lz-menu-sub a {
-        width: 159px;
-    }*/
     ul.dropdown-menu.lz-menu-sub {
-        width: 160px;
     }
 }
 
