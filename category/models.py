@@ -30,3 +30,6 @@ class Category(models.Model):
 
     def __unicode__(self):
         return self.name
+
+    def get_all_published(self):
+        return self.page_set.filter(is_published=True)
