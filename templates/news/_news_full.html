@@ -3,19 +3,27 @@
     <span>{{ news.category.name }} | {{ news.created_at }}</span>
     <p>{{ news.content_body|safe }}</p>
 </div>
+
 {% if news.gallery %}
     {% if news.gallery.photo_set.all %}
         <br/><br/>
         <h4>Zdjęcia:</h4>
-        <div id="links" class="row">
-            {% for photo in news.gallery.photo_set.all %}
-                <div class="col-sm-6 col-md-3">
+        {% for photo in news.gallery.photo_set.all %}
+            {% if forloop.first %}
+                <div id="links" class="row">
+            {% endif %}
+                <div class="col-sm-6 col-md-4">
                     <a href="/media/{{ photo.image }}" class="thumbnail">
                         <img src="/media/{{ photo.thumbnail }}" alt="">
                     </a>
                 </div>
-            {% endfor %}
-        </div>
+            {% if forloop.last or forloop.counter|divisibleby:3 %}
+                </div>
+            {% endif %}         
+            {% if forloop.counter|divisibleby:3 and not forloop.last %}
+                <div id="links" class="row">
+            {% endif %}   
+        {% endfor %}
     {% endif %}
 {% endif %}
 <!-- The Gallery as lightbox dialog, should be a child element of the document body -->
