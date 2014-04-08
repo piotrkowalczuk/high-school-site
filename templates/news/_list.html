@@ -10,17 +10,17 @@
 
     <ul class="pager">
         <li class="next {% if not news_list.has_previous %}disabled{% endif %}">
-            <a href="{% if news_list.has_previous %}?page={{ news_list.previous_page_number }}{% else %}#{% endif %}">Następna strona &rarr;</a>
+            <a href="{% if news_list.has_previous %}?page={{ news_list.previous_page_number }}{% else %}#{% endif %}">Następna &rarr;</a>
         </li>  
         
-        <li>
+        <li class="hidden-xs">
             <span class="current">
                 Strona {{ news_list.number }} z {{ news_list.paginator.num_pages }}
             </span>
         </li>
 
         <li class="previous {% if not news_list.has_next %}disabled{% endif %}">
-            <a href="{% if news_list.has_next %}?page={{ news_list.next_page_number }}{% else %}#{% endif %}">&larr; Poprzednia strona</a>
+            <a href="{% if news_list.has_next %}?page={{ news_list.next_page_number }}{% else %}#{% endif %}">&larr; Poprzednia</a>
         </li>
 
     </ul>
