@@ -1,0 +1,13 @@
+{% extends "news/index.html" %}
+
+{% block carousel %}
+{% endblock %}  
+{% block breadcrumb %}
+    <ol class="breadcrumb">
+        <li><a href="{% url 'news_list' %}">Strona Główna</a></li>
+        <li class="active">Galeria</li>
+    </ol>
+{% endblock %}  
+{% block left_column %}
+     {% include 'gallery/_list.html' with galleries=galleries %}   
+{% endblock %}

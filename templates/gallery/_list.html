@@ -1,0 +1,44 @@
+{% load thumbnail %}
+<div class="lz-news">
+    <h1>Galerie</h1>
+</div>
+<div id="links">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            {% for gallery in galleries %}
+                {% if not forloop.counter|divisibleby:2 %}
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="thumbnail">
+                                <a href="{% url 'gallery_show' id=gallery.id %}">
+                                    <img class="img-responsive" src="{{ gallery.photo_set.all.0.image | thumbnail_url:'gallery_thumb' }}" alt="">
+                                </a>
+                                <h4 class="text-center">{{ gallery.name }}</h4>
+                                <p class="text-justify">{{ gallery.description }}</p>
+                            </div>
+                        </div>
+                        <br/>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            {% for gallery in galleries %}
+                {% if forloop.counter|divisibleby:2 %}
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="thumbnail">
+                                <a href="{% url 'gallery_show' id=gallery.id %}">
+                                    <img class="img-responsive" src="{{ gallery.photo_set.all.0.image | thumbnail_url:'gallery_thumb' }}" alt="">
+                                </a>
+                                <h4 class="text-center">{{ gallery.name }}</h4>
+                                <p class="text-justify">{{ gallery.description }}</p>
+                            </div>  
+                        </div>
+                    </div>
+                    <br/>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

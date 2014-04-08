@@ -1,5 +1,8 @@
 {% extends "base.html" %}
 
+{% block collapse_menu %}
+    {% include 'common/collapse_menu.html' with menu=menu %}
+{% endblock %}
 {% block top_menu %}
     {% include 'common/top_menu.html' with menu=menu %}
 {% endblock %}
@@ -24,6 +27,7 @@
             {% block right_column %}
                 {% include 'common/address.html' %}
                 {% include 'common/links.html' with links=links %}
+                {% include 'common/address.html' %}
             {% endblock %}
         </div>
     </div>

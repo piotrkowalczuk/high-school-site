@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-from django.db import models
+from gallery.managers import GalleryManager
 from user.models import User
+from django.db import models
 from PIL import Image
 from cStringIO import StringIO
 from django.core.files.uploadedfile import SimpleUploadedFile
 import os
 import uuid
-
 
 def image_filepath(instance, filename):
     ext = filename.split('.')[-1]
@@ -24,6 +24,8 @@ class Gallery(models.Model):
     class Meta:
         verbose_name = "galeria"
         verbose_name_plural = "galerie"
+
+    objects = GalleryManager()
 
     name = models.CharField(max_length=255)
     description = models.TextField(blank=True, null=True)

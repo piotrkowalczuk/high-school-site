@@ -8,6 +8,7 @@ urlpatterns = patterns(
     '',
     url(r'', include('news.urls')),
     url(r'', include('page.urls')),
+    url(r'', include('gallery.urls')),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^grappelli/', include('grappelli.urls')),
     url(r'^tinymce/', include('tinymce.urls')),

@@ -1,6 +1,7 @@
 from common.views import BaseView
 from django.shortcuts import render
 from news.models import News
+from event.models import Event
 from links.models import Link
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
@@ -9,8 +10,9 @@ class NewsIndex(BaseView):
     def get(self, request):
         news_not_pinned = News.objects.get_not_pinned()
         news_pinned = News.objects.get_pinned()[:3]
+        events = Event.objects.get_published()[:5]
         links = Link.objects.get_published()
-        paginator = Paginator(news_not_pinned, 8)
+        paginator = Paginator(news_not_pinned, 1)
 
         try:
             news_list = paginator.page(request.GET.get('page', 1))
@@ -26,7 +28,8 @@ class NewsIndex(BaseView):
                 'news_list': news_list,
                 'news_pinned': news_pinned,
                 'links': links,
-                'menu': self.get_menu()
+                'menu': self.get_menu(),
+                'events': events
             }
         )
 

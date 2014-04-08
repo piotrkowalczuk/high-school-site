@@ -1,0 +1,32 @@
+<div class="collapse navbar-collapse" id="collapse-menu">
+    <ul class="nav navbar-nav visible-xs">
+        <li><a href="{% url 'news_list' %}">Strona Główna</a></li>
+        <li><a href="{% url 'page_show' slug='kontakt' %}">Kontakt</a></li>
+        {% for category in menu %}
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ category.name }} <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    {% if category.name == "Szkoła" %}
+                        <li>
+                            <a href="{% url 'gallery_index' %}">
+                                Galeria
+                            </a>
+                        </li>
+                    {% endif %}
+                    {% for sub_category in category.childrens.all %}
+                        <li>
+                            <a href="{% url 'news_filter' category_name=sub_category.name %}">
+                                {{ sub_category.name }}
+                            </a>
+                        </li>
+                    {% endfor %}               
+                    {% for page in category.page_set.all_published_alphabetically %}
+                        <li>
+                            <a href="{% url 'page_show' slug=page.slug %}">{{ page.title }}</a>
+                        </li>
+                    {% endfor %} 
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
