@@ -12,7 +12,7 @@ class NewsIndex(BaseView):
         news_pinned = News.objects.get_pinned()[:3]
         events = Event.objects.get_published()[:5]
         links = Link.objects.get_published()
-        paginator = Paginator(news_not_pinned, 1)
+        paginator = Paginator(news_not_pinned, 10)
 
         try:
             news_list = paginator.page(request.GET.get('page', 1))
