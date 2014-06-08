@@ -77,7 +77,7 @@ class News(models.Model):
         default=None,
         verbose_name='Duży obrazek pod tekstem'
     )
-    picture_description = models.TextField(verbose_name='Opis obrazka.')
+    picture_description = models.TextField(verbose_name='Opis obrazka.', null=True)
     slug = models.SlugField(unique=True, max_length=100)
     created_at = models.DateTimeField(auto_now_add=True, editable=False)
     updated_at = models.DateTimeField(auto_now=True)
