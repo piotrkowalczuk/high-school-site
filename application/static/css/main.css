@@ -70,6 +70,11 @@ body {
     line-height: 26px;
 }
 
+.lz-menu-sub li a {
+    font-weight: normal;
+    text-transform: none;
+}
+
 @media (min-width: 992px) {
     .lz-menu-nav li a {
         font-size: 16px;
