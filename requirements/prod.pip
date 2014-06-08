@@ -1,0 +1,3 @@
+-r common.pip
+psycopg2
+South

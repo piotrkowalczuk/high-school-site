@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+    <div class="panel-heading"><strong>Wyszukiwarka</strong></div>
+    <div class="panel-body">
+        <form role="form" action="{{ news_archive }}" method="GET">
+            <div class="form-group">
+                <label for="semesterInput">Semestr</label>
+                {{ form.semester }}
+            </div>
+            <div class="form-group">
+              <label for="semesterInput">Kategoria</label>
+              {{ form.category }}
+            </div>
+          <button type="submit" class="btn btn-default">
+              <i class="glyphicon glyphicon-search"></i> Szukaj
+          </button>
+        </form>
+    </div>
+</div>

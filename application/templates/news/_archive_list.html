@@ -1,0 +1,31 @@
+{% if archives_list %}
+    <div class="panel panel-default">
+        <div class="panel-heading"><strong>Aktualności</strong></div>
+        <div class="list-group">
+            {% for news in archives_list %}
+                {% include 'news/_news.html' with news=news %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <ul class="pager">
+        <li class="next {% if not archives_list.has_previous %}disabled{% endif %}">
+            <a href="{% if archives_list.has_previous %}?page={{ archives_list.previous_page_number }}&semester={{ semester_id }}&category={{ category_id }}{% else %}#{% endif %}">Następna &rarr;
+            </a>
+        </li>
+
+        <li>
+            <span class="current">
+                {{ archives_list.number }} z {{ archives_list.paginator.num_pages }}
+            </span>
+        </li>
+
+        <li class="previous {% if not archives_list.has_next %}disabled{% endif %}">
+            <a href="{% if archives_list.has_next %}?page={{ archives_list.next_page_number }}&semester={{ semester_id }}&category={{ category_id }}{% else %}#{% endif %}">
+                &larr; Poprzednia
+            </a>
+        </li>
+    </ul>
+{% else %}
+    <div class="alert alert-info">Brak aktualności</div>
+{% endif %}

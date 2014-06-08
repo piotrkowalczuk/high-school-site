@@ -1,0 +1,509 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"In",
+				"InformationCategory	(imported, class)"
+			],
+			[
+				"Inf",
+				"InformationCategory	(global, class)"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"backgr",
+				"background-position"
+			],
+			[
+				"Infor",
+				"InformationCattegory	(global, class)"
+			],
+			[
+				"For",
+				"ForeignKey	(imported, class)"
+			],
+			[
+				"many",
+				"ManyToOneRel	(imported, class)"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "Searching 68 files for \"lozary\"\n\n/Users/piotrkowalczuk/Projekty/python/lozary/.idea/.name:\n    1: lozary\n\n/Users/piotrkowalczuk/Projekty/python/lozary/.idea/dataSources.ids:\n    4      <identifier-quote-string>`</identifier-quote-string>\n    5      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>\n    6:     <jdbc-url>jdbc:mysql:///lozary</jdbc-url>\n    7:     <user-name>lozary</user-name>\n    8      <user-password>dfc6dfc5dfd0dfcbdfd8dfd3df9bdf98df99</user-password>\n    9      <libraries>\n   ..\n   16      </libraries>\n   17      <schema name=\"\" catalog=\"information_schema\" />\n   18:     <schema name=\"\" catalog=\"lozary\" />\n   19      <schema name=\"\" catalog=\"test\" />\n   20      <table name=\"CHARACTER_SETS\" schema=\"\" catalog=\"information_schema\" type=\"SYSTEM TABLE\">\n\n/Users/piotrkowalczuk/Projekty/python/lozary/.idea/lozary.iml:\n    5        <configuration>\n    6          <option name=\"rootFolder\" value=\"$MODULE_DIR$\" />\n    7:         <option name=\"settingsModule\" value=\"lozary/settings.py\" />\n    8          <option name=\"manageScript\" value=\"manage.py\" />\n    9        </configuration>\n\n/Users/piotrkowalczuk/Projekty/python/lozary/.idea/modules.xml:\n    3    <component name=\"ProjectModuleManager\">\n    4      <modules>\n    5:       <module fileurl=\"file://$PROJECT_DIR$/.idea/lozary.iml\" filepath=\"$PROJECT_DIR$/.idea/lozary.iml\" />\n    6      </modules>\n    7    </component>\n\n/Users/piotrkowalczuk/Projekty/python/lozary/.idea/workspace.xml:\n    3    <component name=\"ChangeListManager\">\n    4      <list default=\"true\" id=\"eae85ae8-5b6d-4ff9-ab7d-a3d910234753\" name=\"Default\" comment=\"\" />\n    5:     <ignored path=\"lozary.iws\" />\n    6      <ignored path=\".idea/workspace.xml\" />\n    7      <file path=\"/models.py\" changelist=\"eae85ae8-5b6d-4ff9-ab7d-a3d910234753\" time=\"1363904650710\" ignored=\"false\" />\n    .\n   27      <leaf>\n   28        <file leaf-file-name=\"settings.py\" pinned=\"false\" current=\"false\" current-in-tab=\"false\">\n   29:         <entry file=\"file://$PROJECT_DIR$/lozary/settings.py\">\n   30            <provider selected=\"true\" editor-type-id=\"text-editor\">\n   31              <state line=\"117\" column=\"30\" selection-start=\"4163\" selection-end=\"4163\" vertical-scroll-proportion=\"0.0\">\n   ..\n   36        </file>\n   37        <file leaf-file-name=\"admin.py\" pinned=\"false\" current=\"false\" current-in-tab=\"false\">\n   38:         <entry file=\"file://$PROJECT_DIR$/lozary/admin.py\">\n   39            <provider selected=\"true\" editor-type-id=\"text-editor\">\n   40              <state line=\"0\" column=\"0\" selection-start=\"0\" selection-end=\"0\" vertical-scroll-proportion=\"0.0\">\n   ..\n  139          <option value=\"$PROJECT_DIR$/templates/registration/member_registration_form.html\" />\n  140          <option value=\"$PROJECT_DIR$/templates/base.html\" />\n  141:         <option value=\"$PROJECT_DIR$/lozary/settings.py\" />\n  142          <option value=\"$PROJECT_DIR$/user/__init__.py\" />\n  143          <option value=\"$PROJECT_DIR$/user/managers.py\" />\n  144:         <option value=\"$PROJECT_DIR$/lozary/admin.py\" />\n  145          <option value=\"$PROJECT_DIR$/user/admin.py\" />\n  146          <option value=\"$PROJECT_DIR$/information/models.py\" />\n  ...\n  184            <PATH>\n  185              <PATH_ELEMENT>\n  186:               <option name=\"myItemId\" value=\"lozary\" />\n  187                <option name=\"myItemType\" value=\"com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode\" />\n  188              </PATH_ELEMENT>\n  ...\n  190            <PATH>\n  191              <PATH_ELEMENT>\n  192:               <option name=\"myItemId\" value=\"lozary\" />\n  193                <option name=\"myItemType\" value=\"com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode\" />\n  194              </PATH_ELEMENT>\n  195              <PATH_ELEMENT>\n  196:               <option name=\"myItemId\" value=\"lozary\" />\n  197                <option name=\"myItemType\" value=\"com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode\" />\n  198              </PATH_ELEMENT>\n  ...\n  200            <PATH>\n  201              <PATH_ELEMENT>\n  202:               <option name=\"myItemId\" value=\"lozary\" />\n  203                <option name=\"myItemType\" value=\"com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode\" />\n  204              </PATH_ELEMENT>\n  205              <PATH_ELEMENT>\n  206:               <option name=\"myItemId\" value=\"lozary\" />\n  207                <option name=\"myItemType\" value=\"com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode\" />\n  208              </PATH_ELEMENT>\n  ...\n  214            <PATH>\n  215              <PATH_ELEMENT>\n  216:               <option name=\"myItemId\" value=\"lozary\" />\n  217                <option name=\"myItemType\" value=\"com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode\" />\n  218              </PATH_ELEMENT>\n  219              <PATH_ELEMENT>\n  220:               <option name=\"myItemId\" value=\"lozary\" />\n  221                <option name=\"myItemType\" value=\"com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode\" />\n  222              </PATH_ELEMENT>\n  223              <PATH_ELEMENT>\n  224:               <option name=\"myItemId\" value=\"lozary\" />\n  225                <option name=\"myItemType\" value=\"com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode\" />\n  226              </PATH_ELEMENT>\n  ...\n  228            <PATH>\n  229              <PATH_ELEMENT>\n  230:               <option name=\"myItemId\" value=\"lozary\" />\n  231                <option name=\"myItemType\" value=\"com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode\" />\n  232              </PATH_ELEMENT>\n  233              <PATH_ELEMENT>\n  234:               <option name=\"myItemId\" value=\"lozary\" />\n  235                <option name=\"myItemType\" value=\"com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode\" />\n  236              </PATH_ELEMENT>\n  ...\n  242            <PATH>\n  243              <PATH_ELEMENT>\n  244:               <option name=\"myItemId\" value=\"lozary\" />\n  245                <option name=\"myItemType\" value=\"com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode\" />\n  246              </PATH_ELEMENT>\n  247              <PATH_ELEMENT>\n  248:               <option name=\"myItemId\" value=\"lozary\" />\n  249                <option name=\"myItemType\" value=\"com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode\" />\n  250              </PATH_ELEMENT>\n  ...\n  256            <PATH>\n  257              <PATH_ELEMENT>\n  258:               <option name=\"myItemId\" value=\"lozary\" />\n  259                <option name=\"myItemType\" value=\"com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode\" />\n  260              </PATH_ELEMENT>\n  261              <PATH_ELEMENT>\n  262:               <option name=\"myItemId\" value=\"lozary\" />\n  263                <option name=\"myItemType\" value=\"com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode\" />\n  264              </PATH_ELEMENT>\n  ...\n  291      </option>\n  292    </component>\n  293:   <component name=\"RunManager\" selected=\"Django server.lozary\">\n  294      <configuration default=\"true\" type=\"DjangoTestsConfigurationType\" factoryName=\"Django tests\">\n  295        <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n  ...\n  301        <option name=\"WORKING_DIRECTORY\" value=\"\" />\n  302        <option name=\"IS_MODULE_SDK\" value=\"false\" />\n  303:       <module name=\"lozary\" />\n  304        <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" enabled=\"false\" sample_coverage=\"true\" runner=\"coverage.py\" />\n  305        <option name=\"TARGET\" value=\"\" />\n  ...\n  317        <option name=\"WORKING_DIRECTORY\" value=\"\" />\n  318        <option name=\"IS_MODULE_SDK\" value=\"false\" />\n  319:       <module name=\"lozary\" />\n  320        <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" enabled=\"false\" sample_coverage=\"true\" runner=\"coverage.py\" />\n  321        <option name=\"SCRIPT_NAME\" value=\"\" />\n  ...\n  339        <option name=\"WORKING_DIRECTORY\" value=\"\" />\n  340        <option name=\"IS_MODULE_SDK\" value=\"false\" />\n  341:       <module name=\"lozary\" />\n  342        <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" enabled=\"false\" sample_coverage=\"true\" runner=\"coverage.py\" />\n  343        <option name=\"SCRIPT_NAME\" value=\"\" />\n  ...\n  354        <option name=\"WORKING_DIRECTORY\" value=\"\" />\n  355        <option name=\"IS_MODULE_SDK\" value=\"false\" />\n  356:       <module name=\"lozary\" />\n  357        <option name=\"launchJavascriptDebuger\" value=\"false\" />\n  358        <option name=\"port\" value=\"8000\" />\n  ...\n  373        <option name=\"WORKING_DIRECTORY\" value=\"\" />\n  374        <option name=\"IS_MODULE_SDK\" value=\"false\" />\n  375:       <module name=\"lozary\" />\n  376        <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" enabled=\"false\" sample_coverage=\"true\" runner=\"coverage.py\" />\n  377        <option name=\"SCRIPT_NAME\" value=\"\" />\n  ...\n  390        <method />\n  391      </configuration>\n  392:     <configuration default=\"false\" name=\"lozary\" type=\"Python.DjangoServer\" factoryName=\"Django server\">\n  393        <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n  394        <option name=\"PARENT_ENVS\" value=\"true\" />\n  395        <envs>\n  396          <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n  397:         <env name=\"DJANGO_SETTINGS_MODULE\" value=\"lozary.settings\" />\n  398        </envs>\n  399        <option name=\"SDK_HOME\" value=\"\" />\n  400        <option name=\"WORKING_DIRECTORY\" value=\"\" />\n  401        <option name=\"IS_MODULE_SDK\" value=\"false\" />\n  402:       <module name=\"lozary\" />\n  403        <option name=\"launchJavascriptDebuger\" value=\"false\" />\n  404        <option name=\"port\" value=\"8000\" />\n  ...\n  417      </configuration>\n  418      <list size=\"1\">\n  419:       <item index=\"0\" class=\"java.lang.String\" itemvalue=\"Django server.lozary\" />\n  420      </list>\n  421    </component>\n  ...\n  583        </provider>\n  584      </entry>\n  585:     <entry file=\"file://$PROJECT_DIR$/lozary/settings.py\">\n  586        <provider selected=\"true\" editor-type-id=\"text-editor\">\n  587          <state line=\"117\" column=\"30\" selection-start=\"4163\" selection-end=\"4163\" vertical-scroll-proportion=\"0.0\">\n  ...\n  590        </provider>\n  591      </entry>\n  592:     <entry file=\"file://$PROJECT_DIR$/lozary/admin.py\">\n  593        <provider selected=\"true\" editor-type-id=\"text-editor\">\n  594          <state line=\"0\" column=\"0\" selection-start=\"0\" selection-end=\"0\" vertical-scroll-proportion=\"0.0\">\n\n/Users/piotrkowalczuk/Projekty/python/lozary/lozary.sublime-project:\n    4  		{\n    5  			\"follow_symlinks\": true,\n    6: 			\"path\": \"/Users/piotrkowalczuk/Projekty/python/lozary\"\n    7  		}\n    8  	]\n\n/Users/piotrkowalczuk/Projekty/python/lozary/lozary/settings.py:\n    1  import os\n    2  \n    3: # Django settings for lozary project.\n    4  \n    5  DEBUG = True\n    .\n   15      'default': {\n   16          'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.\n   17:         'NAME': 'lozary',                      # Or path to database file if using sqlite3.\n   18          # The following settings are not used with sqlite3:\n   19:         'USER': 'lozary',\n   20:         'PASSWORD': 'lozary123',\n   21          'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.\n   22          'PORT': '',                      # Set to empty string for default.\n   ..\n  101  )\n  102  \n  103: ROOT_URLCONF = 'lozary.urls'\n  104  \n  105  # Python dotted path to the WSGI application used by Django's runserver.\n  106: WSGI_APPLICATION = 'lozary.wsgi.application'\n  107  \n  108  import os\n\n/Users/piotrkowalczuk/Projekty/python/lozary/lozary/wsgi.py:\n    1  \"\"\"\n    2: WSGI config for lozary project.\n    3  \n    4  This module contains the WSGI application used by Django's development server\n    .\n   19  # if running multiple sites in the same mod_wsgi process. To fix this, use\n   20  # mod_wsgi daemon mode with each site in its own daemon process, or use\n   21: # os.environ[\"DJANGO_SETTINGS_MODULE\"] = \"lozary.settings\"\n   22: os.environ.setdefault(\"DJANGO_SETTINGS_MODULE\", \"lozary.settings\")\n   23  \n   24  # This application object is used by any WSGI server configured to use this\n\n/Users/piotrkowalczuk/Projekty/python/lozary/manage.py:\n    4  \n    5  if __name__ == \"__main__\":\n    6:     os.environ.setdefault(\"DJANGO_SETTINGS_MODULE\", \"lozary.settings\")\n    7  \n    8      from django.core.management import execute_from_command_line\n\n/Users/piotrkowalczuk/Projekty/python/lozary/registration/views.py:\n   25          auth.login(request, user)\n   26  \n   27:         return render(request, \"lozary/home.html\", {})\n   28      else:\n   29          return render(request, \"registration/member_registration_form.html\",{'form': form})\n\n50 matches across 10 files\n",
+			"settings":
+			{
+				"buffer_size": 12782,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "registration/views.py",
+			"settings":
+			{
+				"buffer_size": 1007,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/piotrkowalczuk/Projekty/python/lozary/lozary/settings.py",
+		"/Users/piotrkowalczuk/Projekty/python/lozary/manage.py",
+		"/Users/piotrkowalczuk/Projekty/python/lozary/lozary/wsgi.py",
+		"/Users/piotrkowalczuk/Projekty/python/lozary/user/views.py",
+		"/Users/piotrkowalczuk/Projekty/python/lozary/gallery/admin.py",
+		"/Users/piotrkowalczuk/Projekty/python/lozary/gallery/models.py",
+		"/Users/piotrkowalczuk/Projekty/python/lozary/user/models.py",
+		"/Users/piotrkowalczuk/Projekty/python/lozary/information/models.py",
+		"/Users/piotrkowalczuk/Projekty/python/lozary/information/admin.py",
+		"/Users/piotrkowalczuk/Projekty/python/lozary/links/admin.py",
+		"/Users/piotrkowalczuk/Projekty/python/lozary/links/models.py",
+		"/Users/piotrkowalczuk/Projekty/python/lozary/templates/information/_news.html",
+		"/Users/piotrkowalczuk/Projekty/python/lozary/information/fixtures/informations.yaml",
+		"/Users/piotrkowalczuk/Projekty/javascript/ioweyou/package.json",
+		"/Users/piotrkowalczuk/Projekty/python/lozary/user/fixtures/initial_data.yaml",
+		"/Users/piotrkowalczuk/Projekty/python/lozary/links/__init__.py",
+		"/Users/piotrkowalczuk/Projekty/python/lozary/static/css/main.css",
+		"/Users/piotrkowalczuk/Projekty/python/lozary/templates/base.html",
+		"/Users/piotrkowalczuk/Projekty/python/lozary/templates/information/_carousel.html",
+		"/Users/piotrkowalczuk/Projekty/python/lozary/templates/information/_informations.html",
+		"/Users/piotrkowalczuk/Projekty/python/lozary/templates/information/list.html",
+		"/Users/piotrkowalczuk/Projekty/python/lozary/templates/authentication/login_form.html",
+		"/Users/piotrkowalczuk/Projekty/python/lozary/information/fixtures/information_categories.yaml",
+		"/Users/piotrkowalczuk/Projekty/python/lozary/information/fixtures/information_category.yaml",
+		"/Users/piotrkowalczuk/Projekty/python/lozary/gallery/__init__.py",
+		"/Users/piotrkowalczuk/Projekty/python/lozary/lozary/urls.py",
+		"/Users/piotrkowalczuk/Projekty/python/lozary/information/urls.py",
+		"/Users/piotrkowalczuk/Projekty/python/lozary/user/signals.py",
+		"/Users/piotrkowalczuk/Projekty/python/lozary/user/admin.py",
+		"/Users/piotrkowalczuk/Projekty/python/lozary/information/views.py",
+		"/Users/piotrkowalczuk/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/piotrkowalczuk/Library/Application Support/Sublime Text 3/Packages/Djaneiro/Settings/Python (Django).sublime-settings"
+	],
+	"find":
+	{
+		"height": 46.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/piotrkowalczuk/Projekty/python/lozary"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"lozary",
+			")\n",
+			";\n",
+			"8",
+			">\n",
+			"Test1",
+			"12",
+			"static"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12782,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										98,
+										104
+									],
+									[
+										333,
+										339
+									],
+									[
+										373,
+										379
+									],
+									[
+										619,
+										625
+									],
+									[
+										985,
+										991
+									],
+									[
+										1294,
+										1300
+									],
+									[
+										1336,
+										1342
+									],
+									[
+										1637,
+										1643
+									],
+									[
+										2003,
+										2009
+									],
+									[
+										2400,
+										2406
+									],
+									[
+										2828,
+										2834
+									],
+									[
+										3025,
+										3031
+									],
+									[
+										3293,
+										3299
+									],
+									[
+										3576,
+										3582
+									],
+									[
+										3829,
+										3835
+									],
+									[
+										4106,
+										4112
+									],
+									[
+										4359,
+										4365
+									],
+									[
+										4636,
+										4642
+									],
+									[
+										4889,
+										4895
+									],
+									[
+										5136,
+										5142
+									],
+									[
+										5413,
+										5419
+									],
+									[
+										5666,
+										5672
+									],
+									[
+										5943,
+										5949
+									],
+									[
+										6196,
+										6202
+									],
+									[
+										6473,
+										6479
+									],
+									[
+										6726,
+										6732
+									],
+									[
+										6998,
+										7004
+									],
+									[
+										7322,
+										7328
+									],
+									[
+										7662,
+										7668
+									],
+									[
+										8007,
+										8013
+									],
+									[
+										8352,
+										8358
+									],
+									[
+										8631,
+										8637
+									],
+									[
+										8932,
+										8938
+									],
+									[
+										9246,
+										9252
+									],
+									[
+										9480,
+										9486
+									],
+									[
+										9749,
+										9755
+									],
+									[
+										9897,
+										9903
+									],
+									[
+										10206,
+										10212
+									],
+									[
+										10580,
+										10586
+									],
+									[
+										10729,
+										10735
+									],
+									[
+										10941,
+										10947
+									],
+									[
+										11107,
+										11113
+									],
+									[
+										11144,
+										11150
+									],
+									[
+										11420,
+										11426
+									],
+									[
+										11548,
+										11554
+									],
+									[
+										11694,
+										11700
+									],
+									[
+										12019,
+										12025
+									],
+									[
+										12092,
+										12098
+									],
+									[
+										12360,
+										12366
+									],
+									[
+										12615,
+										12621
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								12620,
+								12620
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3473.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "registration/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1007,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1007,
+								1007
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"project": "lozary.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 227.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

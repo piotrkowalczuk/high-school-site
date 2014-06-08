@@ -1,0 +1,4 @@
+-r common.pip
+MySQL-python
+django-debug-toolbar
+django-debug-panel

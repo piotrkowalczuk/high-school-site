@@ -1,0 +1,17 @@
+<div class="lz-news">
+    <h1>Galerie</h1>
+</div>
+<div id="links">
+    {% for gallery in galleries %}
+        {% if forloop.first %}
+            <div class="row row-gallery">
+        {% endif %}
+            {% include 'gallery/_gallery_sample.html' with gallery=gallery %}
+        {% if forloop.last or forloop.counter|divisibleby:4 %}
+            </div>
+        {% endif %}         
+        {% if forloop.counter|divisibleby:4 and not forloop.last %}
+            <div class="row row-gallery">
+        {% endif %}   
+    {% endfor %}
+</div>

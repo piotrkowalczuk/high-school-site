@@ -1,12 +1,12 @@
-[submodule "static/vendors/bootstrap-glyphicons"]
-	path = static/vendors/bootstrap-glyphicons
+[submodule "application/static/vendors/bootstrap-glyphicons"]
+	path = application/static/vendors/bootstrap-glyphicons
 	url = https://github.com/marcoceppi/bootstrap-glyphicons.git
-[submodule "static/vendors/bootstrap"]
-	path = static/vendors/bootstrap
+[submodule "application/static/vendors/bootstrap"]
+	path = application/static/vendors/bootstrap
 	url = https://github.com/twbs/bootstrap.git
-[submodule "static/vendors/blueimp"]
-	path = static/vendors/blueimp
+[submodule "application/static/vendors/blueimp"]
+	path = application/static/vendors/blueimp
 	url = https://github.com/blueimp/Gallery.git
-[submodule "static/vendors/bootstrap-hover-dropdown"]
-	path = static/vendors/bootstrap-hover-dropdown
+[submodule "application/static/vendors/bootstrap-hover-dropdown"]
+	path = application/static/vendors/bootstrap-hover-dropdown
 	url = https://github.com/CWSpear/twitter-bootstrap-hover-dropdown.git
