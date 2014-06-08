@@ -6,6 +6,7 @@ from gallery.forms import PhotoInlineForm
 
 class PhotoAdmin(admin.ModelAdmin):
     list_display = (
+        'id',
         'description',
         'thumbnail_preview',
         'gallery',

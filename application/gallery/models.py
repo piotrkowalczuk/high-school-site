@@ -44,7 +44,7 @@ class Photo(models.Model):
     objects = PhotoManager()
 
     def get_default_author():
-        return Photo.objects.get(id=1)
+        return User.objects.get(id=1)
 
     name = models.CharField(max_length=255)
     description = models.TextField(blank=True, null=True)
