@@ -3,12 +3,16 @@
     <h1>{{ news.title }}</h1>
     <span>{{ news.category.name }} | {{ news.created_at }}</span>
     <p>{{ news.content_body|safe }}</p>
+    {% if news.picture %}
     <div class="thumbnail">
         <img class="img-responsive" src="{{ news.picture | thumbnail_url:'news_picture' }}" alt="">
-        <div class="caption">
-            <p>{{news.picture_description}}</p>
-        </div>
+        {% if news.picture_description %}
+            <div class="caption">
+                <p>{{news.picture_description}}</p>
+            </div>
+        {% endif %}
     </div>
+    {% endif %}
 </div>
 
 {% if photos %}
@@ -25,18 +29,18 @@
                             <img class="img-responsive" src="{{ photo.image | thumbnail_url:'gallery_thumb' }}" alt="">
                         </a>
                         {% if photo.description %}
-                            <div class="caption">  
-                                <p><small>{{ photo.description }}</small></p>  
-                            </div> 
+                            <div class="caption">
+                                <p><small>{{ photo.description }}</small></p>
+                            </div>
                         {% endif %}
                     </div>
                 </div>
             {% if forloop.last or forloop.counter|divisibleby:3 %}
                 </div>
-            {% endif %}         
+            {% endif %}
             {% if forloop.counter|divisibleby:3 and not forloop.last %}
                 <div id="links" class="row row-gallery">
-            {% endif %}   
+            {% endif %}
         {% endfor %}
     </div>
 {% endif %}
