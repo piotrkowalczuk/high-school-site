@@ -234,6 +234,8 @@ ul.dropdown-menu.lz-menu-sub a {
     height: 109px;
     max-height: 109px;
     overflow: hidden;
+    position: relative;
+    z-index: 50;
 }
 
 .lz-carousel-navi-item.list-group-item:hover,
@@ -312,6 +314,7 @@ ul.dropdown-menu.lz-menu-sub a {
 .carousel-link {
     display: block;
     position: absolute;
+    z-index: 100;
     bottom: 10px;
     right: 10px;
 }

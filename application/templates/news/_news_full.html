@@ -4,14 +4,14 @@
     <span>{{ news.category.name }} | {{ news.created_at }}</span>
     <p>{{ news.content_body|safe }}</p>
     {% if news.picture %}
-    <div class="thumbnail">
-        <img class="img-responsive" src="{{ news.picture | thumbnail_url:'news_picture' }}" alt="">
-        {% if news.picture_description %}
-            <div class="caption">
-                <p>{{news.picture_description}}</p>
-            </div>
-        {% endif %}
-    </div>
+        <div class="thumbnail">
+            <img class="img-responsive" src="{{ news.picture | thumbnail_url:'news_picture' }}" alt="">
+            {% if news.picture_description %}
+                <div class="caption">
+                    <p>{{news.picture_description}}</p>
+                </div>
+            {% endif %}
+        </div>
     {% endif %}
 </div>
 
