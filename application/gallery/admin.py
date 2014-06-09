@@ -7,6 +7,7 @@ from gallery.forms import PhotoInlineForm
 class PhotoAdmin(admin.ModelAdmin):
     list_display = (
         'id',
+        'is_published',
         'description',
         'thumbnail_preview',
         'gallery',
@@ -15,7 +16,7 @@ class PhotoAdmin(admin.ModelAdmin):
     readonly_fields = ('image_preview',)
     fields = (
         'description',
-        ('autor', 'gallery'),
+        ('is_published', 'autor', 'gallery'),
         'image',
         'image_preview'
     )

@@ -8,8 +8,8 @@ class Semester(models.Model):
     objects = SemesterManager()
 
     class Meta:
-        verbose_name = "semestr"
-        verbose_name_plural = "semestry"
+        verbose_name = "rok szkolny"
+        verbose_name_plural = "roki szkolny"
 
     name = models.CharField(max_length=255)
     is_active = models.BooleanField(default=False)
