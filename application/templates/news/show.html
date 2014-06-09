@@ -1,13 +1,17 @@
 {% extends "news/index.html" %}
 
+{% block title %}I LO im B. Prusa w Żarach | {{ news.title }}{% endblock %}
+
 {% block carousel %}
-{% endblock %}  
+{% endblock %}
+
 {% block breadcrumb %}
     <ol class="breadcrumb">
         <li><a href="{% url 'news_list' %}">Strona Główna</a></li>
         <li class="active">{{ news.title }}</li>
     </ol>
-{% endblock %}  
+{% endblock %}
+
 {% block left_column %}
     {% include 'news/_news_full.html' with news=news %}
 {% endblock %}
