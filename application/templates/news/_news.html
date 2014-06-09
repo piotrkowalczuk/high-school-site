@@ -1,7 +1,7 @@
 {% load thumbnail %}
 <div class="lz-news list-group-item">
     <h4><a href="{% url 'news_show' slug=news.slug %}">{{ news.title }}</a></h4>
-    <span><a href="{% url 'news_filter' category_name=news.category.name %}">{{ news.category.name }}</a> | {{ news.created_at|date:"d.m.Y" }}</span>
+    <span><a href="{% url 'news_filter' category_name=news.category.name %}">{{ news.category.name }}</a> | {{ news.created_at|date:"D d E Y" }}</span>
     <p>
         {% if news.image %}
             <a href="{% url 'news_show' slug=news.slug %}">

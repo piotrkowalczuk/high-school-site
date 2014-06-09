@@ -1,7 +1,7 @@
 {% load thumbnail %}
 <div class="lz-news">
     <h1>{{ news.title }}</h1>
-    <span>{{ news.category.name }} | {{ news.created_at }}</span>
+    <span>{{ news.category.name }} | {{ news.created_at|date:"D d E Y" }}</span>
     <p>{{ news.content_body|safe }}</p>
     {% if news.picture %}
         <div class="thumbnail">

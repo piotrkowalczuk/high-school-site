@@ -10,16 +10,16 @@
         {% block breadcrumb %}
             <ol class="breadcrumb">
                 <li><a href="{% url 'news_list' %}">Strona Główna</a></li>
-                <li class="active">{{ page.category.name }}</li>        
+                <li class="active">{{ page.category.name }}</li>
                 <li class="active">{{ page.title }}</li>
             </ol>
-        {% endblock %} 
+        {% endblock %}
     </div>
     <div class="row" style="padding-bottom: 100px;">
         <div class="col-lg-8 col-sm-8">
             <div class="lz-news">
                 <h1>{{ page.title }}</h1>
-                <span>{{ page.category.name }} | {{ page.created_at }}</span>
+                <span>{{ page.category.name }} | {{ page.created_at|date:"D d E Y" }}</span>
                 <p>{{ page.content|safe }}</p>
             </div>
             {% if page.gallery %}
@@ -67,7 +67,7 @@
 
                 <div class="list-group">
                     {% for p in page.category.get_all_published %}
-                        <a href="{% url 'page_show' slug=p.slug %}" 
+                        <a href="{% url 'page_show' slug=p.slug %}"
                             class="list-group-item {% if p.slug == page.slug %}active{% endif %}">
                             {{ p.title }}
                         </a>
