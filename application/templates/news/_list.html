@@ -4,16 +4,16 @@
         <div class="list-group">
             {% for news in news_list %}
                 {% include 'news/_news.html' with news=news %}
-            {% endfor %}  
+            {% endfor %}
         </div>
     </div>
 
     <ul class="pager">
         <li class="next {% if not news_list.has_previous %}disabled{% endif %}">
-            <a href="{% if news_list.has_previous %}?page={{ news_list.previous_page_number }}{% else %}#{% endif %}">Następna &rarr;
+            <a href="{% if news_list.has_previous %}?page={{ news_list.previous_page_number }}{% else %}#{% endif %}">Nowsze &rarr;
             </a>
-        </li>  
-        
+        </li>
+
         <li>
             <span class="current">
                 {{ news_list.number }} z {{ news_list.paginator.num_pages }}
@@ -22,11 +22,10 @@
 
         <li class="previous {% if not news_list.has_next %}disabled{% endif %}">
             <a href="{% if news_list.has_next %}?page={{ news_list.next_page_number }}{% else %}#{% endif %}">
-                &larr; Poprzednia
+                &larr; Starsze
             </a>
         </li>
     </ul>
 {% else %}
     <div class="alert alert-info">Brak aktualności</div>
-{% endif %}  
-
+{% endif %}
