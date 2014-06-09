@@ -16,5 +16,6 @@ $('#lz-carousel').on('slid', function() {
 
 $('.ui-carousel-link').on('click', function(event) {
     event.preventDefault();
+    event.stopPropagation();
     window.location = $(this).attr('data-href');
 });

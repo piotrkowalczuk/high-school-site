@@ -4,9 +4,9 @@
 [submodule "application/static/vendors/bootstrap"]
 	path = application/static/vendors/bootstrap
 	url = https://github.com/twbs/bootstrap.git
-[submodule "application/static/vendors/blueimp"]
-	path = application/static/vendors/blueimp
-	url = https://github.com/blueimp/Gallery.git
 [submodule "application/static/vendors/bootstrap-hover-dropdown"]
 	path = application/static/vendors/bootstrap-hover-dropdown
 	url = https://github.com/CWSpear/twitter-bootstrap-hover-dropdown.git
+[submodule "application/static/vendors/blueimp"]
+	path = application/static/vendors/blueimp
+	url = https://github.com/blueimp/Gallery.git
