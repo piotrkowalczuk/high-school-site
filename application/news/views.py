@@ -87,7 +87,7 @@ class NewsArchive(BaseView):
         category_id = request.GET.get('category', None)
 
         archives = News.objects.get_archived_by_category_and_semester(category_id=category_id, semester_id=semester_id)
-        paginator = Paginator(archives, 1)
+        paginator = Paginator(archives, 10)
 
         try:
             archives_list = paginator.page(request.GET.get('page', 1))
