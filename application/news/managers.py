@@ -12,6 +12,9 @@ class NewsManager(models.Manager):
     def get_published_by_category(self, category_name):
         return self.get_query_set().filter(is_published=True).filter(category__name=category_name).order_by('-created_at', 'id')
 
+    def get_published_in_active_semester_by_category(self, category_name):
+        return self.get_query_set().filter(is_published=True).filter(semester__is_active=True).filter(category__name=category_name).order_by('-created_at', 'id')
+
     def get_archived_by_category_and_semester(self, category_id, semester_id):
         query = self.get_query_set().filter(is_published=True).filter(semester__is_active=False)
 

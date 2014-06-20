@@ -39,7 +39,7 @@ class NewsIndex(BaseView):
 
 class NewsList(BaseView):
     def get(self, request, category_name):
-        news_not_pinned = News.objects.get_published_by_category(category_name=category_name)
+        news_not_pinned = News.objects.get_published_in_active_semester_by_category(category_name=category_name)
         links = Link.objects.get_published()
         paginator = Paginator(news_not_pinned, 10)
 
