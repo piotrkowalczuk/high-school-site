@@ -12,4 +12,4 @@ class GalleryManager(models.Manager):
 class PhotoManager(models.Manager):
 
     def get_published_by_gallery(self, gallery_id):
-        return self.get_query_set().filter(is_published=True).filter(gallery=gallery_id).order_by('id')
+        return self.get_query_set().filter(is_published=True).filter(gallery=gallery_id).order_by('-id')

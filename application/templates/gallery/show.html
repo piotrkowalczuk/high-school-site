@@ -33,7 +33,7 @@
                 <p>{{ gallery.description }}</p>
             </div>
             <div id="links">
-                {% for photo in gallery.photo_set.all %}
+                {% for photo in photos %}
                     {% if forloop.first %}
                         <div class="row row-gallery">
                     {% endif %}
