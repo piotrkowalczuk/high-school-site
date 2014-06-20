@@ -11,8 +11,8 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 class NewsIndex(BaseView):
     def get(self, request):
-        news_not_pinned = News.objects.get_not_pinned()
-        news_pinned = News.objects.get_pinned()[:3]
+        news_not_pinned = News.objects.get_not_pinned_in_semester()
+        news_pinned = News.objects.get_pinned_in_semester()[:3]
         events = Event.objects.get_published()[:5]
         links = Link.objects.get_published()
         paginator = Paginator(news_not_pinned, 10)
