@@ -2,6 +2,7 @@ from django.conf.urls import patterns, include, url
 from django.conf import settings
 from filebrowser.sites import site
 from django.contrib import admin
+
 admin.autodiscover()
 
 urlpatterns = patterns(
