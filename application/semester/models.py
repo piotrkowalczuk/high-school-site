@@ -9,7 +9,7 @@ class Semester(models.Model):
 
     class Meta:
         verbose_name = "rok szkolny"
-        verbose_name_plural = "roki szkolne"
+        verbose_name_plural = "lata szkolne"
 
     name = models.CharField(max_length=255)
     is_active = models.BooleanField(default=False)

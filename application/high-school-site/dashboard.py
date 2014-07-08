@@ -23,24 +23,14 @@ class CustomIndexDashboard(Dashboard):
         site_name = get_admin_site_name(context)
 
         self.children.append(modules.Group(
-            title='Zarządzanie treścią',
+            title='Menu',
             column=1,
             collapsible=False,
             children=[
                 modules.ModelList(
-                    title='Aktualności',
+                    title='Treść',
                     collapsible=False,
-                    models=('news.models.News', )
-                ),
-                modules.ModelList(
-                    title='Strony',
-                    collapsible=False,
-                    models=('page.models.Page')
-                ),
-                modules.ModelList(
-                    title='Linki',
-                    collapsible=False,
-                    models=('links.models.Link')
+                    models=('news.models.News', 'page.models.Page', 'links.models.Link')
                 ),
                 modules.ModelList(
                     title='Zdjęcia',
