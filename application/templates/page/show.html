@@ -21,7 +21,7 @@
         <div class="col-lg-8 col-sm-8">
             <div class="lz-news">
                 <h1>{{ page.title }}</h1>
-                <span>{{ page.category.name }} | {{ page.created_at|date:"D d E Y" }}</span>
+                <span>{{ page.category.name }} | {{ page.updated_at|date:"D d E Y" }}</span>
                 <p>{{ page.content|safe }}</p>
             </div>
             {% if page.gallery %}
@@ -50,14 +50,14 @@
                 <ol class="indicator"></ol>
             </div>
             <script>
-            document.getElementById('links').onclick = function (event) {
-                event = event || window.event;
-                var target = event.target || event.srcElement,
-                    link = target.src ? target.parentNode : target,
-                    options = {index: link, event: event},
-                    links = this.getElementsByTagName('a');
-                blueimp.Gallery(links, options);
-            };
+                document.getElementById('links').onclick = function (event) {
+                    event = event || window.event;
+                    var target = event.target || event.srcElement,
+                        link = target.src ? target.parentNode : target,
+                        options = {index: link, event: event},
+                        links = this.getElementsByTagName('a');
+                    blueimp.Gallery(links, options);
+                };
             </script>
         </div>
         <div class="col-lg-4 col-sm-4">

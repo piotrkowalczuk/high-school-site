@@ -73,5 +73,10 @@
     <script src="{{ STATIC_URL }}vendors/bootstrap-hover-dropdown/twitter-bootstrap-hover-dropdown.min.js"></script>
     <script src="{{ STATIC_URL }}vendors/blueimp/js/blueimp-gallery.min.js"></script>
     <script src="{{ STATIC_URL }}scripts/main.js"></script>
+    <script src="http://cdn.pkowalczuk.pl/gowik-script/dist/gowik.min.js"></script>
+	<script>
+		var gowik = new Gowik('http://gonalytics.local.tld', 3);
+		gowik.push();
+	</script>
 </body>
 </html>
