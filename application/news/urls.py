@@ -12,7 +12,7 @@ urlpatterns = patterns(
         name='news_filter'
     ),
     url(
-        r'^archiwum/$',
+        r'^news-archiwum/$',
         NewsArchive.as_view(),
         name='news_archive'
     ),

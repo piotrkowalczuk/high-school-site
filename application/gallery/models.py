@@ -7,6 +7,7 @@ from cStringIO import StringIO
 from django.core.files.uploadedfile import SimpleUploadedFile
 import os
 import uuid
+from semester.models import Semester
 
 def image_filepath(instance, filename):
     ext = filename.split('.')[-1]
@@ -30,6 +31,10 @@ class Gallery(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField(blank=True, null=True)
     is_published = models.BooleanField(default=True)
+    semester = models.ForeignKey(
+        Semester,
+        verbose_name='Semestr'
+    )
 
     def __unicode__(self):
         return self.name
