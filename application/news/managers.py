@@ -18,11 +18,11 @@ class NewsManager(models.Manager):
     def get_archived_by_category_and_semester(self, category_id, semester_id):
         query = self.get_query_set().filter(is_published=True).filter(semester__is_active=False)
 
-        if(category_id):
+        if(isinstance(category_id, ( int, long ))):
             print category_id
             query = query.filter(category_id=category_id)
 
-        if(semester_id):
+        if(isinstance(semester_id, ( int, long ))):
             query = query.filter(semester_id=semester_id)
 
         return query.order_by('-created_at', 'id')

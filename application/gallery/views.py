@@ -39,22 +39,13 @@ class GalleryArchive(BaseView):
         form = SearchForm(request.GET)
         semester_id = request.GET.get('semester', None)
 
-        archives = Gallery.objects.get_archived_by_semester(semester_id=semester_id)
-        paginator = Paginator(archives, 10)
-
-        print "omg"
-        try:
-            archives_list = paginator.page(request.GET.get('page', 1))
-        except PageNotAnInteger:
-            archives_list = paginator.page(1)
-        except EmptyPage:
-            archives_list = paginator.page(paginator.num_pages)
+        galleries = Gallery.objects.get_archived_by_semester(semester_id=semester_id)
 
         return render(
             request,
             'gallery/archive.html',
             {
-                'archives_list': archives_list,
+                'galleries': galleries,
                 'menu': self.get_menu(),
                 'form': form,
                 'semester_id': semester_id

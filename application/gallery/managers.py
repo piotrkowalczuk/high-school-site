@@ -15,10 +15,10 @@ class GalleryManager(models.Manager):
     def get_archived_by_semester(self, semester_id):
         query = self.get_query_set().filter(is_published=True).filter(semester__is_active=False)
 
-        if(semester_id):
+        if(isinstance(semester_id, ( int, long ))):
             query = query.filter(semester_id=semester_id)
 
-        return query.order_by('id')
+        return query.order_by('-id')
 
 
 class PhotoManager(models.Manager):
