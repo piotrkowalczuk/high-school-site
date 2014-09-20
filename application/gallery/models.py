@@ -39,6 +39,9 @@ class Gallery(models.Model):
     def __unicode__(self):
         return self.name
 
+    def get_cover(self):
+        return self.photo_set.filter(is_published=True).order_by('id')[0]
+
 
 class Photo(models.Model):
 
