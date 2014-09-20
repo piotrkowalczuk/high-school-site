@@ -332,7 +332,7 @@ ul.dropdown-menu.lz-menu-sub a {
     border-radius: 0px;
 }
 
-.lz-news p a > img {
+.lz-news-full p a > img {
     width: 16px;
     height: auto;
 }
