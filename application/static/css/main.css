@@ -331,3 +331,8 @@ ul.dropdown-menu.lz-menu-sub a {
 .breadcrumb {
     border-radius: 0px;
 }
+
+.lz-news p a > img {
+    width: 16px;
+    height: auto;
+}
