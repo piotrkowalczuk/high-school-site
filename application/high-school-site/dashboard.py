@@ -18,7 +18,6 @@ class CustomIndexDashboard(Dashboard):
     """
     Custom index dashboard for www.
     """
-
     def init_with_context(self, context):
         site_name = get_admin_site_name(context)
 

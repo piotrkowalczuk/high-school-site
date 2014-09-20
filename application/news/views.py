@@ -83,8 +83,8 @@ class NewsShow(BaseView):
 class NewsArchive(BaseView):
     def get(self, request):
         form = SearchForm(request.GET)
-        semester_id = request.GET.get('semester', None)
-        category_id = request.GET.get('category', None)
+        semester_id = int('0' + request.GET.get('semester', '0'))
+        category_id = int('0' + request.GET.get('category', '0'))
 
         archives = News.objects.get_archived_by_category_and_semester(category_id=category_id, semester_id=semester_id)
         paginator = Paginator(archives, 10)

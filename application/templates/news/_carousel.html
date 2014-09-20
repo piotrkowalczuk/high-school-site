@@ -1,7 +1,6 @@
 {% load thumbnail %}
 <div class="col-lg-8 col-sm-12" style="text-align: center;">
   <div id="lz-carousel" class="carousel slide">
-
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       {% for news in news_pinned %}
@@ -16,18 +15,18 @@
   </div>
 </div>
 <div class="col-lg-4 col-sm-12">
-  <div class="list-group lz-carousel-navi">
+  <div class="list-group lz-carousel-navi"
+       style="margin-bottom: 0px;">
     {% for news in news_pinned %}
       <a href="#" data-target="#lz-carousel" data-slide-to="{{forloop.counter0}}" class="lz-carousel-navi-item list-group-item {{ forloop.counter0|yesno:' ,active' }}">
-
         <h4 class="list-group-item-heading">
-          {{ news.title }}
+            {{ news.title }}
         </h4>
         <p class="list-group-item-text">
-          {{ news.content_intro|truncatechars:70 }}
-          <span class="ui-carousel-link carousel-link" data-href="{% url 'news_show' slug=news.slug %}">
-            więcej »
-          </span>
+            {{ news.content_intro|truncatechars:70 }}
+            <span class="ui-carousel-link carousel-link" data-href="{% url 'news_show' slug=news.slug %}">
+                więcej »
+            </span>
         </p>
       </a>
     {% endfor %}

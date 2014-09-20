@@ -22,7 +22,16 @@
             <div class="lz-news">
                 <h1>{{ page.title }}</h1>
                 <span>{{ page.category.name }} | {{ page.updated_at|date:"D d E Y" }}</span>
-                <p>{{ page.content|safe }}</p>
+                {% if page.content %}
+                    <p>{{ page.content|safe }}</p>
+                {% else %}
+                    <p>
+
+                    </p>
+                    <div class="alert alert-info">
+                        <strong>Przepraszamy</strong>, treść strony nie została jeszcze opublikowana.
+                    </div>
+                {% endif %}
             </div>
             {% if page.gallery %}
                 {% if page.gallery.photo_set.all %}

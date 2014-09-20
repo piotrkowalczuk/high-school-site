@@ -37,7 +37,7 @@ class GalleryShow(BaseView):
 class GalleryArchive(BaseView):
     def get(self, request):
         form = SearchForm(request.GET)
-        semester_id = request.GET.get('semester', None)
+        semester_id = int('0' + request.GET.get('semester', '0'))
 
         galleries = Gallery.objects.get_archived_by_semester(semester_id=semester_id)
 
