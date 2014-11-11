@@ -336,3 +336,53 @@ ul.dropdown-menu.lz-menu-sub a {
     width: 16px;
     height: auto;
 }
+
+.list-group-item-image {
+    height: 122px;
+    width: 287px;
+}
+
+.list-group-item-image-cku {
+    background-image: url('../images/links.jpg');
+    background-position: 0px 0px;
+}
+
+.list-group-item-image-cku:hover {
+    background-position: 288px 0px;
+}
+
+.list-group-item-image-ko-gorzow {
+    background-image: url('../images/links.jpg');
+    background-position: 0px 488px;
+}
+
+.list-group-item-image-ko-gorzow:hover {
+    background-position: 288px 488px;
+}
+
+.list-group-item-image-powiat-zary {
+    background-image: url('../images/links.jpg');
+    background-position: 0px 366px;
+}
+
+.list-group-item-image-powiat-zary:hover {
+    background-position: 288px 366px;
+}
+
+.list-group-item-image-zary {
+    background-image: url('../images/links.jpg');
+    background-position: 0px 244px;
+}
+
+.list-group-item-image-zary:hover {
+    background-position: 288px 244px;
+}
+
+.list-group-item-image-lubuskie {
+    background-image: url('../images/links.jpg');
+    background-position: 0px 122px;
+}
+
+.list-group-item-image-lubuskie:hover {
+    background-position: 288px 122px;
+}
