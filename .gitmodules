@@ -10,3 +10,6 @@
 [submodule "application/static/vendors/blueimp"]
 	path = application/static/vendors/blueimp
 	url = https://github.com/blueimp/Gallery.git
+[submodule "application/static/vendors/font-awesome"]
+	path = application/static/vendors/font-awesome
+	url = https://github.com/FortAwesome/Font-Awesome.git
