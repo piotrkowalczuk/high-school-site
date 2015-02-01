@@ -386,3 +386,33 @@ ul.dropdown-menu.lz-menu-sub a {
 .list-group-item-image-lubuskie:hover {
     background-position: 288px 122px;
 }
+
+#CookielawBanner {
+    background-color: #000;
+    color: #fff;
+    border-bottom: 1px solid #99C;
+}
+
+#CookielawBanner p {
+    color: #D9EDF7;
+    padding: 24px 14px 14px 14px;
+}
+
+#CookielawBanner .icon {
+    font-size: 32px;
+    color: #FFC800;
+    margin: 0px 10px 10px 0px;
+}
+
+#CookielawBanner .btn-primary {
+    background-color: #9999CC;
+    border-color: #9999CC;
+    border-radius: 0px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+}
+
+#CookielawBanner .btn-primary:hover {
+    background-color: #333365;
+    border-color: #9999CC;
+}
