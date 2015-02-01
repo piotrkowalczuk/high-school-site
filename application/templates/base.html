@@ -1,3 +1,4 @@
+{% load cookielaw_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +14,7 @@
 </head>
 
 <body>
+    {% cookielaw_banner %}
     <div class="top-background">
         {% block navbar %}
             <div class="navbar navbar-inverse navbar-custom">
@@ -74,5 +76,11 @@
     <script src="{{ STATIC_URL }}vendors/bootstrap/dist/js/bootstrap.js"></script>
     <script src="{{ STATIC_URL }}vendors/blueimp/js/blueimp-gallery.min.js"></script>
     <script src="{{ STATIC_URL }}scripts/main.js"></script>
+    <script src="{{ STATIC_URL }}cookielaw/js/cookielaw.js"></script>
+    <script src="{{ STATIC_URL }}scripts/gonalytics.js"></script>
+	<script>
+		var gonalytics = new Gonalytics('http://docker:9011/v1', 1);
+		gonalytics.push();
+	</script>
 </body>
 </html>
