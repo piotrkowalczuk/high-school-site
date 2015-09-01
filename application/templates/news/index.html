@@ -20,11 +20,13 @@
         <div class="row" style="padding-top: 15px;">
             {% include 'news/_carousel.html' with news_pinned=news_pinned %}
         </div>
-        <div class="row">
-            <div class="col-lg-13">
-                <hr>
+        {% if news_pinned %}
+            <div class="row">
+                <div class="col-lg-13">
+                    <hr>
+                </div>
             </div>
-        </div>
+        {% endif %}
     {% endblock %}
     <div class="row" style="padding-bottom: 100px;">
         <div class="lz-information-left-column col-lg-9 col-sm-9">
