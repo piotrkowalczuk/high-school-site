@@ -14,7 +14,8 @@ class EventList(BaseView):
 
         published_events = Event.objects.get_filtered(semester_id, category_id, status)
         if status == 0 and category_id == 0 and semester_id == 0 and len(published_events) < 10:
-            published_events = Event.objects.get_filtered(semester_id, category_id, 1)
+            form.status = 1
+            published_events = Event.objects.get_filtered(semester_id, category_id, form.status)
 
         paginator = Paginator(published_events, 10)
 
