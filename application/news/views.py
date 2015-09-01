@@ -2,7 +2,6 @@ from common.views import BaseView
 from django.shortcuts import render
 from news.models import News
 from event.models import Event
-from semester.models import Semester
 from gallery.models import Photo
 from links.models import Link
 from news.forms import SearchForm

@@ -1,4 +1,4 @@
-from page.models import Page, Category
+from page.models import Page
 from django.contrib import admin
 from page.forms import PageForm
 

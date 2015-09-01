@@ -2,7 +2,6 @@
 from django.db import models
 from user.models import User
 from category.models import Category
-from semester.models import Semester
 from page.managers import PageManager
 from gallery.models import Gallery
 

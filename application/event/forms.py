@@ -1,7 +1,5 @@
-from django.forms import Form, ModelForm, CharField, ModelChoiceField, Select, ChoiceField
+from django.forms import Form, ModelForm, ModelChoiceField, Select, ChoiceField
 from event.models import Event, EVENT_STATUS_CHOICES
-from tinymce.widgets import TinyMCE
-from django.core.urlresolvers import reverse
 from semester.models import Semester
 from category.models import Category
 

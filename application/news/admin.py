@@ -1,4 +1,4 @@
-from news.models import News, Category
+from news.models import News
 from django.contrib import admin
 from news.forms import NewsForm
 

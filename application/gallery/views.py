@@ -2,7 +2,6 @@ from common.views import BaseView
 from django.shortcuts import render
 from gallery.models import Gallery, Photo
 from gallery.forms import SearchForm
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 class GalleryIndex(BaseView):
     def get(self, request):

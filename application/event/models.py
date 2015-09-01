@@ -6,7 +6,6 @@ from semester.models import Semester
 from event.managers import EventManager
 import uuid
 from django.utils import timezone
-from schedule.models import Event
 from django.core.urlresolvers import reverse
 
 

@@ -1,5 +1,5 @@
 from cStringIO import StringIO
-from PIL import Image, ImageOps
+from PIL import Image
 
 
 def generate_thumbnail(image, height, width):

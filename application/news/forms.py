@@ -3,7 +3,6 @@ from news.models import News
 from semester.models import Semester
 from category.models import Category
 from tinymce.widgets import TinyMCE
-from django.core.urlresolvers import reverse
 
 
 class NewsForm(ModelForm):
