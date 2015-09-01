@@ -154,7 +154,6 @@ ul.lz-menu-nav > li:first-child{
 .lz-menu-nav .dropdown-menu a:hover {
     background-color: #35356B;
     color: #FFF;
-    text-shadow: 1px 1px 1px #000;
 }
 
 ul.dropdown-menu.lz-menu-sub {

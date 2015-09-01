@@ -88,11 +88,6 @@
     <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
     <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.6/fullcalendar.min.js"></script>
     <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.6/lang-all.js"></script>
-    <script src="{{ STATIC_URL }}scripts/gonalytics.js"></script>
-    <script>
-        var gonalytics = new Gonalytics('http://localhost:9011/v1', 1);
-        gonalytics.push();
-    </script>
     {% include 'common/analytics.html' %}
 </body>
 </html>
