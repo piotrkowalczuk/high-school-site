@@ -6,16 +6,16 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 class EventList(BaseView):
     def get(self, request):
-        form = FilterForm(request.GET)
+        form = FilterForm(request.GET.copy())
 
         semester_id = int('0' + request.GET.get('semester', '0'))
         category_id = int('0' + request.GET.get('category', '0'))
         status = int('0' + request.GET.get('status', '0'))
 
         published_events = Event.objects.get_filtered(semester_id, category_id, status)
-        if status == 0 and category_id == 0 and semester_id == 0 and len(published_events) < 10:
-            form.status = 1
-            published_events = Event.objects.get_filtered(semester_id, category_id, form.status)
+        if status == 0 and category_id == 0 and semester_id == 0 and len(published_events) < 5:
+            form.data['status'] = 1
+            published_events = Event.objects.get_filtered(semester_id, category_id, 1)
 
         paginator = Paginator(published_events, 10)
 

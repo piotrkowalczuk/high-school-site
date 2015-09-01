@@ -10,6 +10,6 @@ class EventForm(ModelForm):
         prepopulated_fields = {"autor": (1,)}
 
 class FilterForm(Form):
-    semester = ModelChoiceField(queryset = Semester.objects.get_sorted(), widget=Select(attrs={'class': 'form-control',}))
-    category = ModelChoiceField(queryset = Category.objects.get_sorted(), widget=Select(attrs={'class': 'form-control',}))
+    semester = ModelChoiceField(queryset=Semester.objects.get_sorted(), widget=Select(attrs={'class': 'form-control',}))
+    category = ModelChoiceField(queryset=Category.objects.get_sorted(), widget=Select(attrs={'class': 'form-control',}))
     status = ChoiceField(choices=EVENT_STATUS_CHOICES)
