@@ -696,7 +696,7 @@ ul.dropdown-menu.lz-menu-sub a {
 .event-header {
     position: relative;
     min-height: 120px;
-    background-color: #F5F5F5;
+    background-color: #333366;
 }
 
 .event-header .time {
