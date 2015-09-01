@@ -1,6 +1,5 @@
 {% if archives_list %}
     <div class="panel panel-default">
-        <div class="panel-heading"><strong>Aktualności</strong></div>
         <div class="list-group">
             {% for news in archives_list %}
                 {% include 'news/_news.html' with news=news %}
@@ -27,5 +26,5 @@
         </li>
     </ul>
 {% else %}
-    <div class="alert alert-info">Brak aktualności</div>
+    <div class="alert alert-info"><strong>Ups!</strong> Brak zarchiwizowanych aktualności dla podanych kryteriów</div>
 {% endif %}

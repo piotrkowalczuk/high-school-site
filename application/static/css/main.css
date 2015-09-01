@@ -797,3 +797,8 @@ ul.dropdown-menu.lz-menu-sub a {
     border-color: #99C;
     color: #336;
 }
+
+.panel > .list-group .list-group-item,
+.panel > .panel-collapse > .list-group .list-group-item {
+    border-radius: 0px;
+}

@@ -54,6 +54,7 @@ class NewsList(BaseView):
             request,
             'news/list.html',
             {
+                'category_name': category_name,
                 'news_list': news_list,
                 'links': links,
                 'menu': self.get_menu()
