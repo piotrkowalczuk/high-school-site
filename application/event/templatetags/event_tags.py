@@ -7,6 +7,7 @@ from datetime import datetime, timedelta, date
 from django.template.defaultfilters import date as _date
 from django.core.urlresolvers import reverse
 from django.utils import timezone
+from django.utils.encoding import smart_text
 
 register = template.Library()
 
@@ -98,10 +99,10 @@ class EventCalendar(LocaleHTMLCalendar):
         a(self.formatmonthname(year, month, False))
         a('<table class="table table-bordered">')
         a('<thead>')
-        a(self.formatweekheader())
+        a(unicode(self.formatweekheader()))
         a('</thead>')
         for week in self.monthdays2calendar(year, month):
-            a(self.formatweek(week))
+            a(self.formatweek(week).decode('utf-8'))
             a('\n')
         a('</table>')
         a('<div class="panel-footer text-right">')
@@ -109,10 +110,13 @@ class EventCalendar(LocaleHTMLCalendar):
         a('</div>')
         a('</div>')
         a('\n')
-        return ''.join(v).encode("utf-8")
+        return ''.join(v)
 
     def formatmonthname(self, theyear, themonth, withyear=True):
-            return '<div class="panel-heading"><strong>Wydarzenia</strong><span class="pull-right">%s</span></div>' % _date(datetime.now(), "F o")
+        dt = _date(timezone.now(), "F o")
+        s = smart_text(dt)
+
+        return u'<div class="panel-heading"><strong>Wydarzenia</strong><span class="pull-right">'+unicode(s)+u'</span></div>'
 
     def day_cell(self, cssclass, body):
         return '<td class="event-calendar-day %s">%s</td>' % (cssclass, body)
