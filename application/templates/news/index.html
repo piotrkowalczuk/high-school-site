@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load event_tags %}
 
 {% block title %}I LO im B. Prusa w Żarach | Strona Główna{% endblock %}
 
@@ -11,24 +12,30 @@
 {% endblock %}
 
 {% block content %}
-    <div class="row" style="height: 15px;">
-    </div>
     <div class="row">
         {% block breadcrumb %}
         {% endblock %}
     </div>
     {% block carousel %}
-        <div class="row">
+        <div class="row" style="padding-top: 15px;">
             {% include 'news/_carousel.html' with news_pinned=news_pinned %}
         </div>
+        <div class="row">
+            <div class="col-lg-13">
+                <hr>
+            </div>
+        </div>
     {% endblock %}
-    <div class="row" style="padding-bottom: 100px; padding-top: 15px;">
-        <div class="lz-information-left-column col-lg-8 col-sm-8">
+    <div class="row" style="padding-bottom: 100px;">
+        <div class="lz-information-left-column col-lg-9 col-sm-9">
             {% block left_column %}
                 {% include 'news/_list.html' with news_list=news_list %}
             {% endblock %}
         </div>
         <div class="lz-information-right-column col-lg-4 col-sm-4">
+            <div class="event-calendar">
+                {% event_calendar events %}
+            </div>
             {% block right_column %}
                 {% include 'common/address.html' %}
                 {% include 'common/links.html' with links=links %}

@@ -13,7 +13,6 @@ class NewsIndex(BaseView):
     def get(self, request):
         news_not_pinned = News.objects.get_not_pinned_in_semester()
         news_pinned = News.objects.get_pinned_in_semester()[:3]
-        events = Event.objects.get_published()[:5]
         links = Link.objects.get_published()
         paginator = Paginator(news_not_pinned, 10)
 
@@ -24,6 +23,8 @@ class NewsIndex(BaseView):
         except EmptyPage:
             news_list = paginator.page(paginator.num_pages)
 
+        events = Event.objects.get_for_current_month()
+
         return render(
             request,
             'news/index.html',
@@ -32,7 +33,7 @@ class NewsIndex(BaseView):
                 'news_pinned': news_pinned,
                 'links': links,
                 'menu': self.get_menu(),
-                'events': events
+                'events': events,
             }
         )
 

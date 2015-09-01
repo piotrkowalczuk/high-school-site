@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-xs-13">
+        {% if events %}
+            {% for event in events %}
+                {% include 'event/_event.html' with event=event %}
+            {% endfor %}
+        {% else %}
+            <div class="alert alert-info"><strong>Ups!</strong> Brak wydarzeń dla podanych kryteriów</div>
+        {% endif %}
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-13">
+        <ul class="pager">
+        <li class="next {% if not events.has_previous %}disabled{% endif %}">
+            <a href="{% if events.has_previous %}?page={{ events.previous_page_number }}{% else %}#{% endif %}">Nowsze &rarr;
+            </a>
+        </li>
+
+        <li>
+            <span class="current">
+                {{ events.number }} z {{ events.paginator.num_pages }}
+            </span>
+        </li>
+
+        <li class="previous {% if not events.has_next %}disabled{% endif %}">
+            <a href="{% if events.has_next %}?page={{ events.next_page_number }}{% else %}#{% endif %}">
+                &larr; Starsze
+            </a>
+        </li>
+    </ul>
+    </div>
+</div>

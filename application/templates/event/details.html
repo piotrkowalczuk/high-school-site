@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load i18n staticfiles %}
+{% load event_tags %}
+
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block title %}I LO im B. Prusa w Żarach | Kalendarz{% endblock %}
+
+{% block carousel %}
+{% endblock %}
+
+{% block collapse_menu %}
+    {% include 'common/collapse_menu.html' with menu=menu %}
+{% endblock %}
+
+{% block top_menu %}
+    {% include 'common/top_menu.html' with menu=menu %}
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    {% block breadcrumb %}
+    <ol class="breadcrumb">
+        <li><a href="{% url 'news_list' %}">Strona Główna</a></li>
+        <li><a href="{% url 'event_list' %}">Wydarzenia</a></li>
+        <li class="active">{{ event.title }}</li>
+    </ol>
+    {% endblock %}
+</div>
+    <div class="row">
+        <div class="col-xs-13">
+            <div class="page-header">
+                <h1>
+                    {{ event.title }}
+                    {% if event.status == 3 %}
+                        <small class="event-finished">
+                            zakończone
+                        </small>
+                    {% elif event.status == 2 %}
+                        <small class="event-in-progress">
+                            w trakcie
+                        </small>
+                    {% else %}
+                        <small class="event-incoming">
+                            nadchodzące
+                        </small>
+                    {% endif %}
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="padding-bottom: 100px;">
+        <div class="col-md-13 col-sm-13">
+            <ul class="list-inline">
+                <li><strong>od</strong> {{ event.start_at|date:"l d E Y H:i" }} <br/></li>
+                <li><strong>do</strong> {{ event.end_at|date:"l d E Y H:i" }}</li>
+            </ul>
+            <p>
+                {{ event.description }}
+            </p>
+        </div>
+    </div>
+{% endblock %}

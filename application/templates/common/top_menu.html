@@ -1,22 +1,13 @@
 <ul class="nav nav-pills lz-menu-nav">
-    <li class="col-lg-2 col-sm-2 col-xs-12 dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Aktualności</a>
-        <ul class="dropdown-menu lz-menu-sub">
-            <li>
-                <a href="{% url 'news_list' %}">
-                    Bieżące
-                </a>
-            </li>
-            <li>
-                <a href="{% url 'news_archive' %}">
-                    Archiwalne
-                </a>
-            </li>
-        </ul>
+    <li class="col-lg-1 col-sm-1 col-xs-4 dropdown">
+        <a href="{% url 'news_list' %}" title="Aktualności"><i class="glyphicon glyphicon-home"></i></a>
+    </li>
+    <li class="col-lg-1 col-sm-1 col-xs-4 dropdown">
+        <a href="{% url 'event_list' %}" title="Wydarzenia"><i class="glyphicon glyphicon-calendar"></i></a>
     </li>
     {% for category in menu %}
-        <li class="col-lg-2 col-sm-2 col-xs-12 dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+        <li class="col-lg-2 col-sm-2 col-xs-13 dropdown">
+            <a href="#" title="{{ category.name }}" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
                 {{ category.name }}
             </a>
             <ul class="dropdown-menu lz-menu-sub">
@@ -42,4 +33,7 @@
             </ul>
         </li>
     {% endfor %}
+    <li class="col-lg-1 col-sm-1 col-xs-4 dropdown">
+        <a href="{% url 'news_archive' %}" title="Archiwum"><i class="glyphicon glyphicon-book"></i></a>
+    </li>
 </ul>

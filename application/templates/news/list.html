@@ -7,10 +7,8 @@
 {% endblock %}
 
 {% block content %}
-    <div class="row" style="height: 15px;">
-    </div>
     <div class="row" style="padding-bottom: 100px;">
-        <div class="lz-information-left-column col-lg-8 col-sm-8">
+        <div class="lz-information-left-column col-lg-9 col-sm-9">
             {% block left_column %}
                 {% include 'news/_list.html' with news_list=news_list %}
             {% endblock %}

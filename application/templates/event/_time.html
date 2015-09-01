@@ -1,0 +1,10 @@
+{% load tz %}
+<div class="time">
+    {% if event.start_at|localtime|date:"d" != event.end_at|localtime|date:"d" or event.start_at|localtime|date:"b" != event.end_at|localtime|date:"b" or event.start_at|localtime|date:"Y" != event.end_at|localtime|date:"Y" %}
+        <time datetime="{{ event.start_at|localtime|date:"Y-m-d H:i:s" }}">{{ event.start_at|localtime|date:"d E Y H:i " }}</time>
+        <small><i class="glyphicon glyphicon-arrow-right"></i></small>
+        <time class="" datetime="{{ event.end_at|localtime|date:"Y-m-d H:i:s" }}">{{ event.end_at|localtime|date:"d E Y H:i " }}</time>
+    {% else %}
+        {{ event.start_at|localtime|date:"d E Y" }} <strong>{{ event.start_at|localtime|date:"H:i" }} - {{ event.end_at|localtime|date:"H:i" }}</strong>
+    {% endif %}
+</div>

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load i18n staticfiles %}
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block title %}I LO im B. Prusa w Żarach | Kalendarz{% endblock %}
+
+{% block carousel %}
+{% endblock %}
+
+{% block collapse_menu %}
+{% include 'common/collapse_menu.html' with menu=menu %}
+{% endblock %}
+
+{% block top_menu %}
+{% include 'common/top_menu.html' with menu=menu %}
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    {% block breadcrumb %}
+        <ol class="breadcrumb">
+            <li><a href="{% url 'news_list' %}">Strona Główna</a></li>
+            <li class="active">Wydarzenia</li>
+        </ol>
+    {% endblock %}
+</div>
+<div class="row">
+    <div class="col-xs-13">
+        <div class="page-header">
+            <h1>Wydarzenia</h1>
+        </div>
+    </div>
+</div>
+<div class="row" style="padding-bottom: 100px;">
+    <div class="col-lg-9 col-sm-9">
+        {% include 'event/_list.html' with event=event %}
+    </div>
+    <div class="col-lg-4 col-sm-4">
+        {% include 'event/_filter.html' with form=form %}
+    </div>
+</div>
+{% endblock %}

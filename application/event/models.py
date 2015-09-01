@@ -4,14 +4,22 @@ from user.models import User
 from category.models import Category
 from semester.models import Semester
 from event.managers import EventManager
-from gallery.models import Gallery
 import uuid
-import image.thumbnails as thumbnails
-from cStringIO import StringIO
-from PIL import Image
+from django.utils import timezone
+from schedule.models import Event
+from django.core.urlresolvers import reverse
 
+
+def image_filepath(instance, filename):
+    ext = filename.split('.')[-1]
+    filename = "%s.%s" % (uuid.uuid4(), ext)
+    return '/'.join(['uploads/calendar/thumbnails', filename])
 
 class Event(models.Model):
+    STATUS_ANY = 0
+    STATUS_INCOMING = 1
+    STATUS_IN_PROGRESS = 2
+    STATUS_FINISHED = 3
 
     objects = EventManager()
 
@@ -23,26 +31,61 @@ class Event(models.Model):
         max_length=255,
         verbose_name='Tytuł'
     )
-    description_short = models.TextField(verbose_name='Skrócony opis wydarzenia')
-    description_full = models.TextField(verbose_name='Pełny opis wydarzenia')
+    start_at = models.DateTimeField()
+    end_at = models.DateTimeField()
+    category = models.ForeignKey(
+        Category,
+        verbose_name='Kategoria'
+    )
     autor = models.ForeignKey(
         User,
-        verbose_name='Autor',
-        related_name='Event'
     )
+    description = models.TextField(verbose_name='Opis')
     is_published = models.BooleanField(
         default=False,
         verbose_name='Czy jest opublikowany'
     )
     semester = models.ForeignKey(
         Semester,
-        verbose_name='Semestr'
+        verbose_name='Semestr',
+    )
+    image = models.ImageField(
+        upload_to=image_filepath,
+        null=True,
+        blank=True,
+        default=None,
+        verbose_name='Miniaturka'
     )
     slug = models.SlugField(unique=True, max_length=100)
-    start_at = models.DateTimeField()
-    end_at = models.DateTimeField()
     created_at = models.DateTimeField(auto_now_add=True, editable=False)
     updated_at = models.DateTimeField(auto_now=True)
 
     def __unicode__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('event_details', args=[str(self.slug)])
+
+    @property 
+    def status(self):
+        now = timezone.localtime(timezone.now())
+
+        try:
+            if now >= self.start_at and now <= self.end_at:
+                return self.STATUS_IN_PROGRESS
+            if now > self.end_at:
+                return self.STATUS_FINISHED
+            if now < self.start_at:
+                return self.STATUS_INCOMING
+
+            return self.STATUS_ANY
+        except TypeError:
+            print "datetime comparison TypeError"
+
+
+EVENT_STATUS_CHOICES = (
+    (Event.STATUS_ANY, 'Najbliższe'),
+    (Event.STATUS_INCOMING, 'Nadchodzące'),
+    (Event.STATUS_IN_PROGRESS, 'W trakcie'),
+    (Event.STATUS_FINISHED, 'Zakończone'),
+)

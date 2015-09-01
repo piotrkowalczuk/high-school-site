@@ -1,3 +1,6 @@
+@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
+@import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
+
 body {
     background-color: #585858;
     font-family: Arial;
@@ -177,6 +180,14 @@ ul.dropdown-menu.lz-menu-sub a {
     background-color: #fff;
 }
 
+.lz-content .page-header{
+    margin-top: 0px;
+}
+
+.lz-content .page-header h1{
+    margin-top: 10px;
+}
+
 .lz-informations-h2 {
     color: #cc6666;
     font-size: 30px;
@@ -236,11 +247,16 @@ ul.dropdown-menu.lz-menu-sub a {
 }
 
 .lz-carousel-navi-item {
-    height: 109px;
-    max-height: 109px;
+    height: 113px;
+    max-height: 113px;
     overflow: hidden;
     position: relative;
     z-index: 50;
+}
+
+.lz-carousel-navi-item:last-child {
+    height: 114px;
+    max-height: 114px;
 }
 
 .lz-carousel-navi-item.list-group-item:hover,
@@ -337,9 +353,21 @@ ul.dropdown-menu.lz-menu-sub a {
     height: auto;
 }
 
+.lz-news-full .thumbnail .caption {
+    padding: 7px;
+    color: #3E3E3E;
+    margin-top: 5px;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.lz-news-full .thumbnail .caption p {
+    margin: 0;
+    font-size: 12px;
+}
+
 .list-group-item-image {
-    height: 122px;
-    width: 287px;
+    height: 100px;
+    width: 263px;
 }
 
 .list-group-item-image-cku {
@@ -348,43 +376,43 @@ ul.dropdown-menu.lz-menu-sub a {
 }
 
 .list-group-item-image-cku:hover {
-    background-position: 288px 0px;
+    background-position: 263px 0px;
 }
 
 .list-group-item-image-ko-gorzow {
     background-image: url('../images/links.jpg');
-    background-position: 0px 488px;
+    background-position: 0px 400px;
 }
 
 .list-group-item-image-ko-gorzow:hover {
-    background-position: 288px 488px;
+    background-position: 263px 400px;
 }
 
 .list-group-item-image-powiat-zary {
     background-image: url('../images/links.jpg');
-    background-position: 0px 366px;
+    background-position: 0px 300px;
 }
 
 .list-group-item-image-powiat-zary:hover {
-    background-position: 288px 366px;
+    background-position: 263px 300px;
 }
 
 .list-group-item-image-zary {
     background-image: url('../images/links.jpg');
-    background-position: 0px 244px;
+    background-position: 0px 200px;
 }
 
 .list-group-item-image-zary:hover {
-    background-position: 288px 244px;
+    background-position: 263px 200px;
 }
 
 .list-group-item-image-lubuskie {
     background-image: url('../images/links.jpg');
-    background-position: 0px 122px;
+    background-position: 0px 100px;
 }
 
 .list-group-item-image-lubuskie:hover {
-    background-position: 288px 122px;
+    background-position: 263px 100px;
 }
 
 #CookielawBanner {
@@ -415,4 +443,303 @@ ul.dropdown-menu.lz-menu-sub a {
 #CookielawBanner .btn-primary:hover {
     background-color: #333365;
     border-color: #9999CC;
+}
+
+.fc-event {
+    border-radius: 0px;
+    margin: 0px 0px 1px 0px;
+    border-width: 0px;
+    background-color: #DADAEE;
+    color: #6D6DA1;
+    padding: 2px 4px;
+}
+
+.fc-event:hover {
+    cursor: pointer;
+    background-color: #9999CC;
+    color: #333366;
+}
+
+.fc-unthemed .fc-today {
+    background-color: #EFEFEF;
+}
+
+.fc-event-informacje {
+    background-color/*: #7CBFF8;
+    color: #004682;*/
+}
+
+.fc-event-szkoła {
+    /*background-color: #04970F;*/
+    /*color: #fff;*/
+}
+
+.fc-event-komunikaty {
+    /*background-color: #9999CC;*/
+    /*color: #333365;*/
+}
+
+.fc-event-uczniowie {
+    /*background-color: #C66;*/
+    /*color: #fff;*/
+}
+
+.fc-event-rodzice {
+    /*background-color: #C4C4C4;*/
+    /*color: #333;*/
+}
+
+.fc-event-kandydaci {
+    /*background-color: #333365;*/
+    /*color: #fff;*/
+}
+
+.fc-event-sport {
+    /*background-color: #653363;*/
+    /*color: #fff;*/
+}
+
+#calendar {
+    position: relative;
+}
+
+#loading {
+    z-index: 100;
+    background-color: rgba(255,255,255,0.7);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+}
+
+#loading .loader {
+    font-size: 164px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 30%;
+    width: 50%;
+    margin: -15% 0 0 -25%;
+    color: #333365;
+}
+
+.pager li > a,
+.pager li > span,
+.panel,
+.panel-heading {
+    border-radius: 0px;
+}
+.panel-paddingless {
+    padding: 0px;
+}
+.panel-paddingless span.category {
+    font-size: 14px;
+    padding: 5px 15px;
+    display: inline-block;
+}
+
+.news-event-details {
+    width: 250px;
+}
+
+.panel-body-photo {
+    padding: 0px;
+}
+
+.thumbnail {
+    border-radius: 0px;
+}
+
+.panel-body-photo .thumbnail {
+    width:50%;
+    float: left;
+    padding: 0px;
+    margin: 0px;
+    border: 0px solid #fff;
+    border-radius: 0px;
+}
+    
+.panel-heading-time {
+    font-size: 12px;
+    padding: 5px 15px;
+}
+
+.panel-default > .panel-heading-time {
+    background-color: #fff;
+}
+
+.panel-footer .social,
+.panel-heading .social {
+    width: 100px;
+    height: 25px;
+    padding: 0px;
+    list-style: none;
+}
+
+.panel-footer .social li,
+.panel-heading .social li {
+    width: 25px;
+    float: left;
+    line-height: 30px;
+    text-align: center;
+}
+
+.facebook a,
+.twitter a,
+.google-plus a {
+	display: block;
+	width: 100%;
+	color: rgb(75, 110, 168) !important;
+}
+.twitter a {
+	color: rgb(79, 213, 248) !important;
+}
+.google-plus a {
+	color: rgb(221, 75, 57) !important;
+}
+.facebook:hover a {
+	color: rgb(255, 255, 255) !important;
+	background-color: rgb(75, 110, 168) !important;
+}
+.twitter:hover a {
+	color: rgb(255, 255, 255) !important;
+	background-color: rgb(79, 213, 248) !important;
+}
+.google-plus:hover a {
+	color: rgb(255, 255, 255) !important;
+	background-color: rgb(221, 75, 57) !important;
+}
+
+.event-calendar > table.month {
+    border-spacing: 0px;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    border: 0px solid red;
+}
+
+.event-calendar .table > thead > tr > th,
+.event-calendar .table > tbody > tr > th,
+.event-calendar .table > tfoot > tr > th,
+.event-calendar .table > thead > tr > td,
+.event-calendar .table > tbody > tr > td,
+.event-calendar .table > tfoot > tr > td {
+  padding: 6px;
+  line-height: 1.42857143;
+  vertical-align: top;
+}
+
+.event-calendar .panel > .table-bordered > thead > tr:first-child > th {
+    border-bottom: 1px solid #DDD;
+    background-color: #DFE0E2;
+}
+
+
+.event-calendar-day {
+    color: #555;
+    text-align: center;
+    padding: 5px;
+    background-color: #FFF;
+}
+
+.event-calendar-day.noday {
+    border: none;
+}
+
+.event-calendar-day.filled {
+    background-color: #9999CC;
+    color: #fff;
+}
+
+.event-calendar-day span.today {
+    color: #fff;
+    background-color: #99c;
+}
+
+.event-header {
+    position: relative;
+    min-height: 120px;
+    background-color: #F5F5F5;
+}
+
+.event-header .time {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 18px;
+    color: #FFF;
+    text-shadow: 1px 1px 4px #000;
+}
+
+.list-group .time {
+    font-size: 13px;
+}
+
+.event-header .title {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    display: inline;
+}
+
+.event-header .title {
+    font-size: 32px;
+    color: #FFF;
+    text-shadow: 1px 1px 4px #000;
+    width: 100%;
+    text-align: right;
+}
+
+.event-header .title.long {
+    font-size: 23px;
+    display-inline: 8px;
+    display: inline;
+}
+
+.event-header .title a {
+    padding: 5px;
+    color: #fff;
+}
+
+.event-header .title a:hover {
+}
+
+.event-finished {
+    color: #A7A7A7;
+}
+
+.event-header-finished {
+    border-bottom: 5px solid #A7A7A7;
+}
+
+.event-header-finished a:hover {
+}
+
+.event-in-progress { 
+    color: #259260;
+}
+
+.event-header-in-progress {
+    border-bottom: 5px solid #259260;
+}
+
+.event-header-in-progress a:hover {
+}
+
+.event-incoming { 
+    color: #99C;
+}
+
+.event-header-incoming {
+    border-bottom: 5px solid #99C;
+}
+
+.event-header-incoming a:hover {
+}
+
+.bg-inactive {
+    background-color: #777;
+    color: #fff;
 }

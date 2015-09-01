@@ -13,7 +13,6 @@ from django.core.urlresolvers import reverse
 from grappelli.dashboard import modules, Dashboard
 from grappelli.dashboard.utils import get_admin_site_name
 
-
 class CustomIndexDashboard(Dashboard):
     """
     Custom index dashboard for www.
@@ -22,14 +21,18 @@ class CustomIndexDashboard(Dashboard):
         site_name = get_admin_site_name(context)
 
         self.children.append(modules.Group(
-            title='Menu',
             column=1,
             collapsible=False,
             children=[
                 modules.ModelList(
                     title='Treść',
                     collapsible=False,
-                    models=('news.models.News', 'page.models.Page', 'links.models.Link')
+                    models=(
+                        'news.models.News', 
+                        'page.models.Page', 
+                        'links.models.Link',
+                        'event.*'
+                    )
                 ),
                 modules.ModelList(
                     title='Zdjęcia',
@@ -46,17 +49,22 @@ class CustomIndexDashboard(Dashboard):
                     collapsible=False,
                     models=('user.models.User',)
                 ),
+                # modules.AppList(
+                #     title='Wydarzenia',
+                #     column=1,
+                #     models=('schedule.*',)
+                # ),
             ]
         ))
 
         # append another link list module for "support".
         self.children.append(modules.LinkList(
-            _('Media Management'),
+            'Zarządzanie mediami',
             column=3,
             collapsible=False,
             children=[
                 {
-                    'title': _('FileBrowser'),
+                    'title': 'Przeglądarka plików',
                     'url': '/admin/filebrowser/browse/',
                     'external': False,
                 },
@@ -65,8 +73,8 @@ class CustomIndexDashboard(Dashboard):
 
         # append a recent actions module
         self.children.append(modules.RecentActions(
-            _('Recent Actions'),
-            limit=5,
+            'Ostatnie akcje',
+            limit=8,
             collapsible=False,
-            column=4,
+            column=3,
         ))

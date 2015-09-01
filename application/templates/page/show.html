@@ -7,7 +7,6 @@
 {% endblock %}
 
 {% block content %}
-    <div class="row" style="height: 15px;"></div>
     <div class="row">
         {% block breadcrumb %}
             <ol class="breadcrumb">
@@ -17,10 +16,16 @@
             </ol>
         {% endblock %}
     </div>
-    <div class="row" style="padding-bottom: 100px;">
-        <div class="col-lg-8 col-sm-8">
-            <div class="lz-news">
+    <div class="row">
+        <div class="col-xs-13">
+            <div class="page-header">
                 <h1>{{ page.title }}</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="padding-bottom: 100px;">
+        <div class="col-lg-9 col-sm-9">
+            <div class="lz-news">
                 <span>{{ page.category.name }} | {{ page.updated_at|date:"D d E Y" }}</span>
                 {% if page.content %}
                     <p>{{ page.content|safe }}</p>
@@ -71,11 +76,7 @@
         </div>
         <div class="col-lg-4 col-sm-4">
             <div class="panel panel-default">
-                <div class="panel-heading"><strong>{{ page.category.name }}</strong></div>
-                <div class="panel-body">
-                    <p>Inne strony z tej kategorii.</p>
-                </div>
-
+                <div class="panel-heading"><i class="glyphicon glyphicon-list"></i> <strong>Inne z kategorii {{ page.category.name|lower }}</strong></div>
                 <div class="list-group">
                     {% for p in page.category.get_all_published %}
                         <a href="{% url 'page_show' slug=p.slug %}"

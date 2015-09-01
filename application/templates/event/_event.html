@@ -1,0 +1,34 @@
+{% load thumbnail %}
+{% load social_share %}
+
+<div class="panel panel-default">
+    {% if event.status == 3 %}
+    <div class="event-header {% if event.image %}event-header-image{% endif %} event-header-finished">
+        {% elif event.status == 2 %}
+        <div class="event-header {% if event.image %}event-header-image{% endif %} event-header-in-progress">
+            {% else %}
+            <div class="event-header {% if event.image %}event-header-image{% endif %} event-header-incoming">
+                {% endif %}
+                {% if event.image %}
+                    <img class="img-responsive" src="{{ event.image | thumbnail_url:'event_thumb' }}" alt="">
+                {% endif %}
+
+                {% include 'event/_time.html' with event=event %}
+                <div class="title {% if event.title|length >= 40 %}long{% endif %}">
+                    <a href="{% url 'event_details' slug=event.slug %}">{{ event.title }}</a>
+                </div>
+            </div>
+            <div class="panel-body">
+                <p class="desc">{{ event.description|truncatechars:600 }}</p>
+            </div>
+            <div class="panel-footer panel-paddingless">
+                <span class="category small">
+                    <i class="glyphicon glyphicon-tag"></i> {{ event.category|lower }}
+                </span>
+                <ul class="pull-right social">
+                    {% post_to_facebook event %}
+                    {% post_to_twitter "tweet!" event %}
+                    {% post_to_gplus event %}
+                </ul>
+            </div>
+        </div>

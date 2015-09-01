@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
+import uuid
+import image.thumbnails as thumbnails
 from django.db import models
 from user.models import User
+from event.models import Event
 from category.models import Category
 from semester.models import Semester
 from news.managers import NewsManager
 from gallery.models import Gallery
-import uuid
-import image.thumbnails as thumbnails
 from cStringIO import StringIO
 from PIL import Image
 
@@ -40,6 +41,12 @@ class News(models.Model):
         verbose_name='Autor',
         related_name='News'
     )
+    event = models.ForeignKey(
+        Event,
+        blank=True,
+        null=True,
+        verbose_name='Wydarzenie',
+        related_name='news')
     is_published = models.BooleanField(
         default=False,
         verbose_name='Czy jest opublikowany'

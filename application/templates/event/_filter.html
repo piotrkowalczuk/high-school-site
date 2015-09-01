@@ -1,0 +1,22 @@
+<div class="panel panel-default">
+    <div class="panel-heading"><strong>Wyszukiwarka</strong></div>
+    <div class="panel-body">
+        <form role="form" action="{{ news_archive }}" method="GET">
+            <div class="form-group">
+                <label for="">Rok szkolny</label>
+                {{ form.semester }}
+            </div>
+            <div class="form-group">
+              <label for="">Kategoria</label>
+              {{ form.category }}
+            </div>
+            <div class="form-group">
+              <label for="">Status</label>
+              {{ form.status }}
+            </div>
+          <button type="submit" class="btn btn-default">
+              <i class="glyphicon glyphicon-filter"></i> Filtruj
+          </button>
+        </form>
+    </div>
+</div>

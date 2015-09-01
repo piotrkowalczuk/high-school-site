@@ -10,11 +10,20 @@ class NewsAdmin(admin.ModelAdmin):
         'title',
         'autor',
         'category',
+        'semester',
+        'event',
         'is_published',
         'is_pinned',
         'created_at',
         'updated_at',
         'slug'
     )
+    list_filter = (
+        ('is_pinned', admin.BooleanFieldListFilter),
+        ('is_published', admin.BooleanFieldListFilter),
+        'semester', 
+        'category'
+    )
+    search_fields = ['title']
 
 admin.site.register(News, NewsAdmin)

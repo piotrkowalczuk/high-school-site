@@ -1,7 +1,6 @@
 from django.http import HttpResponseRedirect
 from django.contrib import auth
 
-
 def login_process(request):
     username = request.POST.get('username', '')
     password = request.POST.get('password', '')

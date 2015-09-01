@@ -15,5 +15,10 @@ class PageAdmin(admin.ModelAdmin):
         'updated_at',
         'slug'
     )
+    list_filter = (
+        ('is_published', admin.BooleanFieldListFilter),
+        'category'
+    )
+    search_fields = ['title']
 
 admin.site.register(Page, PageAdmin)

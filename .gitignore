@@ -1,4 +1,5 @@
 .DS_Store
+.idea
 *.class
 *.pyc
 *.pyo
@@ -13,3 +14,4 @@ application/media/*
 application/static/images/carusele-background-test.jpg
 application/high-school-site/settings.py
 venv
+build
