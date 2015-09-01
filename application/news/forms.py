@@ -20,4 +20,4 @@ class NewsForm(ModelForm):
 
 class SearchForm(Form):
     semester = ModelChoiceField(queryset = Semester.objects.get_archived(), widget=Select(attrs={'class': 'form-control',}))
-    category = ModelChoiceField(queryset = Category.objects.all(), widget=Select(attrs={'class': 'form-control',}))
+    category = ModelChoiceField(queryset = Category.objects.get_sorted(), widget=Select(attrs={'class': 'form-control',}))
