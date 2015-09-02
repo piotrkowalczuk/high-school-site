@@ -7,6 +7,7 @@ from category.models import Category
 from semester.models import Semester
 from news.managers import NewsManager
 from gallery.models import Gallery
+from django.core.urlresolvers import reverse
 
 
 def image_filepath(instance, filename):
@@ -92,3 +93,6 @@ class News(models.Model):
 
     def __unicode__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('news_show', args=[str(self.slug)])

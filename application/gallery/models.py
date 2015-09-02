@@ -8,6 +8,8 @@ from django.core.files.uploadedfile import SimpleUploadedFile
 import os
 import uuid
 from semester.models import Semester
+from django.core.urlresolvers import reverse
+
 
 def image_filepath(instance, filename):
     ext = filename.split('.')[-1]
@@ -42,6 +44,9 @@ class Gallery(models.Model):
     def get_cover(self):
         return self.photo_set.filter(is_published=True).order_by('id')[0]
 
+    def get_absolute_url(self):
+        return reverse('gallery_show', args=[str(self.id)])
+
 
 class Photo(models.Model):
 
@@ -68,7 +73,6 @@ class Photo(models.Model):
     gallery = models.ForeignKey(Gallery)
     created_at = models.DateTimeField(auto_now_add=True, editable=False)
     updated_at = models.DateTimeField(auto_now=True)
-
 
     def __unicode__(self):
         return self.name

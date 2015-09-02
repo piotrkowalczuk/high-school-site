@@ -14,7 +14,6 @@ sitemaps = {
     'news': NewsSitemap,
     'page': PageSitemap,
     'gallery': GallerySitemap,
-    'photo': PhotoSitemap,
     'event': EventSitemap,
 }
 
