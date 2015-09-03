@@ -13,3 +13,60 @@
         </div>
     {% endif %}
 </div>
+
+
+{% if photos %}
+<br/><br/>
+<h4>Zdjęcia:</h4>
+    {% for photo in photos %}
+
+    {% if forloop.first %}
+        <div id="links" class="row row-gallery">
+    {% endif %}
+
+    <div class="col-sm-5">
+        <div class="thumbnail">
+            <a href="/media/{{ photo.image }}">
+                <img class="img-responsive"
+                     src="{{ photo.image | thumbnail_url:'gallery_thumb' }}"
+                     alt="{{ news.title }} Photo #1 {{ photo.id }}">
+            </a>
+            {% if photo.description %}
+                <div class="caption">
+                    <p><small>{{ photo.description }}</small></p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    {% if forloop.last or forloop.counter|divisibleby:3 %}
+        </div>
+    {% endif %}
+
+    {% if forloop.counter|divisibleby:3 and not forloop.last %}
+        <div id="links" class="row row-gallery">
+    {% endif %}
+{% endfor %}
+
+<!-- The Gallery as lightbox dialog, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+</div>
+<script>
+    document.getElementById('links').onclick = function (event) {
+        event = event || window.event;
+        var target = event.target || event.srcElement,
+            link = target.src ? target.parentNode : target,
+            options = {index: link, event: event},
+            links = this.getElementsByTagName('a');
+        blueimp.Gallery(links, options);
+    };
+</script>
+
+{% endif %}
