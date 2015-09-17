@@ -18,10 +18,11 @@
 {% if photos %}
 <br/><br/>
 <h4>Zdjęcia:</h4>
+<div id="links">
     {% for photo in photos %}
 
     {% if forloop.first %}
-        <div id="links" class="row row-gallery">
+        <div class="row row-gallery">
     {% endif %}
 
     <div class="col-sm-4">
@@ -44,9 +45,10 @@
     {% endif %}
 
     {% if forloop.counter|divisibleby:3 and not forloop.last %}
-        <div id="links" class="row row-gallery">
+        <div class="row row-gallery">
     {% endif %}
 {% endfor %}
+</div>
 
 <!-- The Gallery as lightbox dialog, should be a child element of the document body -->
 <div id="blueimp-gallery" class="blueimp-gallery">
