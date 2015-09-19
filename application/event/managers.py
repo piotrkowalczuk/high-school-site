@@ -21,7 +21,6 @@ class EventManager(models.Manager):
         now = timezone.localtime(timezone.now())
         day1, day2 = calendar.monthrange(now.year, now.month)
 
-        print now, now.tzname()
         start = now.replace(day=1, hour=0, minute=0, second=0, microsecond=0)
         end = now.replace(day=day2, hour=23, minute=59, second=59, microsecond=9999)
 

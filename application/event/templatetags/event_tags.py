@@ -126,7 +126,10 @@ class EventCalendar(LocaleHTMLCalendar):
 
         for event in events:
             diff = event.end_at - event.start_at
-            for i in range(diff.days):
-                d[event.start_at.date()+timedelta(days=i)].append(event)
+            if diff.days == 0:
+                d[event.start_at.date()].append(event)
+            else:
+                for i in range(diff.days):
+                    d[event.start_at.date()+timedelta(days=i)].append(event)
 
         return d

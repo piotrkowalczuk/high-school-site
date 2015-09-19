@@ -13,11 +13,13 @@ from django.core.urlresolvers import reverse
 def image_filepath(instance, filename):
     ext = filename.split('.')[-1]
     filename = "%s.%s" % (uuid.uuid4(), ext)
+
     return '/'.join(['uploads/news/thumbnail', filename])
 
 def picture_filepath(instance, filename):
     ext = filename.split('.')[-1]
     filename = "%s.%s" % (uuid.uuid4(), ext)
+
     return '/'.join(['uploads/news/picture', filename])
 
 class News(models.Model):
