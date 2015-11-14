@@ -1,7 +1,9 @@
-from gallery.models import Photo
-from gallery.widgets import AdminImageWidget
 from django.forms import Form, ModelForm, ModelChoiceField, Select
+
+from gallery.models import Photo, Gallery
+from gallery.widgets import AdminImageWidget
 from semester.models import Semester
+
 
 class PhotoInlineForm(ModelForm):
     class Meta:
@@ -15,7 +17,15 @@ class PhotoInlineForm(ModelForm):
             'gallery',
         ]
         widgets = {'image': AdminImageWidget(), }
+
     readonly_fields = ('image_preview',)
 
+    def __init__(self, *args, **kwargs):
+        super(PhotoInlineForm, self).__init__(*args, **kwargs)
+
+        self.fields['gallery'].queryset = Gallery.objects.order_by('-id')
+
+
 class SearchForm(Form):
-    semester = ModelChoiceField(queryset = Semester.objects.get_archived(), widget=Select(attrs={'class': 'form-control',}))
+    semester = ModelChoiceField(queryset=Semester.objects.get_archived(),
+                                widget=Select(attrs={'class': 'form-control', }))

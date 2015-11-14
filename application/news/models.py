@@ -1,13 +1,15 @@
 # -*- coding: utf-8 -*-
 import uuid
-from django.db import models
-from user.models import User
-from event.models import Event
-from category.models import Category
-from semester.models import Semester
-from news.managers import NewsManager
-from gallery.models import Gallery
+
 from django.core.urlresolvers import reverse
+from django.db import models
+
+from category.models import Category
+from event.models import Event
+from gallery.models import Gallery
+from news.managers import NewsManager
+from semester.models import Semester
+from user.models import User
 
 
 def image_filepath(instance, filename):
@@ -16,14 +18,15 @@ def image_filepath(instance, filename):
 
     return '/'.join(['uploads/news/thumbnail', filename])
 
+
 def picture_filepath(instance, filename):
     ext = filename.split('.')[-1]
     filename = "%s.%s" % (uuid.uuid4(), ext)
 
     return '/'.join(['uploads/news/picture', filename])
 
-class News(models.Model):
 
+class News(models.Model):
     objects = NewsManager()
 
     class Meta:

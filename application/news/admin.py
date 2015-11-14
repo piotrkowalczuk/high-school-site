@@ -1,6 +1,7 @@
-from news.models import News
 from django.contrib import admin
+
 from news.forms import NewsForm
+from news.models import News
 
 
 class NewsAdmin(admin.ModelAdmin):
@@ -21,9 +22,10 @@ class NewsAdmin(admin.ModelAdmin):
     list_filter = (
         ('is_pinned', admin.BooleanFieldListFilter),
         ('is_published', admin.BooleanFieldListFilter),
-        'semester', 
+        'semester',
         'category'
     )
     search_fields = ['title']
+
 
 admin.site.register(News, NewsAdmin)
