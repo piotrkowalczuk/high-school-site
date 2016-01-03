@@ -21,6 +21,7 @@ def event_calendar(parser, token):
 
     return EventCalendarNode(events)
 
+
 class EventCalendarNode(template.Node):
     """
     Process a particular node in the template. Fail silently.
@@ -106,17 +107,19 @@ class EventCalendar(LocaleHTMLCalendar):
             a('\n')
         a('</table>')
         a('<div class="panel-footer text-right">')
-        a('<a href="%s" class="small">Wszystkie <i class="glyphicon glyphicon-circle-arrow-right"></i></a>' % reverse('event_list'))
+        a('<a href="%s" class="small">Wszystkie <i class="glyphicon glyphicon-circle-arrow-right"></i></a>' % reverse(
+            'event_list'))
         a('</div>')
         a('</div>')
         a('\n')
         return ''.join(v)
 
     def formatmonthname(self, theyear, themonth, withyear=True):
-        dt = _date(timezone.now(), "F o")
+        dt = _date(timezone.now(), "F Y")
         s = smart_text(dt)
 
-        return u'<div class="panel-heading"><strong>Wydarzenia</strong><span class="pull-right">'+unicode(s)+u'</span></div>'
+        return u'<div class="panel-heading"><strong>Wydarzenia</strong><span class="pull-right">' + unicode(
+            s) + u'</span></div>'
 
     def day_cell(self, cssclass, body):
         return '<td class="event-calendar-day %s">%s</td>' % (cssclass, body)
@@ -130,6 +133,6 @@ class EventCalendar(LocaleHTMLCalendar):
                 d[event.start_at.date()].append(event)
             else:
                 for i in range(diff.days):
-                    d[event.start_at.date()+timedelta(days=i)].append(event)
+                    d[event.start_at.date() + timedelta(days=i)].append(event)
 
         return d

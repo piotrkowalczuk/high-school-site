@@ -4,6 +4,7 @@ from event.forms import FilterForm
 from models import Event
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
+
 class EventList(BaseView):
     def get(self, request):
         form = FilterForm(request.GET.copy())
@@ -38,6 +39,7 @@ class EventList(BaseView):
                 'status': status,
             }
         )
+
 
 class EventDetails(BaseView):
     def get(self, request, slug):
