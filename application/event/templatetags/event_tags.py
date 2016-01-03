@@ -100,7 +100,7 @@ class EventCalendar(LocaleHTMLCalendar):
         a(self.formatmonthname(year, month, False))
         a('<table class="table table-bordered">')
         a('<thead>')
-        a(unicode(self.formatweekheader()))
+        a(unicode(self.formatweekheader().decode('utf-8')))
         a('</thead>')
         for week in self.monthdays2calendar(year, month):
             a(self.formatweek(week).decode('utf-8'))
