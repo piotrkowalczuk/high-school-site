@@ -13,5 +13,6 @@ application/auto_static/*
 application/media/*
 application/static/images/carusele-background-test.jpg
 application/high-school-site/settings.py
+application/gunicorn.conf
 venv
 build
