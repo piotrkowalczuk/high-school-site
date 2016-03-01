@@ -8,7 +8,11 @@
     {% for category in menu %}
         <li class="col-lg-2 col-sm-2 col-xs-13 dropdown">
             <a href="#" title="{{ category.name }}" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
-                {{ category.name }}
+                {% if category.name == "Liceum" %}
+                    70 Lecie
+                {% else %}
+                    {{ category.name }}
+                {% endif %}
             </a>
             <ul class="dropdown-menu lz-menu-sub">
                 {% if category.name == "Szkoła" %}
