@@ -22,12 +22,12 @@ body {
 .lz-header .header {
     background-color: transparent;
     height: 196px;
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .lz-header {
     background: transparent url('../images/background-top.jpg') repeat-x;
-    background-position: 0px 0px;
+    background-position: 0 0;
 }
 
 .lz-footer {
@@ -41,13 +41,13 @@ body {
 .lz-footer .panel-heading,
 .lz-footer .list-group-item  {
     background-color: #585858;
-    border-width: 0px;
+    border-width: 0;
 }
 
 .navbar-custom {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     background-color: #000;
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 .lz-menu {
@@ -55,7 +55,7 @@ body {
 }
 
 .lz-menu .container {
-    padding: auto 0px;
+    padding: auto 0;
 }
 
 .lz-menu-nav {
@@ -93,7 +93,7 @@ body {
 .lz-menu-nam li,
 .nav-pills > li + li {
     padding:0px;
-    margin: 0px;
+    margin: 0;
 }
 
 .nav .open > a,
@@ -105,20 +105,20 @@ body {
 .lz-menu-nam li.dropdown a,
 .nav-pills > li.dropdown a,
 .nav-pills > li a {
-    border-radius: 0px;
-    margin: 0px;
+    border-radius: 0;
+    margin: 0;
     padding:0px;
     height: 46px;
     line-height: 46px;
 }
 
 .nav-pills > li.dropdown:first-of-type a {
-    border-left-width: 0px;
+    border-left-width: 0;
 }
 
 .nav-pills > li a {
     border: 1px solid #333366;
-    border-width: 0px 0px 0px 1px;
+    border-width: 0 0 0 1px;
 }
 
 .nav-pills.lz-menu-nav > li {
@@ -126,25 +126,25 @@ body {
 
 
 ul.lz-menu-nav > li:first-child{
-    border-width: 0px 0px 0px 0px;
-    padding: 0px;
+    border-width: 0 0 0 0;
+    padding: 0;
 }
 
 .lz-menu-nav li a:hover,
 .lz-menu-nav .dropdown.open a {
-    border-radius: 0px;
+    border-radius: 0;
     color: #34346A;
     background-color: #fff;
 }
 
 .lz-menu-nav li.col-lg-2.col-sm-2.col-xs-6 {
-    padding: 0px;
+    padding: 0;
 }
 
 .lz-menu-nav .dropdown-menu {
-    margin: 0px;
-    padding: 0px;
-    border-width: 0px;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
 }
 
 .lz-menu-nav li a:hover {
@@ -165,9 +165,9 @@ ul.dropdown-menu.lz-menu-sub {
     padding:0px;
     margin:0px;
     border: 1px solid #343467;
-    border-width: 0px 1px 1px 1px;
-    border-radius: 0px;
-    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.35);;
+    border-width: 0 1px 1px 1px;
+    border-radius: 0;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.35);;
 
     position: absolute;
     top: 100%;
@@ -189,8 +189,8 @@ ul.dropdown-menu.lz-menu-sub {
 
 ul.dropdown-menu.lz-menu-sub a,
 ul.dropdown-menu.lz-menu-sub li {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 .nav-pills .lz-menu-sub > li a {
@@ -200,10 +200,10 @@ ul.dropdown-menu.lz-menu-sub li {
 }
 
 ul.dropdown-menu.lz-menu-sub a {
-    border-width: 0px;
+    border-width: 0;
     font-size:14px;
     padding: 4px;
-    margin: 0px;
+    margin: 0;
     text-align: left;
 }
 
@@ -216,7 +216,7 @@ ul.dropdown-menu.lz-menu-sub a {
 }
 
 .lz-content .page-header{
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .lz-content .page-header h1{
@@ -267,11 +267,11 @@ ul.dropdown-menu.lz-menu-sub a {
     background-color: rgba(0, 0, 0, 0.6);
     display: block;
     padding: 8px;
-    margin: 0px;
+    margin: 0;
     text-align: left;
-    bottom: 0px;
-    right: 0px;
-    left: 0px;
+    bottom: 0;
+    right: 0;
+    left: 0;
     font-size: 18px;
     font-family: Calibri, "Lucida Grande" , "Helvetica Neue", Arial, sans-serif;
     font-weight: 400;
@@ -303,7 +303,7 @@ ul.dropdown-menu.lz-menu-sub a {
 
 .lz-carousel-navi-item h4 {
     font-size: 15px;
-    padding: 4px 0px 0px 0px;
+    padding: 4px 0 0 0;
 }
 
 .lz-carousel-navi-item p {
@@ -339,7 +339,7 @@ ul.dropdown-menu.lz-menu-sub a {
 
 .lz-carousel-navi-item.list-group-item:first-child,
 .lz-carousel-navi-item.list-group-item:last-child {
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 .btn-more {
@@ -350,7 +350,7 @@ ul.dropdown-menu.lz-menu-sub a {
 .carousel-thumb {
     padding: 4px;
     border: 1px solid #dedede;
-    margin: 1px 10px 0px 0px;
+    margin: 1px 10px 0 0;
 }
 
 .lz-carousel-navi-item.active .carousel-thumb {
@@ -358,8 +358,8 @@ ul.dropdown-menu.lz-menu-sub a {
 }
 
 .footer-copyrights {
-    margin: 0px;
-    padding: 15px 0px 0px 0px;
+    margin: 0;
+    padding: 15px 0 0 0;
     font-size: 12px;
 }
 
@@ -380,7 +380,7 @@ ul.dropdown-menu.lz-menu-sub a {
 }
 
 .breadcrumb {
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 .lz-news-full p a > img {
@@ -407,46 +407,55 @@ ul.dropdown-menu.lz-menu-sub a {
 
 .list-group-item-image-cku {
     background-image: url('../images/links.jpg');
-    background-position: 0px 0px;
+    background-position: 0 0;
 }
 
 .list-group-item-image-cku:hover {
-    background-position: 263px 0px;
+    background-position: 263px 0;
 }
 
 .list-group-item-image-ko-gorzow {
     background-image: url('../images/links.jpg');
-    background-position: 0px 400px;
+    background-position: 0 500px;
 }
 
 .list-group-item-image-ko-gorzow:hover {
-    background-position: 263px 400px;
+    background-position: 263px 500px;
 }
 
 .list-group-item-image-powiat-zary {
     background-image: url('../images/links.jpg');
-    background-position: 0px 300px;
+    background-position: 0 400px;
 }
 
 .list-group-item-image-powiat-zary:hover {
-    background-position: 263px 300px;
+    background-position: 263px 400px;
 }
 
 .list-group-item-image-zary {
     background-image: url('../images/links.jpg');
-    background-position: 0px 200px;
+    background-position: 0 300px;
 }
 
 .list-group-item-image-zary:hover {
-    background-position: 263px 200px;
+    background-position: 263px 300px;
 }
 
 .list-group-item-image-lubuskie {
     background-image: url('../images/links.jpg');
-    background-position: 0px 100px;
+    background-position: 0 200px;
 }
 
 .list-group-item-image-lubuskie:hover {
+    background-position: 263px 200px;
+}
+
+.list-group-item-image-bip {
+    background-image: url('../images/links.jpg');
+    background-position: 0 100px;
+}
+
+.list-group-item-image-bip:hover {
     background-position: 263px 100px;
 }
 
@@ -464,13 +473,13 @@ ul.dropdown-menu.lz-menu-sub a {
 #CookielawBanner .icon {
     font-size: 32px;
     color: #FFC800;
-    margin: 0px 10px 10px 0px;
+    margin: 0 10px 10px 0;
 }
 
 #CookielawBanner .btn-primary {
     background-color: #9999CC;
     border-color: #9999CC;
-    border-radius: 0px;
+    border-radius: 0;
     margin-bottom: 8px;
     margin-left: 8px;
 }
@@ -481,9 +490,9 @@ ul.dropdown-menu.lz-menu-sub a {
 }
 
 .fc-event {
-    border-radius: 0px;
-    margin: 0px 0px 1px 0px;
-    border-width: 0px;
+    border-radius: 0;
+    margin: 0 0 1px 0;
+    border-width: 0;
     background-color: #DADAEE;
     color: #6D6DA1;
     padding: 2px 4px;
@@ -564,10 +573,10 @@ ul.dropdown-menu.lz-menu-sub a {
 .pager li > span,
 .panel,
 .panel-heading {
-    border-radius: 0px;
+    border-radius: 0;
 }
 .panel-paddingless {
-    padding: 0px;
+    padding: 0;
 }
 .panel-paddingless span.category {
     font-size: 14px;
@@ -580,20 +589,20 @@ ul.dropdown-menu.lz-menu-sub a {
 }
 
 .panel-body-photo {
-    padding: 0px;
+    padding: 0;
 }
 
 .thumbnail {
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 .panel-body-photo .thumbnail {
     width:50%;
     float: left;
-    padding: 0px;
-    margin: 0px;
-    border: 0px solid #fff;
-    border-radius: 0px;
+    padding: 0;
+    margin: 0;
+    border: 0 solid #fff;
+    border-radius: 0;
 }
     
 .panel-heading-time {
@@ -609,7 +618,7 @@ ul.dropdown-menu.lz-menu-sub a {
 .panel-heading .social {
     width: 100px;
     height: 25px;
-    padding: 0px;
+    padding: 0;
     list-style: none;
 }
 
@@ -648,11 +657,11 @@ ul.dropdown-menu.lz-menu-sub a {
 }
 
 .event-calendar > table.month {
-    border-spacing: 0px;
+    border-spacing: 0;
     border-collapse: collapse;
     width: 100%;
     max-width: 100%;
-    border: 0px solid red;
+    border: 0 solid red;
 }
 
 .event-calendar .table > thead > tr > th,
@@ -789,7 +798,7 @@ ul.dropdown-menu.lz-menu-sub a {
 }
 
 .alert {
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 .alert-info {
@@ -800,5 +809,5 @@ ul.dropdown-menu.lz-menu-sub a {
 
 .panel > .list-group .list-group-item,
 .panel > .panel-collapse > .list-group .list-group-item {
-    border-radius: 0px;
+    border-radius: 0;
 }
