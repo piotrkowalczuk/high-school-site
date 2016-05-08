@@ -15,4 +15,5 @@ application/static/images/carusele-background-test.jpg
 application/high-school-site/settings.py
 application/gunicorn.conf
 venv
+help
 build
