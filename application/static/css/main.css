@@ -405,31 +405,31 @@ ul.dropdown-menu.lz-menu-sub a {
     width: 263px;
 }
 
-.list-group-item-image-cku {
-    background-image: url('../images/links.jpg');
-    background-position: 0 0;
-}
-
-.list-group-item-image-cku:hover {
-    background-position: 263px 0;
-}
-
 .list-group-item-image-interreg {
     background-image: url('../images/links.jpg');
-    background-position: 0 600px;
+    background-position: 0 0px;
 }
 
 .list-group-item-image-interreg:hover {
-    background-position: 263px 600px;
+    background-position: 263px 0px;
 }
 
 .list-group-item-image-bip {
     background-image: url('../images/links.jpg');
-    background-position: 0 500px;
+    background-position: 0 600px;
 }
 
 .list-group-item-image-bip:hover {
-    background-position: 263px 500px;
+    background-position: 263px 600px;
+}
+
+.list-group-item-image-cku {
+    background-image: url('../images/links.jpg');
+    background-position: 0 500;
+}
+
+.list-group-item-image-cku:hover {
+    background-position: 263px 500;
 }
 
 .list-group-item-image-ko-gorzow {
