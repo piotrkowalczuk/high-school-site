@@ -5,7 +5,6 @@
 *.pyo
 */.git/*
 */migrations/*.py
-.idea
 high-school-site.sublime.project
 high-school-site.sublime-workspace
 grappeli/*

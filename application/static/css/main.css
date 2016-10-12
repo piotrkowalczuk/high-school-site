@@ -414,48 +414,57 @@ ul.dropdown-menu.lz-menu-sub a {
     background-position: 263px 0;
 }
 
-.list-group-item-image-ko-gorzow {
+.list-group-item-image-interreg {
     background-image: url('../images/links.jpg');
-    background-position: 0 500px;
+    background-position: 0 600px;
 }
 
-.list-group-item-image-ko-gorzow:hover {
-    background-position: 263px 500px;
-}
-
-.list-group-item-image-powiat-zary {
-    background-image: url('../images/links.jpg');
-    background-position: 0 400px;
-}
-
-.list-group-item-image-powiat-zary:hover {
-    background-position: 263px 400px;
-}
-
-.list-group-item-image-zary {
-    background-image: url('../images/links.jpg');
-    background-position: 0 300px;
-}
-
-.list-group-item-image-zary:hover {
-    background-position: 263px 300px;
-}
-
-.list-group-item-image-lubuskie {
-    background-image: url('../images/links.jpg');
-    background-position: 0 200px;
-}
-
-.list-group-item-image-lubuskie:hover {
-    background-position: 263px 200px;
+.list-group-item-image-interreg:hover {
+    background-position: 263px 600px;
 }
 
 .list-group-item-image-bip {
     background-image: url('../images/links.jpg');
-    background-position: 0 100px;
+    background-position: 0 500px;
 }
 
 .list-group-item-image-bip:hover {
+    background-position: 263px 500px;
+}
+
+.list-group-item-image-ko-gorzow {
+    background-image: url('../images/links.jpg');
+    background-position: 0 400px;
+}
+
+.list-group-item-image-ko-gorzow:hover {
+    background-position: 263px 400px;
+}
+
+.list-group-item-image-powiat-zary {
+    background-image: url('../images/links.jpg');
+    background-position: 0 300px;
+}
+
+.list-group-item-image-powiat-zary:hover {
+    background-position: 263px 300px;
+}
+
+.list-group-item-image-zary {
+    background-image: url('../images/links.jpg');
+    background-position: 0 200px;
+}
+
+.list-group-item-image-zary:hover {
+    background-position: 263px 200px;
+}
+
+.list-group-item-image-lubuskie {
+    background-image: url('../images/links.jpg');
+    background-position: 0 100px;
+}
+
+.list-group-item-image-lubuskie:hover {
     background-position: 263px 100px;
 }
 
