@@ -425,11 +425,11 @@ ul.dropdown-menu.lz-menu-sub a {
 
 .list-group-item-image-cku {
     background-image: url('../images/links.jpg');
-    background-position: 0 500;
+    background-position: 0 500px;
 }
 
 .list-group-item-image-cku:hover {
-    background-position: 263px 500;
+    background-position: 263px 500px;
 }
 
 .list-group-item-image-ko-gorzow {
