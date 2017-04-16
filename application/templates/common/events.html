@@ -1,11 +1,20 @@
-<div class="panel panel-default">
-    <div class="panel-heading"><strong>Wydarzenia</strong></div>
-    <div class="list-group">
-        {% for event in events %}
-            <a href="{{ event.id }}" class="list-group-item">
-                {{ event.title }}<br/>
-                {{ event.description_short }}
-            </a>
-        {% endfor %}
+{% if events %}
+    <div class="panel panel-{{ style }}">
+        <div class="panel-heading">
+            <strong>{{ heading }}</strong>
+        </div>
+        <div class="list-group">
+            {% for event in events %}
+                <a href="{% url 'event_details' slug=event.slug %}" class="list-group-item">
+                    <strong>{{ event.title }}</strong><br/>
+                    {% if mode == 'starting' %}
+                    <small>początek za {{ event.start_at|timeuntil }}</small>
+                    {% endif %}
+                    {% if mode == 'ongoing' %}
+                    <small>koniec za {{ event.end_at|timeuntil }}</small>
+                    {% endif %}
+                </a>
+            {% endfor %}
+        </div>
     </div>
-</div>
+{% endif %}

@@ -34,9 +34,6 @@
                             <span class="icon-bar"></span>
                         </button>
                     </div>
-                    <ul class="nav navbar-nav navbar-left hidden-xs">
-                        <li><a href="{% url 'news_list' %}">Strona Główna</a></li>
-                    </ul>
                     <ul class="nav navbar-nav navbar-right hidden-xs">
                         <li><a href="{% url 'page_show' slug='kontakt' %}">Kontakt</a></li>
                     </ul>
@@ -85,6 +82,6 @@
     <script src="{{ STATIC_URL }}cookielaw/js/cookielaw.js"></script>
     <script src="//www.fuelcdn.com/fuelux/3.5.0/js/fuelux.min.js"></script>
     <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
-    {% include 'common/analytics.html' %}
+
 </body>
 </html>

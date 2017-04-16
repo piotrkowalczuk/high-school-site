@@ -22,7 +22,8 @@ class NewsIndex(BaseView):
         except EmptyPage:
             news_list = paginator.page(paginator.num_pages)
 
-        events = Event.objects.get_for_current_month()
+        events_starting = Event.objects.get_starting_in_next_days(7)
+        events_ongoing = Event.objects.get_ongoing()
 
         return render(
             request,
@@ -32,7 +33,8 @@ class NewsIndex(BaseView):
                 'news_pinned': news_pinned,
                 'links': links,
                 'menu': self.get_menu(),
-                'events': events,
+                'events_starting': events_starting,
+                'events_ongoing': events_ongoing,
             }
         )
 

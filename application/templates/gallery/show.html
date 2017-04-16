@@ -14,13 +14,15 @@
 
 {% block content %}
     <div class="row">
-        {% block breadcrumb %}
-            <ol class="breadcrumb">
-                <li><a href="{% url 'news_list' %}">Strona Główna</a></li>
-                <li><a href="{% url 'gallery_index' %}">Galerie Zdjęć</a></li>
-                <li class="active">{{ gallery.name }}</li>
-            </ol>
-        {% endblock %}
+        <div class="col-lg-13">
+            {% block breadcrumb %}
+                <ol class="breadcrumb">
+                    <li><a href="{% url 'news_list' %}">Strona Główna</a></li>
+                    <li><a href="{% url 'gallery_index' %}">Galerie Zdjęć</a></li>
+                    <li class="active">{{ gallery.name }}</li>
+                </ol>
+            {% endblock %}
+        </div>
     </div>
     <div class="row">
         <div class="col-xs-13">

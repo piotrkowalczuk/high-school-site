@@ -1,4 +1,4 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import patterns, url, include
 from django.conf import settings
 from filebrowser.sites import site
 from django.contrib import admin
@@ -26,7 +26,7 @@ urlpatterns = patterns(
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^grappelli/', include('grappelli.urls')),
-    url(r'^schedule/', include('schedule.urls')),
+    # url(r'^schedule/', include('schedule.urls')),
     url(r'^tinymce/', include('tinymce.urls')),
     url(r'^admin/filebrowser/', include(site.urls)),
     url(r'^admin/',  include(admin.site.urls)),

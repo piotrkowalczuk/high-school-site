@@ -1,43 +1,41 @@
 <ul class="nav nav-pills lz-menu-nav">
-    <li class="col-lg-1 col-sm-1 col-xs-4 dropdown">
-        <a href="{% url 'news_list' %}" title="Aktualności"><i class="glyphicon glyphicon-home"></i></a>
+    <li class="col-lg-1 col-sm-1 col-xs-4">
+        <a href="{% url 'news_list' %}" title="Aktualności">Start</a>
     </li>
-    <li class="col-lg-1 col-sm-1 col-xs-4 dropdown">
-        <a href="{% url 'event_list' %}" title="Wydarzenia"><i class="glyphicon glyphicon-calendar"></i></a>
-    </li>
-    {% for category in menu %}
-        <li class="col-lg-2 col-sm-2 col-xs-13 dropdown">
-            <a href="#" title="{{ category.name }}" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
-                {% if category.name == "Liceum" %}
-                    <small style="font-size:8pt;">Prus Tourismus</small>
-                {% else %}
-                    {{ category.name }}
-                {% endif %}
-            </a>
-            <ul class="dropdown-menu lz-menu-sub">
-                {% if category.name == "Szkoła" %}
-                    <li>
-                        <a href="{% url 'gallery_index' %}">
-                            Galerie zdjęć
-                        </a>
-                    </li>
-                {% endif %}
-                {% for sub_category in category.childrens.all %}
-                    <li>
-                        <a href="{% url 'news_filter' category_name=sub_category.name %}">
-                            {{ sub_category.name }}
-                        </a>
-                    </li>
-                {% endfor %}
-                {% for page in category.page_set.all_published_alphabetically %}
-                    <li>
-                        <a href="{% url 'page_show' slug=page.slug %}">{{ page.title }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
-        </li>
-    {% endfor %}
-    <li class="col-lg-1 col-sm-1 col-xs-4 dropdown">
-        <a href="{% url 'news_archive' %}" title="Archiwum"><i class="glyphicon glyphicon-book"></i></a>
+    <li class="col-lg-12 col-sm-11 col-xs-4">
+        <ul class="nav nav-pills pull-right">
+            {% for category in menu %}
+                <li class="dropdown">
+                    <a href="#" title="{{ category.name }}" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+                        {% if category.name == "Liceum" %}
+                            <small style="font-size:8pt;">Prus Tourismus</small>
+                        {% else %}
+                            {{ category.name }}
+                        {% endif %}
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu lz-menu-sub">
+                        {% for sub_category in category.childrens.all %}
+                            <li>
+                                <a href="{% url 'news_filter' category_name=sub_category.name %}">
+                                    {{ sub_category.name }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                        {% for page in category.page_set.all_published_alphabetically %}
+                            <li>
+                                <a href="{% url 'page_show' slug=page.slug %}">{{ page.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+            <li>
+                <a href="{% url 'gallery_index' %}" title="Galerie Zdjęć">Galerie zdjęć</a>
+            </li>
+            <li>
+                <a href="{% url 'news_archive' %}" title="Archiwum">Archiwum</a>
+            </li>
+        </ul>
     </li>
 </ul>

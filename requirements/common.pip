@@ -4,8 +4,8 @@ PyYAML
 django-static-precompiler
 easy-thumbnails
 django-grappelli==2.5.3
-django-filebrowser
-django-tinymce
+django-filebrowser==3.5.8
+django-tinymce==2.4.0
 django-bower
 django-less
 pillow

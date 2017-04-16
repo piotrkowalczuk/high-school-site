@@ -35,12 +35,13 @@
             {% endblock %}
         </div>
         <div class="lz-information-right-column col-lg-4 col-sm-4">
-            <a href="https://powiatzarski.edu.com.pl/kandydat/app/access_locked.html" class="thumbnail">
+            <a href="https://powiatzarski.edu.com.pl/kandydat/app/access_locked.html" class="thumbnail" style="background-color: #41414b;">
                 <img src="{{ STATIC_URL }}images/nabor2016.jpg" alt="nabór 2016"/>
             </a>
-            <div class="event-calendar">
-                {% event_calendar events %}
-            </div>
+
+            {% include 'common/events.html' with events=events_ongoing style="warning" heading="Wydarzenia w trakcie" mode="ongoing" %}
+            {% include 'common/events.html' with events=events_starting style="info" heading="Nadchodzące wydarzenia" mode="starting"%}
+
             {% block right_column %}
                 {% include 'common/address.html' %}
                 {% include 'common/links.html' with links=links %}

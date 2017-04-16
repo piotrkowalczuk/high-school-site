@@ -8,13 +8,15 @@
 
 {% block content %}
     <div class="row">
-        {% block breadcrumb %}
-            <ol class="breadcrumb">
-                <li><a href="{% url 'news_list' %}">Strona Główna</a></li>
-                <li class="active">{{ page.category.name }}</li>
-                <li class="active">{{ page.title }}</li>
-            </ol>
-        {% endblock %}
+        <div class="col-lg-13">
+            {% block breadcrumb %}
+                <ol class="breadcrumb">
+                    <li><a href="{% url 'news_list' %}">Strona Główna</a></li>
+                    <li class="active">{{ page.category.name }}</li>
+                    <li class="active">{{ page.title }}</li>
+                </ol>
+            {% endblock %}
+        </div>
     </div>
     <div class="row">
         <div class="col-xs-13">

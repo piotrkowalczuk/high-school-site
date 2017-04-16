@@ -26,9 +26,20 @@ class EventManager(models.Manager):
 
         return self.get_query_set().filter(start_at__lte=end, end_at__gte=start).order_by('end_at', '-start_at',  'id')
 
-    def get_for_next_two_weeks(self):
+    def get_ongoing(self):
         now = timezone.localtime(timezone.now())
-        end = now + timedelta(days=14)
+
+        return self.get_query_set().filter(start_at__lt=now, end_at__gt=now).order_by('start_at', 'end_at', 'id')
+
+    def get_starting_in_next_days(self, days):
+        now = timezone.localtime(timezone.now())
+        end = now + timedelta(days=days)
+
+        return self.get_query_set().filter(start_at__gt=now, start_at__lt=end).order_by('start_at', 'end_at', 'id')
+
+    def get_for_next_days(self, days):
+        now = timezone.localtime(timezone.now())
+        end = now + timedelta(days=days)
 
         return self.get_query_set().filter(end_at__gt=now, end_at__lt=end).order_by('end_at', '-start_at',  'id')
 
